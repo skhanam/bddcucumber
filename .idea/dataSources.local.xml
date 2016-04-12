@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQ - String url = &quot;jdbc:mysql://localhost:3306/&quot;;" uuid="a01a4d0d-2dc4-459b-8a5a-121e7eda661c">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+    <data-source name="Beta DB" uuid="f25a0b43-a771-477f-87f1-a9269bbff163">
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+    </data-source>
+  </component>
+</project>
