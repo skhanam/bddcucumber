@@ -19,8 +19,8 @@ public class LoginPage_sd {
         homepage.navigateToHomePage(arg1);
     }
 
-    @When("^I click on the login button$")
-    public void i_click_on_the_login_button() throws Throwable {
+    @When("^I click on the login link$")
+    public void i_click_on_the_login_link() throws Throwable {
         login.clickOnLoginLink();
     }
 

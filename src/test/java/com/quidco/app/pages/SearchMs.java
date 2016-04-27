@@ -23,6 +23,7 @@ public class SearchMs extends Driver {
 
     public void enterSearchTerm(String searchTerm){
         waitForElementDisplay(searchfield);
+        searchfield.clear();
         searchfield.sendKeys(searchTerm);
 
     }
