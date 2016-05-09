@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by thadeus on 26/04/16.
  */
+
 public class Search_sd {
     LoginPage login = PageFactory.initElements(Driver.driver, LoginPage.class);
     SearchMs search = PageFactory.initElements(Driver.driver,SearchMs.class);
@@ -19,13 +20,14 @@ public class Search_sd {
         search.enterSearchTerm(arg1);
     }
 
-    @Then("^I should get back a merchant that matches exactly\"([^\"]*)\" my search term$")
-    public void i_should_get_back_a_merchant_that_matches_exactly_my_search_term(String arg1) throws Throwable {
-            search.validateTopSearchResultsDisplayed(arg1);
+    @Then("^I should get back a merchant that matches exactly\"([^\"]*)\"and rate\"([^\"]*)\"my search term$")
+    public void i_should_get_back_a_merchant_that_matches_exactly_and_rate_my_search_term(String arg1, String arg2) throws Throwable {
+        search.validateTopSearchResultsDisplayed(arg1, arg2);
     }
-    @Then("^I should see merchants similar to my searchTerm$")
-    public void i_should_see_merchants_similar_to_my_searchTerm() throws Throwable {
-     search.validateSimilarSearchResultsDisplayed();
+
+    @Then("^I should find a merchant similar \"([^\"]*)\" result to my searchTerm$")
+    public void i_should_find_a_merchant_similar_result_to_my_searchTerm(String arg1) throws Throwable {
+     search.validateSimilarSearchResultsDisplayed(arg1);
     }
 
 

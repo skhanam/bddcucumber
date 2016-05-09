@@ -1,8 +1,11 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.utility.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -15,10 +18,13 @@ public class SearchMs extends Driver {
     private WebElement searchfield;
     @FindBy(xpath = "//*[@id='search-results-top-retailer-container']/div[1]/div/h3/a")
     private WebElement topSearchResults;
+    @FindBy(css = ".rate")
+    private WebElement topRatevalue;
     @FindBy(css = ".touch-link.mixpanel-search-merchant-link")
     private WebElement seaerchResults;
     @FindBy(css = "#search-results-similar-retailers-container>h2")
     private WebElement similarSearchTerms;
+    String Results =".mixpanel-search-merchant-link:contains('%s')";
 
 
     public void enterSearchTerm(String searchTerm){
@@ -27,17 +33,26 @@ public class SearchMs extends Driver {
         searchfield.sendKeys(searchTerm);
 
     }
-    public void validateTopSearchResultsDisplayed(String top_result) {
+    public void validateTopSearchResultsDisplayed(String top_result, String rate_value) {
         waitForElementDisplay(topSearchResults);
-        System.out.println(topSearchResults.getAttribute(top_result));
+        List<WebElement> topMerchantResult = Driver.driver.findElements(By.cssSelector(String.format(Results,top_result)));
+          for (WebElement topmerchant: topMerchantResult){
+              assertTrue(topmerchant.getText().contains(top_result));
+          }
 
+               topRatevalue.getAttribute(rate_value);
+       List<WebElement> topRate = Driver.driver.findElements(By.cssSelector(".rate"));
+        for (WebElement rate : topRate){
+                    Integer.parseInt(rate.getAttribute(rate_value));
+            assertTrue(rate.getText().contains(rate_value));
+        }
     }
-
-    public void validateSimilarSearchResultsDisplayed(){
+   public void validateSimilarSearchResultsDisplayed(String s_merchant){
         waitForElementDisplay(similarSearchTerms);
-        similarSearchTerms.isDisplayed();
-        System.out.println(similarSearchTerms.getText());
+       List<WebElement> similarResult= Driver.driver.findElements(By.cssSelector(String.format(Results,s_merchant)));
 
-    }
-
+        for (WebElement similar: similarResult) {
+            assertTrue(similar.getText().contains(s_merchant));
+        }
+   }
 }

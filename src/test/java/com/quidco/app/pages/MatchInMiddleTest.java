@@ -28,14 +28,14 @@ public class MatchInMiddleTest extends Driver {
         searchfield.sendKeys(searchTerm);
     }
 
-    public void validateResultsFromMiddleMatchSearch(){
-        List<String> numList= new ArrayList<String>();
+    public void validateResultsFromMiddleMatchSearch(int[] nums){
+
         List<WebElement> middleSearch =driver.findElements(By.cssSelector(".touch-link.mixpanel-search-merchant-link"));
 
-        for(WebElement num:middleSearch{
-            numList.add(num.getText());
-            assertEquals(numList,middleSearch);
-        }
+       // for(WebElement num:middleSearch {
+            //     numList.add(num.getText());
+            //   assertEquals(numList,middleSearch);
+
 
 
     }

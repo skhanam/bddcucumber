@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@smoke",
+@CucumberOptions( tags="@smoke-test2",
         plugin= {"pretty","html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = { "com.quidco.app.pages", "com.quidco.app.page_sd",
