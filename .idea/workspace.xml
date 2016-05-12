@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d0071d-02b6-4587-8ff6-c614b42debb8" name="Default" comment="" />
+    <list default="true" id="a0d0071d-02b6-4587-8ff6-c614b42debb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/Ampersand_sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/BestMatch_Sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/FallBackMatch_sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SpecialCharactersName_sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/support/BestMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/Ampersand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/FallBackMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/SpecialCharactersName.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/Ampersand.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/BestMatch.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExactMatch.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/FallBackMatch.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SpecialChararctersName.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ShoopRestful/src/test/java/com/test/shoop/utility/BestMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ShoopRestful/src/test/java/search_sd/BestMatch_Sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ShoopRestful/src/test/resources/com/test/shoop/BestMatch.feature" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SimilarMerchantSearch_sd.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExaMatch.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/ExactMatchAmpersand.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SimilarMerchantSearch.feature" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/ExactMatch_sd.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/ExactMatch_sd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SearchTest_sd.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/Search_sd/SearchTest_sd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/cucumber/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/support/Helper.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/support/Helper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/CategorySearch.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/CategorySearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/ExactMatch.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/ExactMatch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/SearchTest.java" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/java/com/test/quidco/utility/SearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/MatchInMiddle.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/MatchInMiddle.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" />
+    </list>
     <ignored path="Quidco-ApplicationsTests.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestMedia.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestMedia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/TestMedia.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="684">
@@ -75,6 +108,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,7 +234,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -420,8 +465,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1039,6 +1082,7 @@
       <workItem from="1462524394102" duration="14651000" />
       <workItem from="1462779853991" duration="612000" />
       <workItem from="1462810779394" duration="681000" />
+      <workItem from="1462958804805" duration="635000" />
     </task>
     <servers />
   </component>
@@ -1075,11 +1119,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93952000" />
+    <option name="totallyTimeSpent" value="94587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1405,13 +1449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1538,6 +1575,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
