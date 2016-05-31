@@ -55,4 +55,6 @@ public class SearchMs extends Driver {
             assertTrue(similar.getText().contains(s_merchant));
         }
    }
+
+
 }

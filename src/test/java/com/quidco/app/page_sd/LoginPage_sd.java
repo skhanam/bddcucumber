@@ -19,19 +19,5 @@ public class LoginPage_sd {
         homepage.navigateToHomePage(arg1);
     }
 
-    @When("^I click on the login link$")
-    public void i_click_on_the_login_link() throws Throwable {
-        login.clickOnLoginLink();
-    }
 
-    @When("^I enter my username and password$")
-    public void i_enter_my_username_and_password() throws Throwable {
-        login.enterUsernameAndPassWord();
-    }
-    @Then("^I should be logged in$")
-    public void i_should_be_logged_in() throws Throwable {
-        login.validateUserLoggedIn();
-
-
-    }
 }
