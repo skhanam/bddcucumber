@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d0071d-02b6-4587-8ff6-c614b42debb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SignedMember.feature" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SignedMember.feature" />
     </list>
     <ignored path="Quidco-ApplicationsTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1074,7 +1074,7 @@
       <workItem from="1462779853991" duration="612000" />
       <workItem from="1462810779394" duration="681000" />
       <workItem from="1462958804805" duration="635000" />
-      <workItem from="1464691467877" duration="1250000" />
+      <workItem from="1464691467877" duration="1409000" />
     </task>
     <servers />
   </component>
@@ -1111,7 +1111,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95837000" />
+    <option name="totallyTimeSpent" value="95996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
