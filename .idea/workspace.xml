@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d0071d-02b6-4587-8ff6-c614b42debb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../LoadTests/tests/PerformancyTests/Quidco-Search MS Thadeus.jmx" afterPath="$PROJECT_DIR$/../LoadTests/tests/PerformancyTests/Quidco-Search MS Thadeus.jmx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/linux/operachromium/64bit/operadriver" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/FakeExactMatch_sd.java" afterPath="$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/FakeExactMatch_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/Search_sd.java" afterPath="$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/Search_sd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/quidco/app/pages/FakeExactMatch.java" afterPath="$PROJECT_DIR$/src/test/java/com/quidco/app/pages/FakeExactMatch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/quidco/app/pages/SearchMs.java" afterPath="$PROJECT_DIR$/src/test/java/com/quidco/app/pages/SearchMs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/RatedSearchTest.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/RatedSearchTest.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testFeature/SearchTest.feature" afterPath="$PROJECT_DIR$/src/test/resources/testFeature/SearchTest.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" />
     </list>
     <ignored path="Quidco-ApplicationsTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1060,7 +1055,7 @@
       <workItem from="1462779853991" duration="612000" />
       <workItem from="1462810779394" duration="681000" />
       <workItem from="1462958804805" duration="635000" />
-      <workItem from="1464691467877" duration="27516000" />
+      <workItem from="1464691467877" duration="27723000" />
     </task>
     <servers />
   </component>
@@ -1089,15 +1084,15 @@
     <history-entry file="Runner - 2016.06.01 at 17h 14m 31s.xml">
       <configuration name="Runner" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Runner - 2016.06.01 at 17h 18m 45s.xml">
+      <configuration name="Runner" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="Scenario__Logged_in_User_searching_with_a_Search_Ampersand_term_match - 2016.06.01 at 16h 58m 51s.xml">
       <configuration name="Scenario: Logged in User searching with a Search Ampersand term match" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Scenario__User_searching_with_a_Search_term - 2016.06.01 at 16h 24m 21s.xml">
-      <configuration name="Scenario: User searching with a Search term" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122103000" />
+    <option name="totallyTimeSpent" value="122310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2037" y="30" width="1835" height="998" extended-state="0" />
