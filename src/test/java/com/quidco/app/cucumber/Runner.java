@@ -17,6 +17,7 @@ import java.io.IOException;
                 "com.quidco.app.helper","com.quidco.app.cucumber",
                  "com.quidco.app.page","com.quidco.app.utility"},
         features={"src/test/resources/testFeature"}
+        //,@QP-888-Fake-exact-matches
 
 )
 

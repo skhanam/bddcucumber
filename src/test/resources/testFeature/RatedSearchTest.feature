@@ -9,7 +9,8 @@
 #
 #  Scenario Outline: Logged in User searching with a Search Ampersand term match
 #    And I enter a search term "<SearchTerm>" in the search field
-#    Then I should get back a merchant that matches exactly"<ExactMerchantId>"and rate"<MerchantRateValue>"my search term
+#    Then I should get back a merchant that matches exactly"<ExactMerchantId>"
+#    And I should see merchant rate value "<MerchantRateValue>" for my search term
 #    Then I should find a merchant similar "<similarResults>" result to my searchTerm
 #
 #    Examples:

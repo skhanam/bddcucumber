@@ -9,11 +9,18 @@ Feature: Logged search test
 
   Scenario Outline: User searching with a Search term
     And I enter a search term "<SearchTerm>" in the search field
-    Then I should get back a merchant that matches exactly"<ExactMerchantId>" my search term
+    Then I should get back a merchant that matches exactly"<ExactMerchantName>" my search term
     And I click on the merchant matched
-    Then I  should be on merchant page
+
+
     Examples:
-      | SearchTerm      | ExactMerchantId  |
-      | marks & spence  | Mark and spencer |
-      | amaz            | Amazon           |
+      | SearchTerm     | ExactMerchantName |
+      | marks & spence | Mark and spencer  |
+      | amaz           | Amazon            |
+      | m and co       | M&CO              |
+      | House of fr    | House of Fraser   |
+      | bed so         | Bed SOS           |
+
+
+
 

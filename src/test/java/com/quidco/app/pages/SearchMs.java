@@ -33,13 +33,15 @@ public class SearchMs extends Driver {
         searchfield.sendKeys(searchTerm);
 
     }
-    public void validateTopSearchResultsDisplayed(String top_result, String rate_value) {
+    public void validateTopSearchResultsDisplayed(String top_result) {
         waitForElementDisplay(topSearchResults);
-        List<WebElement> topMerchantResult = Driver.driver.findElements(By.cssSelector(String.format(Results,top_result)));
-          for (WebElement topmerchant: topMerchantResult){
-              assertTrue(topmerchant.getText().contains(top_result));
-          }
+        List<WebElement> topMerchantResult = Driver.driver.findElements(By.cssSelector(String.format(Results, top_result)));
+        for (WebElement topmerchant : topMerchantResult) {
+            assertTrue(topmerchant.getText().contains(top_result));
+        }
 
+    }
+    public void validateSearchResultRates(String rate_value){
                topRatevalue.getAttribute(rate_value);
        List<WebElement> topRate = Driver.driver.findElements(By.cssSelector(".rate"));
         for (WebElement rate : topRate){
