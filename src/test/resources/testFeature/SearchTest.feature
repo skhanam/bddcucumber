@@ -3,7 +3,7 @@ Feature: Logged search test
 
 
   Scenario: Log in a User
-    Given I am on "http://delta2.quidco.com"
+    Given I am on "http://delta5.quidco.com"
     When  I click on the login link
     And I enter my username and password
 
