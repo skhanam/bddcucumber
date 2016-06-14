@@ -2,11 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d0071d-02b6-4587-8ff6-c614b42debb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/Shoop End-End Tests.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop End-End Tests/src/test/java/com/test/shoop/RunTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/helper/common_sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/page_sd/UnregisteredEmailTest_sd.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/UnregisteredEmailTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/ReadMe.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/SHOOP END-END TESTS.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/src/test/java/utility/Driver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SHOOP END-END TESTS/src/test/java/utility/drive33.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_12_v20150709.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_12_v20150709.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_12_v20150709.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_12_v20150709.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_12_v20150709.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_50_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/page_sd/SignedMemberPage_sd.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/page_sd/SignedMemberTest_sd.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/SignedMemberPage.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/SignedMemberTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SignedMember.feature" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SignedMemberTest.feature" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/UserquidcomerchantPage.feature" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/UnregisteredEmailTest.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../QuidcoRestful/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/FallBackMatch.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/FallBackMatch.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" afterPath="$PROJECT_DIR$/../QuidcoRestful/src/test/resources/com/test/quidco/SearchTest.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/Shoop-ApplicationTests.iml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/Shoop-ApplicationTests.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/pom.xml" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/cucumber/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/page_sd/LoginPage_sd.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/page_sd/LoginPage_sd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/HomePage.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/HomePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/MerchantSearch.java" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/java/com/test/shoop/pages/MerchantSearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/MerchantCatgoryUrl.feature" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/MerchantCatgoryUrl.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SearchMearch.feature" afterPath="$PROJECT_DIR$/../Shoop-ApplicationTests/src/test/resources/testFeature/SearchMearch.feature" />
     </list>
     <ignored path="Quidco-ApplicationsTests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchMs.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchMs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/SearchMs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
@@ -57,11 +108,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchInMiddleTest.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MatchInMiddleTest.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -82,9 +145,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
               <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +155,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="792">
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -173,10 +236,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="85" />
-    <option name="y" value="80" />
-    <option name="width" value="1835" />
-    <option name="height" value="998" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -203,9 +266,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,6 +532,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1095,6 +1158,7 @@
       <workItem from="1465155340070" duration="11000" />
       <workItem from="1465200201205" duration="38000" />
       <workItem from="1465204826186" duration="27000" />
+      <workItem from="1465896059422" duration="698000" />
     </task>
     <servers />
   </component>
@@ -1131,11 +1195,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126142000" />
+    <option name="totallyTimeSpent" value="126840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="80" width="1835" height="998" extended-state="0" />
-    <editor active="false" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1146,11 +1210,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22540046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22532189" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24930128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24875621" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1410,17 +1474,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MatchInMiddleTest.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        <state relative-caret-position="396">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/SearchMs.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/FakeExactMatch_sd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="324">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/Search_sd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/SearchTest.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1433,36 +1518,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/cucumber/Runner.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/MatchInMiddleTest.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        <state relative-caret-position="360">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testFeature/SearchTest.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/pages/SearchMs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/FakeExactMatch_sd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/quidco/app/page_sd/Search_sd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="504">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding />
         </state>
       </provider>
