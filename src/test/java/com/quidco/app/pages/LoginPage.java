@@ -23,6 +23,8 @@ private WebElement emailPassword;
 private WebElement signInButton;
 @FindBy(xpath = "//*[@id='main-nav']/div/div[7]/div[2]")
 private WebElement userAvatar;
+ @FindBy(css = "#continue")
+ private WebElement continueButton;
 
  public void clickOnLoginLink(){
         waitForElementDisplay(loginLink);
@@ -33,6 +35,8 @@ private WebElement userAvatar;
         username.sendKeys("t.ssewanyana@quidco.com");
         emailPassword.sendKeys("kalanzi09");
         signInButton.click();
+        waitForElementDisplay(continueButton);
+        continueButton.click();
     }
     public void validateUserLoggedIn(){
         waitForElementDisplay(userAvatar);

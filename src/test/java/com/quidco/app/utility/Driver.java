@@ -1,5 +1,6 @@
 package com.quidco.app.utility;
 
+import com.quidco.app.helper.Constants;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,19 +15,16 @@ import java.util.concurrent.TimeUnit;
  * Created by thadeus on 11/04/16.
  */
 public abstract class Driver{
+
     public static WebDriver driver = null;
-
-
     public static void driver(String browsertype) throws IOException {
-
-
         if (browsertype.equalsIgnoreCase("firefox") || browsertype.equalsIgnoreCase("")) {
             DesiredCapabilities dc = new DesiredCapabilities();
             driver = new QuidcoFirefoxDriver(dc);
         } else {
             if (browsertype.equalsIgnoreCase("chrome")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/LinuxbrowserBinaries/chromedriver");
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeLinuxdriver);
                 driver = new QuidcoChromeDriver(dc);
 
             }
