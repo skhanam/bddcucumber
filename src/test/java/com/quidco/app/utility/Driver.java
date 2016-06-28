@@ -24,7 +24,7 @@ public abstract class Driver{
         } else {
             if (browsertype.equalsIgnoreCase("chrome")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeLinuxdriver);
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ Constants.chromeCentosdriver);
                 driver = new QuidcoChromeDriver(dc);
 
             }
