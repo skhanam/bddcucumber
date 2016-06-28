@@ -8,7 +8,6 @@ import com.quidco.app.utility.Driver;
 public class HomePage extends Driver {
     public void navigateToHomePage(String url){
         driver.get(url);
-        driver.getTitle();
         System.out.println(driver.getTitle());
     }
 }
