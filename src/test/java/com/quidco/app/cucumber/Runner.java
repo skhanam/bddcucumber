@@ -19,7 +19,7 @@ import java.io.IOException;
         glue = { "com.quidco.app.pages", "com.quidco.app.pageStepdef",
                 "com.quidco.app.helper","com.quidco.app.cucumber",
                  "com.quidco.app.page","com.quidco.app.utility"},
-        features={"src/test/resources/testFeature"}
+        features={"src/test/resources/features"}
         //,@QP-888-Fake-exact-matches
 
 )
