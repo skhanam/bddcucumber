@@ -13,14 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 
 @RunWith(Cucumber.class)
-@CucumberOptions( tags="@login-logout",
-        plugin= {"pretty","html:target/cucumber", "json:target/cucumber.json"},
+@CucumberOptions(tags = "@login-logout",
+        plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
-        glue = { "com.quidco.app.pages", "com.quidco.app.pageStepdef",
-                "com.quidco.app.helper","com.quidco.app.cucumber",
-                 "com.quidco.app.page","com.quidco.app.utility"},
-        features={"src/test/resources/features"}
-        //,@QP-888-Fake-exact-matches
+        glue = {"com.quidco.app.pages", "com.quidco.app.pageStepdef",
+                "com.quidco.app.helper", "com.quidco.app.cucumber",
+                "com.quidco.app.page", "com.quidco.app.utility"},
+        features = {"src/test/resources/features"}
 
 )
 
@@ -35,10 +34,8 @@ public class Runner extends BasePage {
     }
 
     @AfterClass
-    public static void tearDown(){
-    System.out.println("Quiting browser");
-    driver.quit();
-}
-
-
+    public static void tearDown() {
+        System.out.println("Quiting browser");
+        driver.quit();
+    }
 }

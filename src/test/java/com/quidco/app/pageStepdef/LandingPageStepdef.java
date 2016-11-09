@@ -2,6 +2,7 @@ package com.quidco.app.pageStepdef;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by ashishmohindroo on 11/8/16.
@@ -9,15 +10,18 @@ import cucumber.api.java.en.Then;
 public class LandingPageStepdef extends BaseStepdef {
 
     @Then("^I click signOut$")
-    public void i_click_signOut(){
-        landingPage.clickUserAvatarIcon();
-
+    public void i_click_signOut() {
+        notificationsPage = landingPage.secondNavigationBarPage.clickAvatar();
+        logoutPage = notificationsPage.clickSignOutLink();
+    }
+    @Then("^I am logged in$")
+    public void i_am_logged_in(){
+        landingPage.secondNavigationBarPage.verifyAvatarVisible();
     }
 
     @Then("^I am logged out$")
-    public void i_am_logged_out(){
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void i_am_logged_out() {
+        logoutPage.verifySignOutMessage();
     }
 
 }

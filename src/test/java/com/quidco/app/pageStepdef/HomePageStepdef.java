@@ -21,10 +21,6 @@ public class HomePageStepdef extends BaseStepdef{
         loginPage =   homePage.clickSignInOnNavigationBar();
     }
 
-    @Then("^I am logged in$")
-    public void i_am_logged_in() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
+
 
 }

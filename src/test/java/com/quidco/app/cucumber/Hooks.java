@@ -1,6 +1,7 @@
 package com.quidco.app.cucumber;
 
 
+import com.quidco.app.pages.BasePage;
 import com.quidco.app.utility.Driver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -12,7 +13,7 @@ import org.openqa.selenium.WebDriverException;
 /**
  * Created by Thadeus on 11/04/2017.
  */
-public class Hooks extends Driver {
+public class Hooks extends BasePage {
 
 
 
