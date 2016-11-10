@@ -20,10 +20,11 @@ public class LoginPage extends BasePage{
     private WebElement signInBtn;
 
 
-    public void enterUsernameAndPassWord(){
+    public LoginPage enterUsernameAndPassWord(String username,String password){
         waitForElementDisplay(usernameInput);
-        usernameInput.sendKeys("t.ssewanyana@quidco.com");
-        passwordInput.sendKeys("kalanzi09");
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        return this;
     }
     public LandingPage clickSignInBtn(){
         signInBtn.click();
@@ -32,6 +33,5 @@ public class LoginPage extends BasePage{
         }
         return PageFactory.initElements(driver,LandingPage.class);
     }
-
 
 }

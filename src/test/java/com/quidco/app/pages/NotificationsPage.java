@@ -1,5 +1,6 @@
 package com.quidco.app.pages;
 
+import com.quidco.app.pageObjects.NotificationsPageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,14 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
-public class NotificationsPage extends NavigationBarPage {
+public class NotificationsPage extends BasePage {
 
-    @FindBy(css = ".sign-out>a[title='Logout']")
-    private WebElement signOutLink;
+    NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver,NotificationsPageObject.class);
 
     public LogoutPage clickSignOutLink(){
-        waitForElementDisplay(signOutLink);
-        signOutLink.click();
+        waitForElementDisplay(notificationsPageObject.signOutLink);
+        notificationsPageObject.signOutLink.click();
         return PageFactory.initElements(driver,LogoutPage.class);
     }
 

@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class BaseStepdef {
 
-    public static HomePage homePage = PageFactory.initElements(BasePage.driver,HomePage.class);
+    public static LandingPage landingPage = PageFactory.initElements(BasePage.driver,LandingPage.class);
+    public static HomePage homePage;
     public static LoginPage loginPage;
-    public static LandingPage landingPage;
     public static NotificationsPage notificationsPage;
     public static LogoutPage logoutPage;
 }

@@ -1,15 +1,12 @@
 package com.quidco.app.pages;
 
-import com.quidco.app.utility.Driver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by thadeus on 11/04/16.
  */
-public class Payments extends Driver {
-    Actions builder=new Actions(Driver.driver);
+public class Payments extends BasePage {
 
     @FindBy(css = ".how-much.hidden-xs>p")
     private WebElement paymentMethod;
@@ -27,11 +24,12 @@ public class Payments extends Driver {
 
     public void clickAndGoToPaymentsPage(){
      waitForElementDisplay(controlPanel);
-      builder.click(controlPanel).build().perform();
-        builder.moveToElement(paymentsLink).
-                click().
-                build().
-                perform();
+
+//      builder.click(controlPanel).build().perform();
+//        builder.moveToElement(paymentsLink).
+//                click().
+//                build().
+//                perform();
 
     }
 

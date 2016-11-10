@@ -2,7 +2,6 @@ package com.quidco.app.cucumber;
 
 
 import com.quidco.app.pages.BasePage;
-import com.quidco.app.utility.Driver;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -19,8 +18,6 @@ public class Hooks extends BasePage {
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        System.out.println( "Starting before test method");
-
     }
 
     public void embedScreenshot(Scenario scenario) {
