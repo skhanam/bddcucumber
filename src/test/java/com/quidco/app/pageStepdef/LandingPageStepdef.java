@@ -1,25 +1,25 @@
 package com.quidco.app.pageStepdef;
 
-import cucumber.api.java.en.Then;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
 public class LandingPageStepdef extends BaseStepdef {
 
-    @Then("^I click signOut$")
-    public void i_click_signOut() {
-        notificationsPage = homePage.clickAvatar();
-        logoutPage = notificationsPage.clickSignOutLink();
-    }
-//    @Then("^I am logged in$")
-//    public void i_am_logged_in(){
-//        homePage.verifyAvatarVisible();
-//    }
 
-    @Then("^I am logged out$")
-    public void i_am_logged_out() {
-        logoutPage.verifySignOutMessage();
+
+    @Given("^I am on the landing page$")
+    public void i_am_on_the_landing_page()  {
+        landingPage.navigateToHomePage();
     }
+
+    @When("^I click on the signin link$")
+    public void i_click_on_the_signin_link()  {
+        loginPage =   landingPage.clickSignInOnNavigationBar();
+    }
+
 
 }

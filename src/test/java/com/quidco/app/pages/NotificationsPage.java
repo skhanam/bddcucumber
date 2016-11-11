@@ -1,8 +1,6 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.NotificationsPageObject;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**

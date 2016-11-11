@@ -1,8 +1,9 @@
 package com.quidco.app.pageStepdef;
 
+import com.quidco.app.pageObjects.HomePageObjects;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.Then;
+import org.junit.Assert;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -10,20 +11,23 @@ import cucumber.api.java.en.When;
 public class HomePageStepdef extends BaseStepdef{
 
 
-    @Given("^I am on \"([^\"]*)\"$")
-    public void i_am_on(String arg1)  {
-        landingPage.navigateToHomePage(arg1);
+    @Then("^I click signOut$")
+    public void i_click_signOut() {
+        notificationsPage = homePage.clickAvatar();
+        logoutPage = notificationsPage.clickSignOutLink();
+    }
+    @Then("^I am logged out$")
+    public void i_am_logged_out() {
+        logoutPage.verifySignOutMessage();
     }
 
-    @When("^I click on the signin link$")
-    public void i_click_on_the_signin_link()  {
-        loginPage =   landingPage.clickSignInOnNavigationBar();
+    @And("^I am logged in$")
+    public void i_am_logged_in(){
+        Assert.assertTrue(homePage.isAvatarVisible());
     }
-    @And("^I have a \"([^\"]*)\" login$")
-    public void i_have_valid_invalid_login(String status){
-        homePage.verifyAvatarVisible(status);
+    @And("^I see wrong credentials message$")
+    public void i_see_wrong_credentials_message(){
+        loginPage.checkWrongCredentialsMessage();
     }
-
-
 
 }

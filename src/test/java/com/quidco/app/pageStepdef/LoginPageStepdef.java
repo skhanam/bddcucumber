@@ -16,7 +16,7 @@ public class LoginPageStepdef extends BaseStepdef {
 
     @And("^I click signIn$")
     public void clickSignInBtn() {
-        landingPage = loginPage.clickSignInBtn();
+        homePage = loginPage.clickSignInBtn();
     }
 
 

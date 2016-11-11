@@ -1,7 +1,6 @@
 package com.quidco.app.pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import com.quidco.app.pageObjects.LoginPageObjects;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -10,28 +9,22 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends BasePage{
 
 
-    @FindBy(id = "username")
-    private WebElement usernameInput;
-    @FindBy(id = "password")
-    private WebElement passwordInput;
-    @FindBy(id = "continue")
-    private WebElement continueBtn;
-    @FindBy(xpath = "//*[@id=\"sign-in-page-form\"]/div/div[1]/div[3]/input")
-    private WebElement signInBtn;
-
+    LoginPageObjects loginPageObjects = PageFactory.initElements(driver,LoginPageObjects.class);
 
     public LoginPage enterUsernameAndPassWord(String username,String password){
-        waitForElementDisplay(usernameInput);
-        usernameInput.sendKeys(username);
-        passwordInput.sendKeys(password);
+        waitForElementDisplay(loginPageObjects.usernameInput);
+        loginPageObjects.usernameInput.sendKeys(username);
+        loginPageObjects.passwordInput.sendKeys(password);
         return this;
     }
-    public LandingPage clickSignInBtn(){
-        signInBtn.click();
-        if(isElementVisible(continueBtn)){
-            continueBtn.click();
+    public HomePage clickSignInBtn(){
+        loginPageObjects.signInBtn.click();
+        if(isElementVisible(loginPageObjects.continueBtn)){
+            loginPageObjects.continueBtn.click();
         }
-        return PageFactory.initElements(driver,LandingPage.class);
+        return PageFactory.initElements(driver,HomePage.class);
     }
+    public void checkWrongCredentialsMessage(){
 
+    }
 }
