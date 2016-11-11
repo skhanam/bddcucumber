@@ -13,14 +13,16 @@ public class PropertyReader {
 
     public static Properties prop = new Properties();
 
-    PropertyReader(){
+    PropertyReader() {
 
     }
-    public static Properties  getPropertyReader() {
-        if (prop.size() == 0 ) {
+
+    public static Properties getPropertyReader() {
+        if (prop.size() == 0) {
             InputStream inputStream = null;
             try {
-                inputStream = new FileInputStream(System.getProperty("user.dir")+"/src/test/java/com/quidco/app/utility/config.properties");
+                inputStream = new FileInputStream(System.getProperty("user.dir")
+                        + "/target/classes/config.properties");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

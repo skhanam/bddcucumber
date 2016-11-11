@@ -19,9 +19,8 @@
         <target.version>1.8</target.version>
         <!-- Database dependency version -->
         <!--configurable variables-->
-
+        <env>staging3</env>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -81,6 +80,13 @@
         </dependency>
     </dependencies>
     <build>
+        <resources>
+            <!-- Filter resource files -->
+            <resource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -91,7 +97,6 @@
                 </configuration>
                 <version>3.5.1</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
