@@ -31,6 +31,7 @@ public class Hooks extends BasePage {
 
     @After
     public void afterScenario(Scenario scenario) {
+        driver.manage().deleteAllCookies();
         embedScreenshot(scenario);
     }
 
