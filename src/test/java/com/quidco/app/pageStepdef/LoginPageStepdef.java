@@ -9,7 +9,7 @@ import cucumber.api.java.en.When;
 public class LoginPageStepdef extends BaseStepdef {
 
     @When("^I enter my username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
-    public void i_enter_my_credentials(String username,String password) throws Throwable {
+    public void i_enter_my_credentials(String username,String password)  {
         loginPage.enterUsernameAndPassWord(username,password);
     }
 
@@ -19,5 +19,9 @@ public class LoginPageStepdef extends BaseStepdef {
         homePage = loginPage.clickSignInBtn();
     }
 
+    @When("^I enter valid credentials$")
+    public void i_enter_valid_credentials()  {
+        i_enter_my_credentials(landingPage.username,landingPage.password);
+    }
 
 }

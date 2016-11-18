@@ -25,6 +25,8 @@ public abstract class BasePage extends SeleniumUtils{
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String QuidcoAppUrl;
+    public static String username ;
+    public static String password ;
 
 
     public BasePage(){

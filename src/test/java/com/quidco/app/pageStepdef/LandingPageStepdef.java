@@ -18,8 +18,22 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @When("^I click on the signin link$")
     public void i_click_on_the_signin_link()  {
+
         loginPage =   landingPage.clickSignInOnNavigationBar();
     }
+
+    @Given("^I am an existing normal user$")
+    public void i_am_an_existing_normal_user() {
+            landingPage.username = "quidco.tester@gmail.com";
+            landingPage.password = "quidcotester@02";
+    }
+
+    @Given("^I am an existing premium user$")
+    public void i_am_an_existing_premium_user() {
+            landingPage.username = "quidco.tester+premium@gmail.com";
+            landingPage.password = "quidcotester@01";
+    }
+
 
 
 }
