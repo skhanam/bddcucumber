@@ -25,15 +25,15 @@ public class Runner extends BasePage {
 
     @BeforeClass
     public static void setUp() throws IOException {
-        logger.log(Level.INFO,"Starting Browser");
+        logger.log(Level.INFO, "Starting Browser");
         driver = getDriverInstance("chrome");
         driver.manage().window().maximize();
 
-            }
+    }
 
     @AfterClass
     public static void tearDown() {
-        logger.log(Level.INFO,"Quiting Browser");
+        logger.log(Level.INFO, "Quiting Browser");
         driver.quit();
     }
 }

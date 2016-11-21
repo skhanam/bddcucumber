@@ -25,8 +25,11 @@ public abstract class BasePage extends SeleniumUtils{
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String QuidcoAppUrl;
-    public static String username ;
-    public static String password = "quidcotester@01";
+    protected static String username ;
+    private static String password = "quidcotester@01";
+
+
+
     public static String user_subscription;
 
 
@@ -48,5 +51,26 @@ public abstract class BasePage extends SeleniumUtils{
         wait = new WebDriverWait(driver, 10);
         executor = (JavascriptExecutor) driver;
         return driver;
+    }
+
+    public void setUsername(String uname){
+        username =  uname;
+    }
+    public String getUsername(){
+        return username;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        BasePage.password = password;
+    }
+    public String getUserSubscription() {
+        return user_subscription;
+    }
+
+    public  void setUserSubscription(String user_subscription) {
+        BasePage.user_subscription = user_subscription;
     }
 }

@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--dependency version -->
-        <selenium.version>2.53.0</selenium.version>
+        <selenium.version>3.0.1</selenium.version>
         <cucumber.version>1.2.3</cucumber.version>
         <junit.version>4.12</junit.version>
         <source.version>1.8</source.version>

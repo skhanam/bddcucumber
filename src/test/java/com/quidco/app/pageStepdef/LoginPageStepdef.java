@@ -21,7 +21,7 @@ public class LoginPageStepdef extends BaseStepdef {
 
     @When("^I enter valid credentials$")
     public void i_enter_valid_credentials()  {
-        i_enter_my_credentials(landingPage.username,landingPage.password);
+        i_enter_my_credentials(landingPage.getUsername(),landingPage.getPassword());
     }
 
 

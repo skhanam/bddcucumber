@@ -1,5 +1,6 @@
 package com.quidco.app.pageStepdef;
 
+import com.quidco.app.utility.JavaUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -26,26 +27,27 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @Given("^I am an existing normal user$")
     public void i_am_an_existing_normal_user() {
-        landingPage.username = "quidco.tester@gmail.com";
-        landingPage.password = "quidcotester@02";
+        landingPage.setUsername("quidco.tester@gmail.com");
+        landingPage.setPassword("quidcotester@02");
     }
 
     @Given("^I am an existing premium user$")
     public void i_am_an_existing_premium_user() {
-        landingPage.username = "quidco.tester+premium@gmail.com";
-        landingPage.password = "quidcotester@01";
+        landingPage.setUsername("quidco.tester+premium@gmail.com");
+        landingPage.setPassword("quidcotester@01");
     }
 
     @Given("^I am a new normal user$")
     public void i_am_a_new_user() {
-        landingPage.username = String.valueOf(UUID.randomUUID());
-        landingPage.user_subscription = "normal";
+
+        landingPage.setUsername(JavaUtils.getTestEmail());
+        landingPage.setUserSubscription("normal");
     }
 
     @Given("^I am a new premium user$")
     public void i_am_a_new_premium_user() {
-        landingPage.username = String.valueOf(UUID.randomUUID());
-        landingPage.user_subscription = "premium";
+        landingPage.setUsername(JavaUtils.getTestEmail());
+        landingPage.setUserSubscription("premium");
     }
 
 }
