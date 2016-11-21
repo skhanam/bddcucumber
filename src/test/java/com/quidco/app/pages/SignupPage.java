@@ -1,6 +1,8 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.SignupPageObject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -14,16 +16,13 @@ public class SignupPage extends BasePage {
         waitForElementDisplay(signupPageObject.firstname);
         signupPageObject.firstname.sendKeys("Quidco");
         signupPageObject.surname.sendKeys("Tester");
-        signupPageObject.email.sendKeys(username);
-        signupPageObject.password.sendKeys(password);
-        setTermsCheckbox();
+        signupPageObject.email.sendKeys(getUsername());
+        signupPageObject.password.sendKeys(getPassword());
+        toggleTermsCheckbox();
     }
 
-    public void setTermsCheckbox(){
-        check_checkbox_by_js("agree_to_terms_join");
-    }
-    public void unsetTermsCheckbox(){
-        uncheck_checkbox_by_js("agree_to_terms_join");
+    public void toggleTermsCheckbox(){
+        check_checkbox_by_js("#agree_to_terms_join");
     }
 
 

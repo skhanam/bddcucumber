@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LandingPage extends BasePage {
 
-    LandingPageObject landingPageObject = PageFactory.initElements(driver,LandingPageObject.class);
+    private LandingPageObject landingPageObject = PageFactory.initElements(driver,LandingPageObject.class);
 
     public void navigateToHomePage(){
         driver.get(QuidcoAppUrl);

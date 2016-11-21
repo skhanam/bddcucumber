@@ -22,14 +22,14 @@ Feature: An Existing user is able to login.
   Scenario: As a new user
     Given I am a new normal user
     And I click join now
-    When I enter all the mandatory fields
-#    Then I am logged in
+    When I enter all the mandatory fields and sign up
+    Then I am logged in
 
   Scenario: As a new premium user
     Given I am a new premium user
     And I click join now
-    When I enter all the mandatory fields
-#    Then I am logged in
+    When I enter all the mandatory fields and sign up
+    Then I am logged in
 
 
 
