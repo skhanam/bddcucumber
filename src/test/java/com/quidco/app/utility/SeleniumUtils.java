@@ -1,8 +1,6 @@
 package com.quidco.app.utility;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public abstract  class SeleniumUtils {
     public static WebDriverWait wait;
+    public static WebDriver driver = null;
+    public static JavascriptExecutor executor ;
     public void waitForElementDisplay(final WebElement element) {
 
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -25,5 +25,13 @@ public abstract  class SeleniumUtils {
         } catch (TimeoutException e) {
         }
         return false;
+    }
+
+    public void check_checkbox_by_js(String id){
+        executor.executeScript("return $(\"#arguments[0]\").prop(\"checked\", true);",id);
+    }
+
+    public void uncheck_checkbox_by_js(String id){
+        executor.executeScript("$(\"#arguments[0]\").prop(\"checked\", true);",id);
     }
 }
