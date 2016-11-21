@@ -22,12 +22,12 @@ import java.util.logging.Logger;
  */
 public abstract class BasePage extends SeleniumUtils{
 
-    public static WebDriver driver = null;
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String QuidcoAppUrl;
     public static String username ;
-    public static String password ;
+    public static String password = "quidcotester@01";
+    public static String user_subscription;
 
 
     public BasePage(){
@@ -46,6 +46,7 @@ public abstract class BasePage extends SeleniumUtils{
             }
         }
         wait = new WebDriverWait(driver, 10);
+        executor = (JavascriptExecutor) driver;
         return driver;
     }
 }
