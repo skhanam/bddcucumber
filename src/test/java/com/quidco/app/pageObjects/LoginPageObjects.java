@@ -18,6 +18,8 @@ public class LoginPageObjects {
     public static WebElement signInBtn;
     @FindBy(css = ".panel .alert-text")
     public static WebElement alertMessage;
+    @FindBy(css = ".panel div.pull-right>a")
+    public static WebElement joinNowBtn;
 
 
 }

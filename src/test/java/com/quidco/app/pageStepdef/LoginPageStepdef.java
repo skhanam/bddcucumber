@@ -24,4 +24,9 @@ public class LoginPageStepdef extends BaseStepdef {
         i_enter_my_credentials(landingPage.username,landingPage.password);
     }
 
+
+    @And("^I click join now$")
+    public void I_CLICK_JOIN_IN() {
+       signupPage =  loginPage.clickJoinIn();
+    }
 }

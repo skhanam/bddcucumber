@@ -27,4 +27,9 @@ public class LoginPage extends BasePage{
     public void checkWrongCredentialsMessage(){
 
     }
+    public SignupPage clickJoinIn(){
+        waitForElementDisplay(loginPageObjects.joinNowBtn);
+        loginPageObjects.joinNowBtn.click();
+        return new SignupPage();
+    }
 }

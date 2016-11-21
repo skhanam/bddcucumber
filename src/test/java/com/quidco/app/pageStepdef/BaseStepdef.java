@@ -13,4 +13,5 @@ public class BaseStepdef {
     public static LoginPage loginPage;
     public static NotificationsPage notificationsPage;
     public static LogoutPage logoutPage;
+    public static SignupPage signupPage;
 }
