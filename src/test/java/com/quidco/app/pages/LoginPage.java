@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LoginPageObjects;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -21,6 +22,7 @@ public class LoginPage extends BasePage{
         loginPageObjects.signInBtn.click();
         if(isElementVisible(loginPageObjects.continueBtn)){
             loginPageObjects.continueBtn.click();
+            waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
         }
         return PageFactory.initElements(driver,HomePage.class);
     }
