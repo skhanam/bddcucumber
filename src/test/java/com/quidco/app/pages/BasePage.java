@@ -24,6 +24,7 @@ public abstract class BasePage extends SeleniumUtils{
 
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
+    public static String os = System.getProperty("os.name");
     public static String QuidcoAppUrl;
     protected static String username ;
     private static String password = "quidcotester@01";
@@ -42,9 +43,17 @@ public abstract class BasePage extends SeleniumUtils{
             DesiredCapabilities dc = new DesiredCapabilities();
             driver = new FirefoxDriver(dc);
         } else {
-            if (browsertype.equalsIgnoreCase("chrome")) {
+            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC")){
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeMacdriver);
+                driver = new ChromeDriver(dc);
+            }else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("LINUX")){
+                DesiredCapabilities dc = DesiredCapabilities.chrome();
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeLinuxdriver);
+                driver = new ChromeDriver(dc);
+            }else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("WINDOWS")){
+                DesiredCapabilities dc = DesiredCapabilities.chrome();
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
                 driver = new ChromeDriver(dc);
             }
         }
