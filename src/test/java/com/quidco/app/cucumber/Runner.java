@@ -18,7 +18,6 @@ import java.util.logging.Level;
                 "com.quidco.app.helper", "com.quidco.app.cucumber",
                 "com.quidco.app.page", "com.quidco.app.utility"},
         features = {"src/test/resources/features"}
-
 )
 
 public class Runner extends BasePage {
@@ -28,7 +27,6 @@ public class Runner extends BasePage {
         logger.log(Level.INFO, "Starting Browser");
         driver = getDriverInstance("chrome");
         driver.manage().window().maximize();
-
     }
 
     @AfterClass

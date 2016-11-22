@@ -8,15 +8,20 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LandingPage extends BasePage {
 
-    private LandingPageObject landingPageObject = PageFactory.initElements(driver,LandingPageObject.class);
+    private LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
 
-    public void navigateToHomePage(){
+    public void navigateToHomePage() {
         driver.get(QuidcoAppUrl);
     }
-    public LoginPage  clickSignInOnNavigationBar(){
-        waitForElementDisplay(landingPageObject.signInLink);
-        landingPageObject.signInLink.click();
-        return PageFactory.initElements(driver,LoginPage.class);
+
+    public LoginPage clickSignInOnNavigationBar() {
+        if (isElementVisible(landingPageObject.frontPageSignInLinks.get(0))) {
+            landingPageObject.frontPageSignInLinks.get(0).click();
+        }
+            waitForElementDisplay(landingPageObject.signInLink);
+            landingPageObject.signInLink.click();
+            return PageFactory.initElements(driver, LoginPage.class);
+
     }
 }
 
