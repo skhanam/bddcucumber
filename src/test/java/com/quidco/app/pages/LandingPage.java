@@ -11,6 +11,7 @@ public class LandingPage extends BasePage {
     private LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
 
     public void navigateToHomePage() {
+        System.out.println(QuidcoAppUrl);
         driver.get(QuidcoAppUrl);
     }
 

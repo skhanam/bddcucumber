@@ -43,7 +43,7 @@ public abstract class BasePage extends SeleniumUtils{
             DesiredCapabilities dc = new DesiredCapabilities();
             driver = new FirefoxDriver(dc);
         } else {
-            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC")){
+            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC OS X")){
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeMacdriver);
                 driver = new ChromeDriver(dc);
