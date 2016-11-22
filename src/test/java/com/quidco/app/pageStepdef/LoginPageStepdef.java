@@ -26,7 +26,7 @@ public class LoginPageStepdef extends BaseStepdef {
 
 
     @And("^I click join now$")
-    public void I_CLICK_JOIN_IN() {
+    public void i_click_join_in() {
        signupPage =  loginPage.clickJoinIn();
     }
 }
