@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LandingPageObject;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -12,16 +13,13 @@ public class LandingPage extends BasePage {
 
     public void navigateToHomePage() {
         driver.get(QuidcoAppUrl);
+        setCookieforVpn();
     }
 
     public LoginPage clickSignInOnNavigationBar() {
-//        if (isElementVisible(landingPageObject.frontPageSignInLinks.get(0))) {
-//            landingPageObject.frontPageSignInLinks.get(0).click();
-//        }
         waitForElementDisplay(landingPageObject.signInLink);
         landingPageObject.signInLink.click();
         return PageFactory.initElements(driver, LoginPage.class);
-
     }
 }
 

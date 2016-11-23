@@ -43,15 +43,15 @@ public abstract class BasePage extends SeleniumUtils{
             DesiredCapabilities dc = new DesiredCapabilities();
             driver = new FirefoxDriver(dc);
         } else {
-            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC OS X")){
+            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC OS X")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeMacdriver);
                 driver = new ChromeDriver(dc);
-            }else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("LINUX")){
+            } else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("LINUX")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeLinuxdriver);
                 driver = new ChromeDriver(dc);
-            }else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("WINDOWS")){
+            } else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("WINDOWS")) {
                 DesiredCapabilities dc = DesiredCapabilities.chrome();
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
                 driver = new ChromeDriver(dc);
@@ -62,24 +62,27 @@ public abstract class BasePage extends SeleniumUtils{
         return driver;
     }
 
-    public void setUsername(String uname){
-        username =  uname;
+    public void setUsername(String uname) {
+        username = uname;
     }
-    public String getUsername(){
+
+    public String getUsername() {
         return username;
     }
+
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        BasePage.password = password;
+    public void setPassword(String pwd) {
+        password = pwd;
     }
+
     public String getUserSubscription() {
         return user_subscription;
     }
 
-    public  void setUserSubscription(String user_subscription) {
-        BasePage.user_subscription = user_subscription;
+    public void setUserSubscription(String user_subs) {
+        user_subscription = user_subs;
     }
 }
