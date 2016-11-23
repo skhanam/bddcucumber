@@ -13,7 +13,6 @@ public class LandingPage extends BasePage {
 
     public void navigateToHomePage() {
         driver.get(QuidcoAppUrl);
-        setCookieforVpn();
     }
 
     public LoginPage clickSignInOnNavigationBar() {
