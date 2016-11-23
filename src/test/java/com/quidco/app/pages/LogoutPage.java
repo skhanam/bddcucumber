@@ -12,6 +12,8 @@ public class LogoutPage extends  BasePage {
     LogoutPageObjects logoutPageObjects = PageFactory.initElements(driver,LogoutPageObjects.class);
 
     public void verifySignOutMessage(){
+
+        waitForElementDisplay(logoutPageObjects.signOutMessage);
         Assert.assertTrue(logoutPageObjects.signOutMessage.getText().equalsIgnoreCase("You have successfully signed out - Sign back in"));
     }
 
