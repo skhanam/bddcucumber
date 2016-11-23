@@ -28,7 +28,7 @@ public class LandingPageStepdef extends BaseStepdef {
     @Given("^I am an existing normal user$")
     public void i_am_an_existing_normal_user() {
         landingPage.setUsername("quidco.tester@gmail.com");
-        landingPage.setPassword("quidcotester@02");
+        landingPage.setPassword("quidcotester@3");
     }
 
     @Given("^I am an existing premium user$")
@@ -41,12 +41,14 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_am_a_new_user() {
 
         landingPage.setUsername(JavaUtils.getTestEmail());
+        landingPage.setPassword("quidcotester@01");
         landingPage.setUserSubscription("normal");
     }
 
     @Given("^I am a new premium user$")
     public void i_am_a_new_premium_user() {
         landingPage.setUsername(JavaUtils.getTestEmail());
+        landingPage.setPassword("quidcotester@01");
         landingPage.setUserSubscription("premium");
     }
 

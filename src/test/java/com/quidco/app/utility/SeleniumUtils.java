@@ -33,5 +33,9 @@ public abstract  class SeleniumUtils {
     public void uncheck_checkbox_by_js(String css_selector){
         executor.executeScript("$(arguments[0]).get(0).checked = false;",css_selector);
     }
+    public void setCookieforVpn(){
+        Cookie ck = new Cookie("betatester","betatastic","/");
+        driver.manage().addCookie(ck);
+    }
 
 }

@@ -18,7 +18,8 @@
         <target.version>1.8</target.version>
         <!-- Database dependency version -->
         <!--configurable variables-->
-        <env>${env}</env>
+        <env>https://staging18.quidco.com</env>
+
     </properties>
     <dependencies>
         <dependency>

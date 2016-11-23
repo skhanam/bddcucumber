@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "@login-logout",
+@CucumberOptions(tags = "@signup",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = {"com.quidco.app.pages", "com.quidco.app.pageStepdef",
@@ -20,7 +20,7 @@ import java.util.logging.Level;
         features = {"src/test/resources/features"}
 )
 
-public class Runner extends BasePage {
+public class SignupRunner extends BasePage {
 
     @BeforeClass
     public static void setUp() throws IOException {
