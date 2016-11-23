@@ -17,9 +17,14 @@ import org.openqa.selenium.WebDriverException;
 public class Hooks extends BasePage {
 
 
+    @BeforeClass
+    public void beforeClass(){
+        setCookieforVpn();
+
+    }
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        driver.get(QuidcoAppUrl+"/access_beta.php");
+//        driver.get(QuidcoAppUrl+"/access_beta.php");
 
     }
 
