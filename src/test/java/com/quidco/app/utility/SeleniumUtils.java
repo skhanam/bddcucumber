@@ -34,7 +34,7 @@ public abstract  class SeleniumUtils {
         executor.executeScript("$(arguments[0]).get(0).checked = false;",css_selector);
     }
     public void setCookieforVpn(){
-        Cookie ck = new Cookie("betatester","betatastic","/");
+        Cookie ck = new Cookie("betatester","betatastic","https://staging4.quidco.com/",null);
         driver.manage().addCookie(ck);
     }
 
