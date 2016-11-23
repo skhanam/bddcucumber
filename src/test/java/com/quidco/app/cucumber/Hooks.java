@@ -17,7 +17,7 @@ import org.openqa.selenium.WebDriverException;
 public class Hooks extends BasePage {
 
 
-    @BeforeClass
+    @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         driver.get(QuidcoAppUrl+"/access_beta.php");
 
