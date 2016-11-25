@@ -1,7 +1,6 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LandingPageObject;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -9,16 +8,24 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LandingPage extends BasePage {
 
-    private LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
+    private static LandingPage landingPage = new LandingPage();
 
-    public void navigateToHomePage() {
+    public static LandingPageObject landingPageObject= PageFactory.initElements(driver, LandingPageObject.class);;
+
+    private LandingPage(){}
+
+    public static LandingPage getInstance(){
+        return landingPage;
+    }
+
+    public void navigateToLandingPage() {
         driver.get(QuidcoAppUrl);
     }
 
     public LoginPage clickSignInOnNavigationBar() {
         waitForElementDisplay(landingPageObject.signInLink);
         landingPageObject.signInLink.click();
-        return PageFactory.initElements(driver, LoginPage.class);
+        return LoginPage.getInstance();
     }
 }
 

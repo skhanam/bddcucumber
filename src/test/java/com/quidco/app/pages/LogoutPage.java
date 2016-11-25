@@ -1,6 +1,6 @@
 package com.quidco.app.pages;
 
-import com.quidco.app.pageObjects.LogoutPageObjects;
+import com.quidco.app.pageObjects.LogoutPageObject;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,12 +9,19 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LogoutPage extends  BasePage {
 
-    LogoutPageObjects logoutPageObjects = PageFactory.initElements(driver,LogoutPageObjects.class);
+    private static LogoutPage logoutPage = new LogoutPage();
+
+    private LogoutPage(){}
+
+    public static LogoutPage getInstance(){
+        return logoutPage;
+    }
+    protected LogoutPageObject logoutPageObject = PageFactory.initElements(driver,LogoutPageObject.class);
 
     public void verifySignOutMessage(){
 
-        waitForElementDisplay(logoutPageObjects.signOutMessage);
-        Assert.assertTrue(logoutPageObjects.signOutMessage.getText().equalsIgnoreCase("You have successfully signed out - Sign back in"));
+        waitForElementDisplay(logoutPageObject.signOutMessage);
+        Assert.assertTrue(logoutPageObject.signOutMessage.getText().equalsIgnoreCase("You have successfully signed out - Sign back in"));
     }
 
 

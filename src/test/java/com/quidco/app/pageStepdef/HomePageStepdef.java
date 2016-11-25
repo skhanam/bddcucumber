@@ -1,6 +1,5 @@
 package com.quidco.app.pageStepdef;
 
-import com.quidco.app.pageObjects.HomePageObjects;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
