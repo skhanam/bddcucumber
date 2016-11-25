@@ -12,5 +12,4 @@ public class JavaUtils {
         int randomInt = random.nextInt(1000000000);
         return  "quidco-tester"+randomInt+"@quidco.com";
     }
-
 }

@@ -9,15 +9,8 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LoginPage extends BasePage{
 
-    private static LoginPage loginPage = new LoginPage();
 
-    private LoginPage(){}
-
-    public static LoginPage getInstance(){
-        return loginPage;
-    }
-
-    protected static LoginPageObjects loginPageObjects = PageFactory.initElements(driver,LoginPageObjects.class);
+    LoginPageObjects loginPageObjects = PageFactory.initElements(driver,LoginPageObjects.class);
 
     public LoginPage enterUsernameAndPassWord(String username,String password){
         waitForElementDisplay(loginPageObjects.usernameInput);
@@ -31,7 +24,7 @@ public class LoginPage extends BasePage{
             loginPageObjects.continueBtn.click();
             waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
         }
-        return HomePage.getInstance();
+        return PageFactory.initElements(driver,HomePage.class);
     }
     public void checkWrongCredentialsMessage(){
 
@@ -39,6 +32,6 @@ public class LoginPage extends BasePage{
     public SignupPage clickJoinIn(){
         waitForElementDisplay(loginPageObjects.joinNowBtn);
         loginPageObjects.joinNowBtn.click();
-        return SignupPage.getInstance();
+        return new SignupPage();
     }
 }
