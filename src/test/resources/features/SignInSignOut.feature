@@ -1,5 +1,5 @@
 @login-logout
-Feature: Login Logout
+Feature: An Existing user is able to login.
 
   Background:  User goes to the sign in page.
     Given I am on the landing page
@@ -15,15 +15,13 @@ Feature: Login Logout
     And I am logged out
 
 
-#  Scenario: As an existing user
-#    Given I am an existing normal user
-#    When I enter valid credentials
-#    And I click signIn
-#    Then I am logged in
-#    And I click signOut
-#    And I am logged out
-
-
+  Scenario: As an existing user
+    Given I am an existing normal user
+    When I enter valid credentials
+    And I click signIn
+    Then I am logged in
+    And I click signOut
+    And I am logged out
 
 
 
