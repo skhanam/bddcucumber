@@ -23,6 +23,10 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_enter_valid_credentials()  {
         i_enter_my_credentials(landingPage.getUsername(),landingPage.getPassword());
     }
+    @When("^I enter invalid credentials as \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void i_enter_valid_credentials(String uname, String pwd)  {
+        i_enter_my_credentials(uname,pwd);
+    }
 
 
     @And("^I click join now$")

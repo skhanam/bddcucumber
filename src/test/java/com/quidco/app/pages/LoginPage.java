@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LoginPageObjects;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -27,6 +28,8 @@ public class LoginPage extends BasePage{
         return PageFactory.initElements(driver,HomePage.class);
     }
     public void checkWrongCredentialsMessage(){
+        waitForElementDisplay(loginPageObjects.alertMessage);
+        Assert.assertEquals(loginPageObjects.alertMessage.getText().trim(),"Invalid username or password.");
 
     }
     public SignupPage clickJoinIn(){
