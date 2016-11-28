@@ -83,7 +83,7 @@
        <resources>
            <!-- Filter resource files -->
            <resource>
-               <directory>src/test/resources</directory>
+               <directory>src/test/resources/config</directory>
                <filtering>true</filtering>
            </resource>
        </resources>
