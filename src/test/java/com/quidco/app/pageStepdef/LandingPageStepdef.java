@@ -1,12 +1,8 @@
 package com.quidco.app.pageStepdef;
 
 import com.quidco.app.utility.JavaUtils;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-
-import java.util.Random;
-import java.util.UUID;
 
 /**
  * Created by ashishmohindroo on 11/8/16.
@@ -16,7 +12,14 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @Given("^I am on the landing page$")
     public void i_am_on_the_landing_page() {
-        landingPage.navigateToHomePage();
+        landingPage.navigateToLandingPage();
+    }
+
+    @Given("^I am on the home page$")
+    public void i_am_on_the_home_page() {
+        landingPage.navigateToLandingPage();
+        landingPage.clickSignInOnNavigationBar();
+
     }
 
     @When("^I click on the signin link$")
