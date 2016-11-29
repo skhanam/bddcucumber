@@ -106,6 +106,7 @@
                    <rootStandaloneServerDirectory>src/resources/binaries</rootStandaloneServerDirectory>
                    <!-- Where you want to store downloaded zip files -->
                    <downloadedZipFileDirectory>src/resources/zips</downloadedZipFileDirectory>
+                   <checkFileHashes>false</checkFileHashes>
                </configuration>
                <executions>
                    <execution>
