@@ -12,7 +12,6 @@ public abstract  class SeleniumUtils {
     public static WebDriver driver = null;
     public static JavascriptExecutor executor ;
     public WebElement waitForElementDisplay(final WebElement element) {
-
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -23,8 +22,8 @@ public abstract  class SeleniumUtils {
         } catch (NoSuchElementException e) {
             return false;
         } catch (TimeoutException e) {
+            return false;
         }
-        return false;
     }
 
     public void check_checkbox_by_js(String css_selector){
@@ -33,9 +32,13 @@ public abstract  class SeleniumUtils {
     public void uncheck_checkbox_by_js(String css_selector){
         executor.executeScript("$(arguments[0]).get(0).checked = false;",css_selector);
     }
-    public void setCookieforVpn(){
-        Cookie ck = new Cookie("betatester","betatastic","staging4.quidco.com","/",null);
-        driver.manage().addCookie(ck);
+    public void scrollElementIntoView(WebElement element){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -8,12 +8,20 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class NotificationsPage extends BasePage {
 
-    NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver,NotificationsPageObject.class);
+    private static NotificationsPage notificationsPage = new NotificationsPage();
+
+    private NotificationsPage(){}
+
+    public static NotificationsPage getInstance(){
+        return notificationsPage;
+    }
+
+    protected NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver,NotificationsPageObject.class);
 
     public LogoutPage clickSignOutLink(){
         waitForElementDisplay(notificationsPageObject.signOutLink);
         notificationsPageObject.signOutLink.click();
-        return PageFactory.initElements(driver,LogoutPage.class);
+        return LogoutPage.getInstance();
     }
 
 }
