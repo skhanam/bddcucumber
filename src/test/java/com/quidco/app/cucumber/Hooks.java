@@ -17,13 +17,13 @@ public class Hooks extends BasePage {
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        driver.get(QuidcoAppUrl+"/access_beta.php");
+        driver.get(QuidcoAppUrl + "/access_beta.php");
 
     }
 
     public void embedScreenshot(Scenario scenario) {
         try {
-            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         } catch (WebDriverException somePlatformsDontSupportScreenshots) {
             System.err.println(somePlatformsDontSupportScreenshots.getMessage());

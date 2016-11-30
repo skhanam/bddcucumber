@@ -37,4 +37,5 @@ public class SignupPage extends BasePage {
         signupPageObject.join_btn.click();
         return OnboardingPage.getInstance();
     }
+
 }

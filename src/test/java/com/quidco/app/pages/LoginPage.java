@@ -3,6 +3,7 @@ package com.quidco.app.pages;
 import com.quidco.app.pageObjects.LoginPageObjects;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -44,4 +45,10 @@ public class LoginPage extends BasePage{
         loginPageObjects.joinNowBtn.click();
         return SignupPage.getInstance();
     }
+    public FacebookLoginPage clickSignInWithFacebook(){
+        WebElement facebookBtn = waitForElementDisplay(loginPageObjects.signInWithFacebookBtns.get(0));
+        facebookBtn.click();
+        return FacebookLoginPage.getInstance();
+    }
+
 }
