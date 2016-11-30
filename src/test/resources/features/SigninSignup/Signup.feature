@@ -1,5 +1,5 @@
 @signup
-Feature: This feature is about that I am able to Signup as a new user.
+Feature: Signup
 
   Background: User goes to the sign in page.
     Given I am on the landing page

@@ -1,7 +1,6 @@
 package com.quidco.app.pages;
 
-import com.quidco.app.pageObjects.HomePageObjects;
-import org.junit.Assert;
+import com.quidco.app.pageObjects.HomePageObject;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,14 +9,22 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class HomePage extends BasePage {
 
-    public static HomePageObjects homePageObjects = PageFactory.initElements(driver,HomePageObjects.class);
+    private static HomePage homePage = new HomePage();
+
+    private HomePage(){}
+
+    public static HomePage getInstance(){
+        return homePage;
+    }
+    protected static HomePageObject homePageObject = PageFactory.initElements(driver,HomePageObject.class);
+
     public NotificationsPage clickAvatar(){
-        homePageObjects.avatarIcon.click();
-        return PageFactory.initElements(driver,NotificationsPage.class);
+        homePageObject.avatarIcon.click();
+        return NotificationsPage.getInstance();
     }
     public boolean isAvatarVisible(){
         try {
-            homePageObjects.avatarIcon.isDisplayed();
+            homePageObject.avatarIcon.isDisplayed();
             return true;
         }catch(NoSuchElementException nosuchElementException){
             return false;

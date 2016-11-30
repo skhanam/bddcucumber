@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by ashishmohindroo on 11/10/16.
  */
-public class HomePageObjects {
+public class HomePageObject {
 
     @FindBy(css = ".user")
     public static WebElement avatarIcon;
