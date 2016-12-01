@@ -40,6 +40,11 @@ public class LoginPage extends BasePage{
         Assert.assertEquals(loginPageObjects.alertMessage.getText().trim(),"Invalid username or password.");
 
     }
+    public void checkWrongCredentialsMessageForFacebook(){
+        waitForElementDisplay(loginPageObjects.alertMessageForFacebook);
+        Assert.assertEquals(loginPageObjects.alertMessageForFacebook.getText().trim(),"Log in as Quidco Tester");
+    }
+
     public SignupPage clickJoinIn(){
         waitForElementDisplay(loginPageObjects.joinNowBtn);
         loginPageObjects.joinNowBtn.click();

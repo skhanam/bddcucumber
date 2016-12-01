@@ -28,6 +28,10 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_enter_facebook_valid_credentials() {
         facebookLoginPage.enterUsernameAndPassword(landingPage.getUsername(), landingPage.getPassword());
     }
+    @When("^I enter facebook invalid credentials as \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void i_enter_facebook_invalid_credentials(String uname,String pwd) {
+        facebookLoginPage.enterUsernameAndPassword(uname,pwd);
+    }
 
     @When("^I enter invalid credentials as \"([^\"]*)\" and \"([^\"]*)\"$")
     public void i_enter_valid_credentials(String uname, String pwd) {

@@ -17,3 +17,14 @@ Feature: User with invalid credentials cannot login
     |quidco.tester@gmail.com|wrongpassword|
     |wrongemail@email.com|quidcotester@01|
 
+  Scenario Outline: user with invalid facebook credentials cannot login
+
+    Given I am an existing facebook user
+    And I click sign in with facebook
+    When I enter facebook invalid credentials as "<username>" and "<password>"
+    And I click login for facebook
+    And I see wrong credentials message for facebook
+
+    Examples:
+      |username|password|
+      |quidco.tester@gmail.com|wrongpassword|

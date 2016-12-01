@@ -23,8 +23,11 @@ public class LoginPageObjects {
     public static List<WebElement> signInWithFacebookBtns;
     @FindBy(css = ".panel .alert-text")
     public static WebElement alertMessage;
+    @FindBy(xpath = "//span[.='Log in as Quidco Tester']")
+    public static WebElement alertMessageForFacebook;
     @FindBy(css = ".panel div.pull-right>a")
     public static WebElement joinNowBtn;
+
 
 
 }
