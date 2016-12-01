@@ -16,7 +16,7 @@ public class HomePage extends BasePage {
     public static HomePage getInstance(){
         return homePage;
     }
-    protected static HomePageObject homePageObject = PageFactory.initElements(driver,HomePageObject.class);
+    public  static HomePageObject homePageObject = PageFactory.initElements(driver,HomePageObject.class);
 
     public NotificationsPage clickAvatar(){
         homePageObject.avatarIcon.click();

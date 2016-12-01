@@ -23,8 +23,9 @@ public class FacebookLoginPage extends BasePage {
         facebookLoginPageObject.passwordInput.sendKeys(password);
         return this;
     }
-    public void clickLogin(){
+    public HomePage clickLogin(){
         facebookLoginPageObject.loginBtn.click();
+        return HomePage.getInstance();
     }
 
 

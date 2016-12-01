@@ -1,6 +1,7 @@
 package com.quidco.app.pageStepdef;
 
 import com.quidco.app.pageObjects.HomePageObject;
+import com.quidco.app.pages.HomePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
@@ -25,7 +26,7 @@ public class HomePageStepdef extends BaseStepdef{
 
     @And("^I am logged in$")
     public void i_am_logged_in(){
-        homePage.waitForElementDisplay(HomePageObject.avatarIcon);
+        waitForElementDisplay(homePage.homePageObject.avatarIcon);
         Assert.assertTrue(homePage.isAvatarVisible());
     }
     @And("^I see wrong credentials message$")

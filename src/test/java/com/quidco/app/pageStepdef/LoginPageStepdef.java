@@ -27,7 +27,6 @@ public class LoginPageStepdef extends BaseStepdef {
     @When("^I enter facebook valid credentials$")
     public void i_enter_facebook_valid_credentials() {
         facebookLoginPage.enterUsernameAndPassword(landingPage.getUsername(), landingPage.getPassword());
-        facebookLoginPage.clickLogin();
     }
 
     @When("^I enter invalid credentials as \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -35,6 +34,11 @@ public class LoginPageStepdef extends BaseStepdef {
         i_enter_my_credentials(uname, pwd);
     }
 
+
+    @And("^I click login for facebook$")
+    public void i_click_login_for_facebook() {
+        homePage = facebookLoginPage.clickLogin();
+    }
 
     @And("^I click join now$")
     public void i_click_join_in() {
@@ -45,8 +49,4 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_click_sign_in_with_facebook() {
         facebookLoginPage = loginPage.clickSignInWithFacebook();
     }
-
-
-
-
 }

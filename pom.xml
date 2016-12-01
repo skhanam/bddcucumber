@@ -110,6 +110,7 @@
                    <onlyGetDriversForHostOperatingSystem>true</onlyGetDriversForHostOperatingSystem>
                    <operatingSystems>
                        <osx>true</osx>
+                       <linux>true</linux>
                    </operatingSystems>
                </configuration>
                <executions>

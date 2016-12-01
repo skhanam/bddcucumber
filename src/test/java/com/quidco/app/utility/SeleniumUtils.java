@@ -15,7 +15,7 @@ public abstract  class SeleniumUtils {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public boolean isElementVisible(WebElement element) {
+    public boolean isElementVisible(final WebElement element) {
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return true;
@@ -26,10 +26,10 @@ public abstract  class SeleniumUtils {
         }
     }
 
-    public void check_checkbox_by_js(String css_selector){
+    public void check_checkbox_by_js(final String css_selector){
         executor.executeScript("$(arguments[0]).get(0).checked = true;",css_selector);
     }
-    public void uncheck_checkbox_by_js(String css_selector){
+    public void uncheck_checkbox_by_js(final String css_selector){
         executor.executeScript("$(arguments[0]).get(0).checked = false;",css_selector);
     }
     public void scrollElementIntoView(WebElement element){

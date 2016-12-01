@@ -1,11 +1,12 @@
 package com.quidco.app.pageStepdef;
 
 import com.quidco.app.pages.*;
+import com.quidco.app.utility.SeleniumUtils;
 
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
-public class BaseStepdef {
+public class BaseStepdef extends SeleniumUtils{
 
     public static LandingPage landingPage = LandingPage.getInstance();
     public  static HomePage homePage;

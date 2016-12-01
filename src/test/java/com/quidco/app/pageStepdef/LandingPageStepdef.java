@@ -56,7 +56,7 @@ public class LandingPageStepdef extends BaseStepdef {
     }
     @Given("^I am an existing facebook user$")
     public void i_am_an_existing_facebook_user() {
-        landingPage.setUsername("quidco.tester+fb@gmail.com");
+        landingPage.setUsername("quidco.tester@gmail.com");
         landingPage.setPassword("quidcotester@01");
     }
 
