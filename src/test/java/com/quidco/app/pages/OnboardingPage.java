@@ -21,6 +21,7 @@ public class OnboardingPage extends BasePage {
 
     public OnboardingPage click_get_started() {
         waitForElementDisplay(onBoardingPageObject.getStarted);
+        scrollElementIntoView(onBoardingPageObject.getStarted);
         onBoardingPageObject.getStarted.click();
         return this;
     }

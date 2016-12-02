@@ -53,6 +53,7 @@ public abstract class BasePage extends SeleniumUtils{
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
                 driver = new ChromeDriver(dc);
                 driver.manage().window().maximize();
+                System.out.println(driver.manage().window().getSize());
             }
         }
         wait = new WebDriverWait(driver, 10);
