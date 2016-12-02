@@ -40,5 +40,13 @@ public abstract  class SeleniumUtils {
             e.printStackTrace();
         }
     }
+    public void scrollElementIntoViewatBottom(WebElement element){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(false);",element);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

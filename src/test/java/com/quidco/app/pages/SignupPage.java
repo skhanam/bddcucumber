@@ -34,6 +34,7 @@ public class SignupPage extends BasePage {
 
 
     public OnboardingPage click_join_in(){
+        scrollElementIntoViewatBottom(signupPageObject.join_btn);
         signupPageObject.join_btn.click();
         return OnboardingPage.getInstance();
     }
