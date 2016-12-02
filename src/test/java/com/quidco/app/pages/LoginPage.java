@@ -28,6 +28,7 @@ public class LoginPage extends BasePage{
         return this;
     }
     public HomePage clickSignInBtn(){
+        waitForElementDisplay(loginPageObjects.signInBtn);
         loginPageObjects.signInBtn.click();
         if(isElementVisible(loginPageObjects.continueBtn)){
             loginPageObjects.continueBtn.click();
@@ -51,7 +52,7 @@ public class LoginPage extends BasePage{
         return SignupPage.getInstance();
     }
     public FacebookLoginPage clickSignInWithFacebook(){
-        WebElement facebookBtn = waitForElementDisplay(loginPageObjects.signInWithFacebookBtns.get(0));
+        WebElement facebookBtn = waitForElementDisplay(loginPageObjects.signInWithFacebookBtn);
         facebookBtn.click();
         return FacebookLoginPage.getInstance();
     }
