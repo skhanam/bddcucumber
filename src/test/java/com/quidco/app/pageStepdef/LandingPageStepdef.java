@@ -28,16 +28,26 @@ public class LandingPageStepdef extends BaseStepdef {
         loginPage = landingPage.clickSignInOnNavigationBar();
     }
 
-    @Given("^I am an existing normal user$")
-    public void i_am_an_existing_normal_user() {
-        landingPage.setUsername("quidco.tester@gmail.com");
-        landingPage.setPassword("quidcotester@3");
-    }
-
-    @Given("^I am an existing premium user$")
-    public void i_am_an_existing_premium_user() {
-        landingPage.setUsername("quidco.tester+premium@gmail.com");
-        landingPage.setPassword("quidcotester@01");
+    @Given("^I am an existing ([^\"]*) user$")
+    public void i_am_an_existing_user(String userType) {
+        switch (userType) {
+            case "normal":
+                landingPage.setUsername("quidco.tester@gmail.com");
+                landingPage.setPassword("quidcotester@3");
+                break;
+            case "premium":
+                landingPage.setUsername("quidco.tester+premium@gmail.com");
+                landingPage.setPassword("quidcotester@01");
+                break;
+            case "facebook":
+                landingPage.setUsername("quidco.tester@gmail.com");
+                landingPage.setPassword("quidcotester@01");
+                break;
+            case "paypal":
+                landingPage.setUsername("adsfsd@adfasf.com");
+                landingPage.setPassword("lkjjlkl");
+                break;
+        }
     }
 
     @Given("^I am a new normal user$")
@@ -54,12 +64,6 @@ public class LandingPageStepdef extends BaseStepdef {
         landingPage.setPassword("quidcotester@01");
         landingPage.setUserSubscription("premium");
     }
-    @Given("^I am an existing facebook user$")
-    public void i_am_an_existing_facebook_user() {
-        landingPage.setUsername("quidco.tester@gmail.com");
-        landingPage.setPassword("quidcotester@01");
-    }
-
 
 
 }

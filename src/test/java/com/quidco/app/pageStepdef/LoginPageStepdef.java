@@ -28,6 +28,10 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_enter_facebook_valid_credentials() {
         facebookLoginPage.enterUsernameAndPassword(landingPage.getUsername(), landingPage.getPassword());
     }
+    @When("^I enter paypal valid credentials$")
+    public void i_enter_paypal_valid_credentials() {
+        paypalLoginPage.enterUsernameAndPassword(landingPage.getUsername(), landingPage.getPassword());
+    }
     @When("^I enter facebook invalid credentials as \"([^\"]*)\" and \"([^\"]*)\"$")
     public void i_enter_facebook_invalid_credentials(String uname,String pwd) {
         facebookLoginPage.enterUsernameAndPassword(uname,pwd);
@@ -43,6 +47,10 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_click_login_for_facebook() {
         homePage = facebookLoginPage.clickLogin();
     }
+    @And("^I click login for paypal")
+    public void i_click_login_for_paypal() {
+        homePage = paypalLoginPage.clickLogin();
+    }
 
     @And("^I click join now$")
     public void i_click_join_in() {
@@ -52,5 +60,9 @@ public class LoginPageStepdef extends BaseStepdef {
     @And("^I click sign in with facebook$")
     public void i_click_sign_in_with_facebook() {
         facebookLoginPage = loginPage.clickSignInWithFacebook();
+    }
+    @And("^I click sign in with paypal$")
+    public void i_click_sign_in_with_paypal() {
+        paypalLoginPage = loginPage.clickSignInWithPayPal();
     }
 }

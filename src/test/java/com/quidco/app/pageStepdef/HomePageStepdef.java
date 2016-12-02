@@ -1,12 +1,8 @@
 package com.quidco.app.pageStepdef;
 
-import com.quidco.app.pageObjects.HomePageObject;
-import com.quidco.app.pages.HomePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thadeus on 11/04/16.
