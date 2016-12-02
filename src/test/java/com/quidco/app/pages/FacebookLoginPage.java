@@ -1,8 +1,6 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.FacebookLoginPageObject;
-import com.quidco.app.pageObjects.HomePageObject;
-import com.quidco.app.pageObjects.SignupPageObject;
 import org.openqa.selenium.support.PageFactory;
 
 /**

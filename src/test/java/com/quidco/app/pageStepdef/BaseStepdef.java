@@ -12,6 +12,7 @@ public class BaseStepdef extends SeleniumUtils{
     public  static HomePage homePage;
     public static LoginPage loginPage;
     public static FacebookLoginPage facebookLoginPage;
+    public static PaypalLoginPage paypalLoginPage;
     public static NotificationsPage notificationsPage;
     public static LogoutPage logoutPage;
     public static SignupPage signupPage;

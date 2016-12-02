@@ -4,6 +4,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Iterator;
+import java.util.Set;
+
 /**
  * Created by ashishmohindroo on 11/10/16.
  */
@@ -39,6 +42,22 @@ public abstract  class SeleniumUtils {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+    public String switchToPopWindow(){
+        String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+        String subWindowHandler = null;
+
+        Set<String> handles = driver.getWindowHandles(); // get all window handles
+        Iterator<String> iterator = handles.iterator();
+        while (iterator.hasNext()){
+            subWindowHandler = iterator.next();
+        }
+        driver.switchTo().window(subWindowHandler);
+        return parentWindowHandler;
+    }
+
+    public void switchBackToParentWindow(String subWindowHandler){
+        driver.switchTo().window(subWindowHandler);
     }
 
 }

@@ -55,5 +55,10 @@ public class LoginPage extends BasePage{
         facebookBtn.click();
         return FacebookLoginPage.getInstance();
     }
+    public PaypalLoginPage clickSignInWithPayPal(){
+        WebElement paypalBtn = waitForElementDisplay(loginPageObjects.signInWithPaypalBtns.get(0));
+        paypalBtn.click();
+        return PaypalLoginPage.getInstance();
+    }
 
 }
