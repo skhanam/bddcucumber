@@ -19,6 +19,7 @@ public class FacebookLoginPage extends BasePage {
     protected FacebookLoginPageObject facebookLoginPageObject = PageFactory.initElements(driver,FacebookLoginPageObject.class);
 
     public FacebookLoginPage enterUsernameAndPassword(String username,String password){
+        waitForElementDisplay(facebookLoginPageObject.emailInput);
         facebookLoginPageObject.emailInput.sendKeys(username);
         facebookLoginPageObject.passwordInput.sendKeys(password);
         return this;
