@@ -27,6 +27,4 @@ public class LoginPageObjects {
     @FindBy(css = ".panel div.pull-right>a")
     public static WebElement joinNowBtn;
 
-
-
 }

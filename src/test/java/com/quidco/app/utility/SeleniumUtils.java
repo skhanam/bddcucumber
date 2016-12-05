@@ -43,13 +43,14 @@ public abstract  class SeleniumUtils {
             e.printStackTrace();
         }
     }
-    public void scrollElementIntoViewatBottom(WebElement element){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(false);",element);
+    public void scrollElementIntoViewatBottom(WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", element);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
     public String switchToPopWindow(){
         String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
         String subWindowHandler = null;
