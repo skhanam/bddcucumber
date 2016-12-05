@@ -61,8 +61,4 @@ public class LoginPageStepdef extends BaseStepdef {
     public void i_click_sign_in_with_facebook() {
         facebookLoginPage = loginPage.clickSignInWithFacebook();
     }
-    @And("^I click sign in with paypal$")
-    public void i_click_sign_in_with_paypal() {
-        paypalLoginPage = loginPage.clickSignInWithPayPal();
-    }
 }
