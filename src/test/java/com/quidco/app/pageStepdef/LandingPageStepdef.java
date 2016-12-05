@@ -18,7 +18,7 @@ public class LandingPageStepdef extends BaseStepdef {
     @Given("^I am on the home page$")
     public void i_am_on_the_home_page() {
         landingPage.navigateToLandingPage();
-        landingPage.clickSignInOnNavigationBar();
+        loginPage = landingPage.clickSignInOnNavigationBar();
 
     }
 
@@ -63,6 +63,12 @@ public class LandingPageStepdef extends BaseStepdef {
         landingPage.setUsername(JavaUtils.getTestEmail());
         landingPage.setPassword("quidcotester@01");
         landingPage.setUserSubscription("premium");
+    }
+
+    @Given("^I am logged in ([^\"]*) user$")
+    public void i_am_logged_in_user(String userType) {
+        i_am_an_existing_user(userType);
+        landingPage.IamloggedinUser();
     }
 
 
