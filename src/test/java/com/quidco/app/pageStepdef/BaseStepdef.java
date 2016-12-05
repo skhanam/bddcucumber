@@ -6,10 +6,10 @@ import com.quidco.app.utility.SeleniumUtils;
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
-public class BaseStepdef extends SeleniumUtils{
+public class BaseStepdef extends SeleniumUtils {
 
     public static LandingPage landingPage = LandingPage.getInstance();
-    public  static HomePage homePage;
+    public static HomePage homePage;
     public static LoginPage loginPage;
     public static FacebookLoginPage facebookLoginPage;
     public static PaypalLoginPage paypalLoginPage;

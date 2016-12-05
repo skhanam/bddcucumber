@@ -1,8 +1,12 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.HomePageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -29,6 +33,21 @@ public class HomePage extends BasePage {
         }catch(NoSuchElementException nosuchElementException){
             return false;
         }
+    }
+    public void moveToAvatarIcon(){
+        Actions builder  = new Actions(driver);
+        builder.moveToElement(homePageObject.avatarIcon).build().perform();
+    }
+    public void verifyDropDownOptions(List<String> options){
+        for(String option:options){
+            waitForElementDisplay(driver.findElement(
+                    By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
+                            "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
+                            "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
+        }
+
+
+
     }
 
 }

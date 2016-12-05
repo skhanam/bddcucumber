@@ -2,7 +2,10 @@ package com.quidco.app.pageStepdef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
+
+import java.util.List;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -36,5 +39,15 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_see_wrong_credentials_message_for_facebook() {
         loginPage.checkWrongCredentialsMessageForFacebook();
     }
+
+    @When("^I am on avatar$")
+    public void i_am_on_avatar() {
+        homePage.moveToAvatarIcon();
+    }
+
+    @Then("^I should see drop down with options:$")
+    public void i_should_see_drop_down_with_options(List<String> options){
+        homePage.verifyDropDownOptions(options);
+   }
 
 }
