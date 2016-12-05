@@ -1,4 +1,4 @@
-@user-experience
+#@user-experience
 Feature: Logged in user experience
   As a logged in user, I should see different dropdown options.
   Scenario: As a logged in user , I should see dropdown options under avatar.

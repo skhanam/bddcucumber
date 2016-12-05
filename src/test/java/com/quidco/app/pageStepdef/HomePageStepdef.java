@@ -49,5 +49,10 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_should_see_drop_down_with_options(List<String> options){
         homePage.verifyDropDownOptions(options);
    }
+   @And("^I click ([^\"]*) dropdown option$")
+    public void i_click_dropdown_option(String option){
+        i_am_on_avatar();
+       homePage.click_dropdown_option(option);
+   }
 
 }

@@ -45,9 +45,20 @@ public class HomePage extends BasePage {
                             "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
                             "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
         }
-
-
-
+    }
+    public void click_dropdown_option(String option){
+        waitForElementDisplay(driver.findElement(
+                By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
+                        "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
+                        "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
+        driver.findElement(By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
+                "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
+                "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")).click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
