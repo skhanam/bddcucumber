@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.NotificationsPageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -22,6 +23,10 @@ public class NotificationsPage extends BasePage {
         waitForElementDisplay(notificationsPageObject.signOutLink);
         notificationsPageObject.signOutLink.click();
         return LogoutPage.getInstance();
+    }
+
+    public void clickTab(String tabName){
+        driver.findElement(By.xpath("//div[@class=\"horizontal-tabs\"]/ul/li/a[text()=\""+tabName+"\"]")).click();
     }
 
 }

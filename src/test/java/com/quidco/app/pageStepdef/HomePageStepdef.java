@@ -52,7 +52,7 @@ public class HomePageStepdef extends BaseStepdef {
    @And("^I click ([^\"]*) dropdown option$")
     public void i_click_dropdown_option(String option){
         i_am_on_avatar();
-       homePage.click_dropdown_option(option);
+       notificationsPage = homePage.click_dropdown_option(option);
    }
 
 }

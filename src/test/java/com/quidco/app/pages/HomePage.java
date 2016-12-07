@@ -46,7 +46,7 @@ public class HomePage extends BasePage {
                             "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
         }
     }
-    public void click_dropdown_option(String option){
+    public NotificationsPage click_dropdown_option(String option){
         waitForElementDisplay(driver.findElement(
                 By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
                         "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
@@ -59,6 +59,8 @@ public class HomePage extends BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        return NotificationsPage.getInstance();
     }
 
 }
