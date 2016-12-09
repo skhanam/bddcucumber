@@ -25,7 +25,7 @@ public class LoggedInExperienceRunner extends BasePage {
     @BeforeClass
     public static void setUp() throws IOException {
         logger.log(Level.INFO, "Starting Browser");
-        driver = getDriverInstance("chrome");
+        driver = getDriverInstance();
         driver.manage().window().maximize();
     }
 

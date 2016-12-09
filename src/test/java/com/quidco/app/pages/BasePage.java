@@ -17,44 +17,60 @@ import java.util.logging.Logger;
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
-public abstract class BasePage extends SeleniumUtils{
+public abstract class BasePage extends SeleniumUtils {
 
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String os = System.getProperty("os.name");
     public static String QuidcoAppUrl;
-    protected static String username ;
-    private static String password = "quidcotester@01";
+    public static String browserType;
 
+    protected static String username;
+    private static String password = "quidcotester@01";
 
 
     public static String user_subscription;
 
 
-    public BasePage(){
+    public BasePage() {
         QuidcoAppUrl = properties.getProperty("URL");
     }
 
-    public static WebDriver getDriverInstance(String browsertype) throws IOException {
-        if (browsertype.equalsIgnoreCase("firefox") || browsertype.equalsIgnoreCase("Firefox")) {
-            DesiredCapabilities dc = new DesiredCapabilities();
-            driver = new FirefoxDriver(dc);
-        } else {
-            if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("MAC OS X")) {
-                DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeMacdriver);
+    public static WebDriver getDriverInstance() throws IOException {
+        browserType = properties.getProperty("BROWSER");
+        DesiredCapabilities dc = null;
+        switch (browserType) {
+            case "Firefox":
+            case "firefox":
+                dc = DesiredCapabilities.firefox();
+                switch (os) {
+                    case "Mac OS X":
+                        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + Constants.firefoxMacdriver);
+                        break;
+                    case "LINUX":
+                        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + Constants.firefoxLinuxdriver);
+                        break;
+                    case "WINDOWS":
+                        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + Constants.firefoxWindowsdriver);
+                        break;
+                }
+                driver = new FirefoxDriver(dc);
+                break;
+            case "Chrome":
+            case "chrome":
+                dc = DesiredCapabilities.chrome();
+                switch (os){
+                    case "Mac OS X":
+                        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeMacdriver);
+                        break;
+                    case "LINUX":
+                        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeLinuxdriver);
+                        break;
+                    case "WINDOWS":
+                        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
+                        break;
+                }
                 driver = new ChromeDriver(dc);
-            } else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("LINUX")) {
-                DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeLinuxdriver);
-                driver = new ChromeDriver(dc);
-            } else if (browsertype.equalsIgnoreCase("chrome") && os.equalsIgnoreCase("WINDOWS")) {
-                DesiredCapabilities dc = DesiredCapabilities.chrome();
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
-                driver = new ChromeDriver(dc);
-                driver.manage().window().maximize();
-                System.out.println(driver.manage().window().getSize());
-            }
         }
         wait = new WebDriverWait(driver, 10);
         executor = (JavascriptExecutor) driver;

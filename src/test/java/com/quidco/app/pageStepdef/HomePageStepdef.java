@@ -54,5 +54,14 @@ public class HomePageStepdef extends BaseStepdef {
         i_am_on_avatar();
        notificationsPage = homePage.click_dropdown_option(option);
    }
+    @When("^I search for \"([^\"]*)\"$")
+    public void i_search_for(String arg1) {
+
+    }
+
+    @Then("^I should see list of retailers and similar retailers$")
+    public void i_should_see_list_of_retailers_and_similar_retailers() {
+
+    }
 
 }

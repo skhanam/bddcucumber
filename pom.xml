@@ -19,6 +19,7 @@
         <!-- Database dependency version -->
         <!--configurable variables-->
         <env>https://staging18.quidco.com</env>
+        <browser>chrome</browser>
 
     </properties>
     <dependencies>
@@ -97,27 +98,6 @@
                </configuration>
                <version>2.3.2</version>
            </plugin>
-           <!--<plugin>-->
-               <!--<groupId>com.lazerycode.selenium</groupId>-->
-               <!--<artifactId>driver-binary-downloader-maven-plugin</artifactId>-->
-               <!--<version>1.0.11</version>-->
-               <!--<configuration>-->
-                   <!--&lt;!&ndash; root directory that downloaded driver binaries will be stored in &ndash;&gt;-->
-                   <!--<rootStandaloneServerDirectory>src/resources/binaries</rootStandaloneServerDirectory>-->
-                   <!--&lt;!&ndash; Where you want to store downloaded zip files &ndash;&gt;-->
-                   <!--<downloadedZipFileDirectory>src/resources/zips</downloadedZipFileDirectory>-->
-                   <!--<checkFileHashes>false</checkFileHashes>-->
-                   <!--<onlyGetDriversForHostOperatingSystem>true</onlyGetDriversForHostOperatingSystem>-->
-                   <!--<overwriteFilesThatExist>true</overwriteFilesThatExist>-->
-               <!--</configuration>-->
-               <!--<executions>-->
-                   <!--<execution>-->
-                       <!--<goals>-->
-                           <!--<goal>selenium</goal>-->
-                       <!--</goals>-->
-                   <!--</execution>-->
-               <!--</executions>-->
-           <!--</plugin>-->
        </plugins>
        <pluginManagement>
            <plugins>
