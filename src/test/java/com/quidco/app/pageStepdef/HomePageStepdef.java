@@ -64,4 +64,10 @@ public class HomePageStepdef extends BaseStepdef {
 
     }
 
+    @Then("I should see tabs: ([^\"]*)")
+    public void i_should_see_tabs(List<String> tabOptions)
+    {
+        quidcoComparePage.AreTabsDisplayed(tabOptions);
+    }
+
 }

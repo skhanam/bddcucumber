@@ -1,6 +1,7 @@
 package com.quidco.app.pageStepdef;
 
 import com.quidco.app.utility.JavaUtils;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
@@ -71,6 +72,11 @@ public class LandingPageStepdef extends BaseStepdef {
         landingPage.IamloggedinUser();
     }
 
+    @And("I click quidco compare")
+    public void i_click_quidco_compare(){
+
+        quidcoComparePage = landingPage.clickQuidcoCompare();
+    }
 
 }
 
