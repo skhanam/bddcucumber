@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -74,6 +75,7 @@ public abstract class BasePage extends SeleniumUtils {
         }
         wait = new WebDriverWait(driver, 10);
         executor = (JavascriptExecutor) driver;
+        actions = new Actions(driver);
         return driver;
     }
 

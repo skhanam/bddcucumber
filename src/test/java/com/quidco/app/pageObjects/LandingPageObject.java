@@ -14,4 +14,11 @@ public class LandingPageObject {
 
     @FindBy(css = ".signed-out")
     public static List<WebElement> frontPageSignInLinks;
+    @FindBy(xpath = "//ul[contains(@class,\"header-additional-links\")]//a[text()=\"Ways to Earn\"]/..")
+    public static WebElement waysToEarn_dropdown;
+
+    @FindBy(xpath = "//ul[contains(@class,\"header-additional-links\")]//a[text()=\"Ways to Earn\"]/..//li[@class=\"ways-to-earn__item ways-to-earn__item--compare\"]")
+    public static WebElement quidcoCompareLink;
+
+
 }
