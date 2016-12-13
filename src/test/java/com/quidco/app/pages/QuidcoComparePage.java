@@ -5,9 +5,7 @@ package com.quidco.app.pages;
  * Created by ashishmohindroo on 12/12/16.
  */
 
-import com.quidco.app.pageObjects.QuidcoComparePageObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -17,9 +15,6 @@ import java.util.List;
 public class QuidcoComparePage extends BasePage {
 
     private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
-
-    public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
-
 
     private QuidcoComparePage() {
     }
