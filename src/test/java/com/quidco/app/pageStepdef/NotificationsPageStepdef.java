@@ -14,26 +14,18 @@ import java.util.List;
 public class NotificationsPageStepdef extends BaseStepdef {
     @Then("^I should see title on Account Summary Tab:$")
     public void i_should_see_title_on_account_summary_tab(List<String> eNames) {
-        for (String name : eNames) {
-            waitForElementDisplay(driver.findElement(By.xpath("//div[@class='account-notifications']" +
-                    "/div[@class='container']//h4[contains(text(),'" + name + "')]")));
-        }
+        notificationsPage.validateTitleOnAccountSummaryPage(eNames);
     }
 
     @Then("^I should see link on Account Summary Tab:$")
     public void i_should_see_link_on_account_summary_tab(List<String> eNames) {
-        for (String name : eNames) {
-            waitForElementDisplay(driver.findElement(By.xpath("//div[@class='notification-annotation']//p/a[contains(text(),'" + name + "')]")));
-        }
+
+        notificationsPage.validateLinksOnAccountSummaryPage(eNames);
     }
 
     @Then("^I should see button on Account Summary Tab:$")
     public void i_should_see_button_on_account_summary_tab(List<String> eNames) {
-        for (String name : eNames) {
-            scrollElementIntoView(driver.findElement(By.xpath("//div[@class='notification-annotation']//a/button[contains(text(),'" + name + "')]")));
-            waitForElementDisplay(driver.findElement(By.xpath(".//*[@id='page-content']/div[3]/div[2]/div/div[1]/p/a/button[contains(text(),'" + name + "')]")));
-
-        }
+        notificationsPage.validateButtonsOnAccountSummaryPage(eNames);
     }
 
     @When("I click on \"([^\"]*)\" tab on account summary page")

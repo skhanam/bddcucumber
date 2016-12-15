@@ -52,10 +52,10 @@ public abstract  class SeleniumUtils {
         }
     }
     public String switchToPopWindow(){
-        String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+        String parentWindowHandler = driver.getWindowHandle();
         String subWindowHandler = null;
 
-        Set<String> handles = driver.getWindowHandles(); // get all window handles
+        Set<String> handles = driver.getWindowHandles();
         Iterator<String> iterator = handles.iterator();
         while (iterator.hasNext()){
             subWindowHandler = iterator.next();

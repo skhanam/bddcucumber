@@ -46,14 +46,16 @@ public class HomePageStepdef extends BaseStepdef {
     }
 
     @Then("^I should see drop down with options:$")
-    public void i_should_see_drop_down_with_options(List<String> options){
+    public void i_should_see_drop_down_with_options(List<String> options) {
         homePage.verifyDropDownOptions(options);
-   }
-   @And("^I click ([^\"]*) dropdown option$")
-    public void i_click_dropdown_option(String option){
+    }
+
+    @And("^I click ([^\"]*) dropdown option$")
+    public void i_click_dropdown_option(String option) {
         i_am_on_avatar();
-       notificationsPage = homePage.click_dropdown_option(option);
-   }
+        notificationsPage = homePage.click_dropdown_option(option);
+    }
+
     @When("^I search for \"([^\"]*)\"$")
     public void i_search_for(String arg1) {
 
