@@ -36,23 +36,8 @@ public class NotificationsPageStepdef extends BaseStepdef {
     @Then("I should see \"([^\"]*)\" on the \"([^\"]*)\"")
     public void i_should_see_title_on_the_appropriate_tab_on_summary_page(String title, String tabName) {
 
-        switch (tabName) {
-            case "Activity":
-                waitForElementDisplay(driver.findElement(By.xpath("//*[@id=\"left_nav\"]/ul/li[1]/a[contains(text(),'" + title + "')]")));
-                break;
-            case "Payments":
-                waitForElementDisplay(driver.findElement(By.xpath("//div[@id='payments_page']//div[contains(@class,'price-header')]/h1[contains(text(),'" + title + "')]")));
-                break;
-            case "Refer Quidco":
-                waitForElementDisplay(driver.findElement(By.xpath("//*[@id=\"page-content\"]/div[5]/div/div[3]/div/h2[contains(text(),'" + title + "')]")));
-                break;
-            case "My reviews":
-                waitForElementDisplay(driver.findElement(By.xpath("//*[@id=\"page-content\"]/div[5]/div/div[1]/div/h1[contains(text(),'" + title + "')]")));
-                break;
-            case "Settings":
-                waitForElementDisplay(driver.findElement(By.xpath("//*[@id=\"page-content\"]/div[4]/div/div[2]/h1[contains(text(),'" + title + "')]")));
-                break;
-        }
+        notificationsPage.validateTitleOnAppropriateTab(title, tabName);
+
     }
 }
 

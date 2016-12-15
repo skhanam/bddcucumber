@@ -13,44 +13,67 @@ public class NotificationsPage extends BasePage {
 
     private static NotificationsPage notificationsPage = new NotificationsPage();
 
-    private NotificationsPage(){}
+    private NotificationsPage() {
+    }
 
-    public static NotificationsPage getInstance(){
+    public static NotificationsPage getInstance() {
         return notificationsPage;
     }
 
-    protected NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver,NotificationsPageObject.class);
+    protected NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver, NotificationsPageObject.class);
 
-    public LogoutPage clickSignOutLink(){
+    public LogoutPage clickSignOutLink() {
         waitForElementDisplay(notificationsPageObject.signOutLink);
         notificationsPageObject.signOutLink.click();
         return LogoutPage.getInstance();
     }
 
-    public void clickTab(String tabName){
-        driver.findElement(By.xpath(String.format(NotificationsPageObject.tabLocator,tabName))).click();
+    public NotificationsPage clickTab(String tabName) {
+        driver.findElement(By.xpath(String.format(NotificationsPageObject.tabLocator, tabName))).click();
+        return this;
     }
 
-    public void validateTitleOnAccountSummaryPage(List<String> eNames){
+    public NotificationsPage validateTitleOnAccountSummaryPage(List<String> eNames) {
 
         for (String name : eNames) {
-            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.titleLocator,name))));
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.titleLocator, name))));
         }
+        return this;
     }
 
-    public void validateLinksOnAccountSummaryPage(List<String> eNames){
+    public NotificationsPage validateLinksOnAccountSummaryPage(List<String> eNames) {
         for (String name : eNames) {
-            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.LinksLocator,name))));
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.LinksLocator, name))));
         }
+        return this;
     }
 
-    public void validateButtonsOnAccountSummaryPage(List<String> eNames){
+    public NotificationsPage validateButtonsOnAccountSummaryPage(List<String> eNames) {
         for (String name : eNames) {
-
-            scrollElementIntoView(driver.findElement(By.xpath(String.format(NotificationsPageObject.buttonLocator,name))));
-            waitForElementDisplay(driver.findElement(By.xpath()));
-
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.buttonLocator, name))));
         }
+        return this;
+    }
+
+    public NotificationsPage validateTitleOnAppropriateTab(String title, String tabName) {
+        switch (tabName) {
+            case "Activity":
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.activityTabTitle,title))));
+                break;
+            case "Payments":
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.paymentsTabTitle,title))));
+                break;
+            case "Refer Quidco":
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.referQuidcoTitle,title))));
+                break;
+            case "My reviews":
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.myreviewsTitle,title))));
+                break;
+            case "Settings":
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.settingsTitle,title))));
+                break;
+        }
+        return this;
     }
 
 }
