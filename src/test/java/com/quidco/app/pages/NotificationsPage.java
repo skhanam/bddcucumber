@@ -4,6 +4,8 @@ import com.quidco.app.pageObjects.NotificationsPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
@@ -26,7 +28,29 @@ public class NotificationsPage extends BasePage {
     }
 
     public void clickTab(String tabName){
-        driver.findElement(By.xpath("//div[@class=\"horizontal-tabs\"]/ul/li/a[text()=\""+tabName+"\"]")).click();
+        driver.findElement(By.xpath(String.format(NotificationsPageObject.tabLocator,tabName))).click();
+    }
+
+    public void validateTitleOnAccountSummaryPage(List<String> eNames){
+
+        for (String name : eNames) {
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.titleLocator,name))));
+        }
+    }
+
+    public void validateLinksOnAccountSummaryPage(List<String> eNames){
+        for (String name : eNames) {
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.LinksLocator,name))));
+        }
+    }
+
+    public void validateButtonsOnAccountSummaryPage(List<String> eNames){
+        for (String name : eNames) {
+
+            scrollElementIntoView(driver.findElement(By.xpath(String.format(NotificationsPageObject.buttonLocator,name))));
+            waitForElementDisplay(driver.findElement(By.xpath()));
+
+        }
     }
 
 }

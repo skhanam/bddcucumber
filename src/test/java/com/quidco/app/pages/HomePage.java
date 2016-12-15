@@ -3,6 +3,7 @@ package com.quidco.app.pages;
 import com.quidco.app.pageObjects.HomePageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -40,20 +41,25 @@ public class HomePage extends BasePage {
     }
     public void verifyDropDownOptions(List<String> options){
         for(String option:options){
-            waitForElementDisplay(driver.findElement(
-                    By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
-                            "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
-                            "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
+            switch(option){
+                case "Account Summary":
+                case "Activity":
+                case "Payments":
+                    waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.userDropdownOptions,option))));
+                    break;
+                case "Refer Quidco":
+                case "My reviews":
+                case "Settings":
+                    waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.userDropdownOptionsWithSingleLine,option))));
+                    break;
+            }
         }
     }
     public NotificationsPage click_dropdown_option(String option){
-        waitForElementDisplay(driver.findElement(
-                By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
-                        "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
-                        "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")));
-        driver.findElement(By.xpath("//li[contains(@class,\"user-activity\")]//ul[contains(@class,\"dropdown-menu\")]//" +
-                "li//a/span[contains(text(),\""+option+"\")] | //li[contains(@class,\"user-activity\")]//" +
-                "ul[contains(@class,\"dropdown-menu\")]//li//a[contains(text(),\""+option+"\")]")).click();
+
+       WebElement el =  waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.userDropdownOptions,option,option))));
+        el.click();
+
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
