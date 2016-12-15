@@ -27,10 +27,9 @@ public class QuidcoComparePage extends BasePage {
     }
 
     public void AreTabsDisplayed(List<String>  options){
-        scrollElementIntoView(driver.findElement(By.xpath("//div[@class=\"proposition__nav\"]//ul[contains(@class,\"nav-tabs\")]//li/a[text()=\""+options.get(0)+"\"]")));
+        scrollElementIntoView(driver.findElement(By.xpath(String.format(QuidcoComparePageObject.quidcoCompareTabs,options.get(0)))));
         for(String option: options){
-            waitForElementDisplay(driver.findElement(By.xpath("//div[@class=\"proposition__nav\"]//ul[contains(@class,\"nav-tabs\")]//li/a[text()=\""+option+"\"]")));
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(QuidcoComparePageObject.quidcoCompareTabs,option))));
         }
     }
-
 }
