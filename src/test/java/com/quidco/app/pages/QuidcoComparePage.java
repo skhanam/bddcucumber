@@ -19,7 +19,6 @@ public class QuidcoComparePage extends BasePage {
     private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
 
     public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
-
     private QuidcoComparePage() {
     }
 
