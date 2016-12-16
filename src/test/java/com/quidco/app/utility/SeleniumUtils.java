@@ -1,6 +1,7 @@
 package com.quidco.app.utility;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,6 +15,10 @@ public abstract  class SeleniumUtils {
     public static WebDriverWait wait;
     public static WebDriver driver = null;
     public static JavascriptExecutor executor ;
+    public static Actions actions ;
+
+
+
     public WebElement waitForElementDisplay(final WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
