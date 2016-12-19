@@ -1,5 +1,6 @@
 package com.quidco.app.pageStepdef;
 
+import com.quidco.app.pages.HomePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -57,18 +58,13 @@ public class HomePageStepdef extends BaseStepdef {
     }
 
     @When("^I search for \"([^\"]*)\"$")
-    public void i_search_for(String arg1) {
-
-    }
-
-    @Then("^I should see list of retailers and similar retailers$")
-    public void i_should_see_list_of_retailers_and_similar_retailers() {
-
+    public void i_search_for(String searchTerm) {
+        searchResultsPage = homePage.searchFor(searchTerm);
+        searchResultsPage.setSearchTerm(searchTerm);
     }
 
     @Then("I should see tabs: ([^\"]*)")
-    public void i_should_see_tabs(List<String> tabOptions)
-    {
+    public void i_should_see_tabs(List<String> tabOptions) {
         quidcoComparePage.AreTabsDisplayed(tabOptions);
     }
 

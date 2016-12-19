@@ -3,6 +3,7 @@ package com.quidco.app.utility;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
@@ -13,6 +14,7 @@ import java.util.Set;
  */
 public abstract  class SeleniumUtils {
     public static WebDriverWait wait;
+    public static Wait flwait ;
     public static WebDriver driver = null;
     public static JavascriptExecutor executor ;
     public static Actions actions ;

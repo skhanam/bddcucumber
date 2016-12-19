@@ -5,7 +5,19 @@ Feature: As a logged in user , i can search different retailers on quidco.com
     Given I am logged in premium user
 
     Scenario: Search Retailers
-      When I search for "Mark & Spencer"
-      Then I should see list of retailers and similar retailers
-      When I search for "Mark & Spencer"
-      Then I should see list of retailers and similar retailers
+      When I search for "Marks & Spencer"
+      Then I should see it as top retailer
+      And I should also see Similar retailers to the retailer
+      And I click close search
+      When I search for "Argos"
+      Then I should see it as top retailer
+      And I should also see Similar retailers to the retailer
+      And I click close search
+      When I search for "Debenhams"
+      Then I should see it as top retailer
+      And I should also see Similar retailers to the retailer
+      And I click close search
+      When I search for "John Lewis"
+      Then I should see it as top retailer
+      And I should also see Similar retailers to the retailer
+      And I click close search

@@ -15,5 +15,13 @@ public class HomePageObject {
             "//li/a/span[contains(text(),'%s')]";
     public static String userDropdownOptionsWithSingleLine = "//li[contains(@class,'user-activity')]//ul[contains(@class,'dropdown-menu')]" +
             "//li/a[contains(text(),'%s')]";
+    @FindBy(id = "store-q1search")
+    public static WebElement searchInput;
+
+    @FindBy(xpath =  "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']")
+    public static WebElement retailersHeadingTitle;
+
+    public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
+
 
 }

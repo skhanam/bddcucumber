@@ -4,7 +4,6 @@ package com.quidco.app.pageStepdef;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 

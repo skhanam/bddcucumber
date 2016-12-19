@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -16,27 +17,32 @@ public class HomePage extends BasePage {
 
     private static HomePage homePage = new HomePage();
 
-    private HomePage(){}
 
-    public static HomePage getInstance(){
+    private HomePage() {
+    }
+
+    public static HomePage getInstance() {
         return homePage;
     }
-    public  static HomePageObject homePageObject = PageFactory.initElements(driver,HomePageObject.class);
 
-    public NotificationsPage clickAvatar(){
+    public static HomePageObject homePageObject = PageFactory.initElements(driver, HomePageObject.class);
+
+    public NotificationsPage clickAvatar() {
         homePageObject.avatarIcon.click();
         return NotificationsPage.getInstance();
     }
-    public boolean isAvatarVisible(){
+
+    public boolean isAvatarVisible() {
         try {
             homePageObject.avatarIcon.isDisplayed();
             return true;
-        }catch(NoSuchElementException nosuchElementException){
+        } catch (NoSuchElementException nosuchElementException) {
             return false;
         }
     }
-    public void moveToAvatarIcon(){
-        Actions builder  = new Actions(driver);
+
+    public void moveToAvatarIcon() {
+        Actions builder = new Actions(driver);
         builder.moveToElement(homePageObject.avatarIcon).build().perform();
     }
     public void verifyDropDownOptions(List<String> options){
@@ -68,6 +74,14 @@ public class HomePage extends BasePage {
 
         return NotificationsPage.getInstance();
     }
+
+    public SearchResultsPage searchFor(String searchTerm) {
+        waitForElementDisplay(HomePageObject.searchInput);
+        HomePageObject.searchInput.clear();
+        HomePageObject.searchInput.sendKeys(searchTerm);
+        return SearchResultsPage.getInstance();
+    }
+
 
 }
 
