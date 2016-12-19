@@ -14,5 +14,4 @@ public class Constants {
     public static final String  firefoxMacdriver="/src/test/resources/OS/Mac/Firefox/geckodriver";
 
 
-
 }
