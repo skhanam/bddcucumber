@@ -20,5 +20,6 @@ public class LandingPageObject {
     @FindBy(xpath = "//ul[contains(@class,\"header-additional-links\")]//a[text()=\"Ways to Earn\"]/..//li[@class=\"ways-to-earn__item ways-to-earn__item--compare\"]")
     public static WebElement quidcoCompareLink;
 
-
+    @FindBy(xpath = "//div[@id='page-content']//div[@class='header-over-image']//button")
+    public static WebElement join_quidco_btn;
 }

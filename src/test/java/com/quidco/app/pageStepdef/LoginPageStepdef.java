@@ -52,7 +52,7 @@ public class LoginPageStepdef extends BaseStepdef {
         homePage = paypalLoginPage.clickLogin();
     }
 
-    @And("^I click join now$")
+    @And("^I click join for free")
     public void i_click_join_in() {
         signupPage = loginPage.clickJoinIn();
     }

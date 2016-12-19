@@ -1,5 +1,6 @@
 package com.quidco.app.pages;
 
+import com.quidco.app.pageObjects.HomePageObject;
 import com.quidco.app.pageObjects.LandingPageObject;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.interactions.Actions;
@@ -48,6 +49,12 @@ public class LandingPage extends BasePage {
         waitForElementDisplay(landingPageObject.quidcoCompareLink);
         landingPageObject.quidcoCompareLink.click();
         return QuidcoComparePage.getInstance();
+    }
+
+    public SignupPage click_join_quidco_now_btn(){
+        waitForElementDisplay(LandingPageObject.join_quidco_btn);
+        LandingPageObject.join_quidco_btn.click();
+        return SignupPage.getInstance();
     }
 }
 
