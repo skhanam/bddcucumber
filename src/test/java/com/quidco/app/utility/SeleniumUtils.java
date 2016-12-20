@@ -1,5 +1,8 @@
 package com.quidco.app.utility;
 
+import com.google.common.base.Function;
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -73,6 +76,26 @@ public abstract  class SeleniumUtils {
 
     public void switchBackToParentWindow(String subWindowHandler){
         driver.switchTo().window(subWindowHandler);
+    }
+
+    public void validateText(WebElement e, String textToAssert){
+        Assert.assertThat(e.getText(), CoreMatchers.containsString(textToAssert));
+    }
+    public void preciseWait(WebElement e){
+        flwait.until(new Function() {
+            @Override
+            public Object apply(Object o) {
+                return e;
+            }
+        });
+
+    }
+    public void sleep(int seconds){
+        try {
+            Thread.sleep(seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
