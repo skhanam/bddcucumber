@@ -18,23 +18,23 @@ public class SearchResultsPage extends BasePage {
 
     private static SearchResultsPage searchResultsPage = new SearchResultsPage();
 
+    public static SearchResultsPageObject searchResultsPageObject = PageFactory.initElements(driver, SearchResultsPageObject.class);
+
+    private String searchTerm = null;
+
+    public static SearchResultsPage getInstance() {
+        return searchResultsPage;
+    }
+
+    private SearchResultsPage() {
+    }
+
     public String getSearchTerm() {
         return searchTerm;
     }
 
     public void setSearchTerm(String searchTerm) {
         this.searchTerm = searchTerm;
-    }
-
-    private String searchTerm = null;
-
-    public static SearchResultsPageObject searchResultsPageObject = PageFactory.initElements(driver, SearchResultsPageObject.class);
-
-    private SearchResultsPage() {
-    }
-
-    public static SearchResultsPage getInstance() {
-        return searchResultsPage;
     }
 
 
@@ -47,6 +47,12 @@ public class SearchResultsPage extends BasePage {
                 return driver.findElement(By.xpath(String.format(HomePageObject.topRetailerTitle, getSearchTerm())));
             }});
         waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.topRetailerTitle, this.getSearchTerm()))));
+        return this;
+    }
+
+    public SearchResultsPage verifyPresenceOfRetailers(){
+        waitForElementDisplay(HomePageObject.multipleRetailersHeadingTitle);
+        Assert.assertTrue(isListNotEmpty(HomePageObject.multiRetailersList));
         return this;
     }
 

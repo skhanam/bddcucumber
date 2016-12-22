@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -24,6 +25,12 @@ public abstract  class SeleniumUtils {
     public WebElement waitForElementDisplay(final WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public boolean isListNotEmpty(final List<WebElement> elments) {
+        if (elments == null)
+                return false;
+        return elments.size()!= 0 ?   true:  false;
+    }
+
 
     public boolean isElementVisible(final WebElement element) {
         try {

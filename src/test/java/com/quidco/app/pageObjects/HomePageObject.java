@@ -3,6 +3,8 @@ package com.quidco.app.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 /**
  * Created by ashishmohindroo on 11/10/16.
  */
@@ -20,6 +22,13 @@ public class HomePageObject {
 
     @FindBy(xpath =  "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']")
     public static WebElement retailersHeadingTitle;
+    @FindBy(xpath =  "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
+    public static WebElement multipleRetailersHeadingTitle;
+
+    @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//li")
+    public static List<WebElement> multiRetailersList;
+
+
 
     public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
 
