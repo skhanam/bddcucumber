@@ -9,6 +9,10 @@ import cucumber.api.java.en.Then;
 public class SearchResultsPageStepdef extends BaseStepdef {
 
 
+    @Then("^I should see retailers for this product$")
+    public void i_should_see_retailers_for_this_product(){
+        searchResultsPage.verifyPresenceOfRetailers();
+    }
     @Then("^I should see it as top retailer$")
     public void i_should_see_it_as_top_retailer() {
         searchResultsPage.validateRetailers();
