@@ -23,4 +23,17 @@ public class QuidcoCompareStepdef extends BaseStepdef {
     public void i_should_see_relevant_content_on_the_page(){
         quidcoComparePage.verify_content_for_tab();
     }
+
+    @Then("^I should see (\\d+) FAQs$")
+    public void i_should_see_FAQs(int numberOfFAQs)  {
+        quidcoComparePage.checkNumberOfFAQs(numberOfFAQs);
+
+    }
+
+    @Then("^I can see relevant information about each FAQ$")
+    public void i_can_see_relevant_information_about_each_FAQ()  {
+        quidcoComparePage.validateFAQContent();
+    }
+
+
 }

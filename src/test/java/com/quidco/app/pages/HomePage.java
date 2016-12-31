@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thadeus on 11/04/16.

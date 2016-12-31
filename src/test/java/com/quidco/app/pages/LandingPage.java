@@ -1,9 +1,6 @@
 package com.quidco.app.pages;
 
-import com.quidco.app.pageObjects.HomePageObject;
 import com.quidco.app.pageObjects.LandingPageObject;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.quidco.app.pageStepdef.BaseStepdef.homePage;

@@ -2,14 +2,10 @@ package com.quidco.app.pages;
 
 import com.google.common.base.Function;
 import com.quidco.app.pageObjects.HomePageObject;
-import com.quidco.app.pageObjects.QuidcoComparePageObject;
 import com.quidco.app.pageObjects.SearchResultsPageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 
 /**
  * Created by ashishmohindroo on 12/16/16.

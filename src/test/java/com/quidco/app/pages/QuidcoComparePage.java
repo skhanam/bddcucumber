@@ -5,14 +5,13 @@ package com.quidco.app.pages;
  * Created by ashishmohindroo on 12/12/16.
  */
 
-import com.google.common.base.Function;
-import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.QuidcoComparePageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -29,6 +28,16 @@ public class QuidcoComparePage extends BasePage {
     }
 
     private String tabName;
+
+    public int getNumberOfFaqs() {
+        return numberOfFaqs;
+    }
+
+    public void setNumberOfFaqs(int numberOfFaqs) {
+        this.numberOfFaqs = numberOfFaqs;
+    }
+
+    private int numberOfFaqs;
 
     private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
 
@@ -68,4 +77,22 @@ public class QuidcoComparePage extends BasePage {
         }
     }
 
+    public void checkNumberOfFAQs(int numberOfFAQs)
+    {
+        setNumberOfFaqs(numberOfFAQs);
+        Assert.assertEquals(new Integer(quidcoCompareObject.faqTitles.size()),new Integer(numberOfFAQs));
+    }
+    public void validateFAQContent() {
+       Iterator plusIterator = quidcoCompareObject.plusSignsForFAQs.iterator();
+        Iterator answerIterator = quidcoCompareObject.faqAnswers.iterator();
+
+        while(plusIterator.hasNext() &&  answerIterator.hasNext()){
+            WebElement e =(WebElement) plusIterator.next();
+            scrollElementIntoViewatBottom(e);
+            waitForElementDisplay(e);
+            e.click();
+            waitForElementDisplay((WebElement) answerIterator.next());
+            e.click();
+        }
+    }
 }
