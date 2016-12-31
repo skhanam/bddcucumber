@@ -20,6 +20,15 @@ Feature: As a Quidco user I want to explore compare feature for different servic
     Then I should see 7 FAQs
     And I can see relevant information about each FAQ
 
+    Scenario:  As a user, I want to see different options for Insurance under Compare.
+      And I click Insurance tab
+      Then I can see the following insurance options:
+      |Car insurance|
+      |Home insurance|
+      |Travel insurance|
+      |Van insurance   |
+      |Motorcycle insurance|
+      |Pet insurance       |
 
 
 

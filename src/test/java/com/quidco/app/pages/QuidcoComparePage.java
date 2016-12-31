@@ -42,6 +42,7 @@ public class QuidcoComparePage extends BasePage {
     private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
 
     public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
+
     private QuidcoComparePage() {
     }
 
@@ -49,50 +50,57 @@ public class QuidcoComparePage extends BasePage {
         return quidcoComparePage;
     }
 
-    public void AreTabsDisplayed(List<String>  options){
-        scrollElementIntoView(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs,options.get(0)))));
-        for(String option: options){
-            waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs,option))));
+    public void AreTabsDisplayed(List<String> options) {
+        scrollElementIntoView(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, options.get(0)))));
+        for (String option : options) {
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, option))));
         }
     }
 
-    public QuidcoComparePage i_click_tab(){
-       WebElement tab = waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs,this.getTabName()))));
+    public QuidcoComparePage i_click_tab() {
+        WebElement tab = waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, this.getTabName()))));
         tab.click();
         return this;
     }
+
     public void verify_content_for_tab() {
-        switch (this.getTabName()){
+        switch (this.getTabName()) {
             case QuidcoComparePageObject.HOWITWORKS:
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs,tabName))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, tabName))));
                 quidcoCompareObject.chooseCompareCarousel.click();
-                validateText(QuidcoComparePageObject.chooseCompareTitle,quidcoCompareObject.chooseCompareTitleText);
+                validateText(QuidcoComparePageObject.chooseCompareTitle, quidcoCompareObject.chooseCompareTitleText);
                 sleep(1000);
                 quidcoCompareObject.moneyCashbackCaraousel.click();
-                validateText(QuidcoComparePageObject.moneyCashbackTitle,quidcoCompareObject.moneyCashbackTitleText);
+                validateText(QuidcoComparePageObject.moneyCashbackTitle, quidcoCompareObject.moneyCashbackTitleText);
                 sleep(1000);
                 quidcoCompareObject.getPaidCaraousel.click();
-                validateText(QuidcoComparePageObject.getPaidTitle,quidcoCompareObject.getPaidTitleText);
+                validateText(QuidcoComparePageObject.getPaidTitle, quidcoCompareObject.getPaidTitleText);
                 break;
         }
     }
 
-    public void checkNumberOfFAQs(int numberOfFAQs)
-    {
+    public void checkNumberOfFAQs(int numberOfFAQs) {
         setNumberOfFaqs(numberOfFAQs);
-        Assert.assertEquals(new Integer(quidcoCompareObject.faqTitles.size()),new Integer(numberOfFAQs));
+        Assert.assertEquals(new Integer(quidcoCompareObject.faqTitles.size()), new Integer(numberOfFAQs));
     }
+
     public void validateFAQContent() {
-       Iterator plusIterator = quidcoCompareObject.plusSignsForFAQs.iterator();
+        Iterator plusIterator = quidcoCompareObject.plusSignsForFAQs.iterator();
         Iterator answerIterator = quidcoCompareObject.faqAnswers.iterator();
 
-        while(plusIterator.hasNext() &&  answerIterator.hasNext()){
-            WebElement e =(WebElement) plusIterator.next();
+        while (plusIterator.hasNext() && answerIterator.hasNext()) {
+            WebElement e = (WebElement) plusIterator.next();
             scrollElementIntoViewatBottom(e);
             waitForElementDisplay(e);
             e.click();
             waitForElementDisplay((WebElement) answerIterator.next());
             e.click();
+        }
+    }
+
+    public void verifyInsuranceOptions(List<String> insuranceOptions) {
+        for (String insuranceName : insuranceOptions) {
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceName, insuranceName))));
         }
     }
 }

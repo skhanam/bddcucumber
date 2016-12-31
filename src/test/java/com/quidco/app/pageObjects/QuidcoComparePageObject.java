@@ -37,8 +37,6 @@ public class QuidcoComparePageObject {
     @FindBy(css = "#page-content .panel-content")
     public static List<WebElement> faqAnswers;
 
-
-
     public static String getPaidTitleText = "Get paid to compare";
 
     public static String moneyCashbackTitleText = "Save time and money, and earn cashback, in one place!";
@@ -47,5 +45,6 @@ public class QuidcoComparePageObject {
 
     public static final String HOWITWORKS = "How it works";
 
+    public static String insuranceName = "//div[@class='flex-grid-card']//div[@class='card__header--split-title']/h4[text()='%s']";
 
 }
