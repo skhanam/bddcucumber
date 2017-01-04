@@ -68,12 +68,15 @@ public class QuidcoComparePage extends BasePage {
         switch (this.getTabName()) {
             case QuidcoComparePageObject.HOWITWORKS:
                 waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, tabName))));
+                scrollElementIntoMiddle(quidcoCompareObject.chooseCompareCarousel);
                 quidcoCompareObject.chooseCompareCarousel.click();
                 validateText(QuidcoComparePageObject.chooseCompareTitle, quidcoCompareObject.chooseCompareTitleText);
                 sleep(1000);
+                scrollElementIntoMiddle(quidcoCompareObject.moneyCashbackCaraousel);
                 quidcoCompareObject.moneyCashbackCaraousel.click();
                 validateText(QuidcoComparePageObject.moneyCashbackTitle, quidcoCompareObject.moneyCashbackTitleText);
                 sleep(1000);
+                scrollElementIntoMiddle(quidcoCompareObject.getPaidCaraousel);
                 quidcoCompareObject.getPaidCaraousel.click();
                 validateText(QuidcoComparePageObject.getPaidTitle, quidcoCompareObject.getPaidTitleText);
                 break;
