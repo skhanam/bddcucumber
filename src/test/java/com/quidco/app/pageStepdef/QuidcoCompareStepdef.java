@@ -37,9 +37,9 @@ public class QuidcoCompareStepdef extends BaseStepdef {
         quidcoComparePage.validateFAQContent();
     }
 
-    @Then("^I can see the following insurance options:$")
+    @Then("^I can see the following grid comparison options:$")
     public void i_can_see_the_following_insurance_options(List<String> options) {
-        quidcoComparePage.verifyInsuranceOptions(options);
+        quidcoComparePage.verifyGridOptions(options);
     }
 
 
