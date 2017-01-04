@@ -22,13 +22,20 @@ Feature: As a Quidco user I want to explore compare feature for different servic
 
     Scenario:  As a user, I want to see different options for Insurance under Compare.
       And I click Insurance tab
-      Then I can see the following insurance options:
+      Then I can see the following grid comparison options:
       |Car insurance|
       |Home insurance|
       |Travel insurance|
       |Van insurance   |
       |Motorcycle insurance|
       |Pet insurance       |
+
+      Scenario: As a user , I want to see if different broadband options are available for comparison
+        And I click Broadband tab
+        Then I can see the following grid comparison options:
+        |Home broadband|
+        |Business broadband|
+        |Mobile broadband  |
 
 
 

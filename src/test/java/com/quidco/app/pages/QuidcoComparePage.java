@@ -98,9 +98,9 @@ public class QuidcoComparePage extends BasePage {
         }
     }
 
-    public void verifyInsuranceOptions(List<String> insuranceOptions) {
-        for (String insuranceName : insuranceOptions) {
-            waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceName, insuranceName))));
+    public void verifyGridOptions(List<String> gridOptions) {
+        for (String optionName : gridOptions) {
+            waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.compareGridOptions, optionName))));
         }
     }
 }

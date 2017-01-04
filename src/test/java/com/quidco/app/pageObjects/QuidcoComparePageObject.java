@@ -45,6 +45,6 @@ public class QuidcoComparePageObject {
 
     public static final String HOWITWORKS = "How it works";
 
-    public static String insuranceName = "//div[@class='flex-grid-card']//div[@class='card__header--split-title']/h4[text()='%s']";
+    public static String compareGridOptions = "//div[@class='card__header--split-title']/h4[text()='%s']";
 
 }
