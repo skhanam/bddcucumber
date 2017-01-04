@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Iterator;
 import java.util.List;
@@ -102,5 +103,18 @@ public class QuidcoComparePage extends BasePage {
         for (String optionName : gridOptions) {
             waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.compareGridOptions, optionName))));
         }
+    }
+
+    public void clickGetaQuote(String gridOption){
+        waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))));
+        scrollElementIntoMiddle(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))));
+        driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))).click();
+    }
+    public void checkBroadbandList(){
+        driver.switchTo().frame("quidco_compare");
+        preciseWait(quidcoCompareObject.broadbandPackagesList.get(0));
+        Assert.assertEquals("true",quidcoCompareObject.broadband_cb.getAttribute("checked"));
+        Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0 );
+        driver.switchTo().defaultContent();
     }
 }

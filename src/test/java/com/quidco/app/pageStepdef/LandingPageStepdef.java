@@ -73,13 +73,13 @@ public class LandingPageStepdef extends BaseStepdef {
     }
 
     @And("I click quidco compare")
-    public void i_click_quidco_compare(){
-
+    public void i_click_quidco_compare() {
         quidcoComparePage = landingPage.clickQuidcoCompare();
     }
+
     @When("^I click Join Quidco now$")
     public void i_click_join_quidco_btn() {
-       signupPage = landingPage.click_join_quidco_now_btn();
+        signupPage = landingPage.click_join_quidco_now_btn();
 
     }
 
