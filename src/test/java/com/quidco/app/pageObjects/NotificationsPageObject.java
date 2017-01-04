@@ -10,7 +10,7 @@ public class NotificationsPageObject {
 
     @FindBy(css = ".sign-out>a[title='Logout']")
     public static WebElement signOutLink;
-    public static String tabLocator = "//div[@class=\"horizontal-tabs\"]/ul/li/a[text()='%s']";
+    public static String tabLocator = "//div[contains(@class,'horizontal-tabs')]/ul/li/a[text()='%s']";
     public static String titleLocator = "//div[@class='account-notifications']" +
             "/div[@class='container']//h4[contains(text(),'%s')]";
     public static String LinksLocator = "//div[@class='notification-annotation']//p/a[contains(text(),'%s')]";
