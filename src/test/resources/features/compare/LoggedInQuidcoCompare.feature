@@ -9,3 +9,10 @@ Feature: As a Quidco logged in  user I want to explore compare feature for diffe
     And I click Broadband tab
     When I Get a quote for Home broadband
     Then I should see list of broadband options
+
+  Scenario: As a user , I want to see if different energy options are available for comparison
+    And I click Energy tab
+    Then I can see the following grid comparison options:
+      | Electricity     |
+      | Gas |
+      | Duel Fuel   |
