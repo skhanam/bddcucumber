@@ -3,6 +3,8 @@ package com.quidco.app.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -38,6 +40,11 @@ public class QuidcoComparePageObject {
     @FindBy(css = ".homepackages")
     public static List<WebElement> broadbandPackagesList;
 
+
+    public static String categoryIcon = "//a[@id='%s']/..";
+
+    public static String insuranceTypesLocator = "//div[@data-id='Insurance']//span[text()='%s']";
+
     public static String getPaidTitleText = "Get paid to compare";
 
     public static String moneyCashbackTitleText = "Save time and money, and earn cashback, in one place!";
@@ -45,6 +52,17 @@ public class QuidcoComparePageObject {
     public static String chooseCompareTitleText = "Here's why Quidco Compare is right for you…";
 
     public static final String HOWITWORKS = "How it works";
+    public static final String INSURANCE = "Insurance";
+    public static final String ENERGY = "Energy";
+    public static final String BROADBAND = "Broadband";
+
+    public static  List<String> insuranceTypes = Arrays.asList(
+            "Car Insurance",
+            "Travel Insurance",
+            "Home Insurance",
+            "Pet Insurance",
+            "Van Insurance",
+            "Bike Insurance");
 
     public static String compareGridOptions = "//div[@class='card__header--split-title']/h4[text()='%s']";
 

@@ -40,16 +40,26 @@ public class QuidcoComparePage extends BasePage {
 
     private int numberOfFaqs;
 
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
 
     public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
 
     private QuidcoComparePage() {
     }
-
     public static QuidcoComparePage getInstance() {
         return quidcoComparePage;
     }
+
 
     public void AreTabsDisplayed(List<String> options) {
         scrollElementIntoView(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, options.get(0)))));
@@ -119,5 +129,22 @@ public class QuidcoComparePage extends BasePage {
         Assert.assertEquals("true",quidcoCompareObject.broadband_cb.getAttribute("checked"));
         Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0 );
         driver.switchTo().defaultContent();
+    }
+    public QuidcoComparePage clickIconCategoryUnderHowitWorksTab(String categoryName){
+        setCategory(categoryName);
+        WebElement categoryIcon = driver.findElement(By.xpath(String.format(QuidcoComparePageObject.categoryIcon,categoryName)));
+        scrollElementIntoMiddle(categoryIcon);
+        waitForElementDisplay(categoryIcon);
+        categoryIcon.click();
+        return this;
+    }
+    public void checkCategoryOptionsVisible(){
+    switch (getCategory()){
+        case QuidcoComparePageObject.INSURANCE:
+            for(String insurance: quidcoCompareObject.insuranceTypes){
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceTypesLocator,insurance))));
+            }
+    }
+
     }
 }

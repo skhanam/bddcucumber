@@ -54,5 +54,13 @@ public class QuidcoCompareStepdef extends BaseStepdef {
         quidcoComparePage.checkBroadbandList();
     }
 
+    @When("^I click ([^\"]*) icon$")
+    public void i_click_category_icon(String categoryIcon) {
+        quidcoComparePage.clickIconCategoryUnderHowitWorksTab(categoryIcon);
+    }
 
+    @Then("^I can see all the insurances available$")
+    public void i_can_see_all_the_insurances_available() {
+        quidcoComparePage.checkCategoryOptionsVisible();
+    }
 }
