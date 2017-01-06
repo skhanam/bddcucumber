@@ -144,6 +144,17 @@ public class QuidcoComparePage extends BasePage {
             for(String insurance: quidcoCompareObject.insuranceTypes){
                 waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceTypesLocator,insurance))));
             }
+            break;
+        case QuidcoComparePageObject.ENERGY:
+            for(String energyType: quidcoCompareObject.energyTypes){
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.energyTypesLocator,energyType))));
+            }
+            break;
+        case QuidcoComparePageObject.BROADBAND:
+            for(String broadbandType: quidcoCompareObject.broadbandTypes){
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.broadbandTypesLocator,broadbandType))));
+            }
+
     }
 
     }

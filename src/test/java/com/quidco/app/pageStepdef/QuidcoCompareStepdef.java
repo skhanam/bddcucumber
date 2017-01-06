@@ -59,8 +59,8 @@ public class QuidcoCompareStepdef extends BaseStepdef {
         quidcoComparePage.clickIconCategoryUnderHowitWorksTab(categoryIcon);
     }
 
-    @Then("^I can see all the insurances available$")
-    public void i_can_see_all_the_insurances_available() {
+    @Then("^I can see appropriate category options available$")
+    public void i_can_see_appropriate_category_options_available() {
         quidcoComparePage.checkCategoryOptionsVisible();
     }
 }
