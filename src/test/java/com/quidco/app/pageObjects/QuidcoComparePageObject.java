@@ -37,11 +37,11 @@ public class QuidcoComparePageObject {
 
     @FindBy(id = "attribute_broadband")
     public static WebElement broadband_cb;
-    @FindBy(css = ".homepackages")
+    @FindBy(css = ".deals-output>tr")
     public static List<WebElement> broadbandPackagesList;
 
 
-    public static String categoryIcon = "//a[@id='%s']/..";
+    public static String categoryIcon = "//a//span[text()='%s']/../..";
 
     public static String insuranceTypesLocator = "//div[@data-id='Insurance']//span[text()='%s']";
     public static String energyTypesLocator = "//div[@data-id='Energy']//span[text()='%s']";
