@@ -44,6 +44,8 @@ public class QuidcoComparePageObject {
     public static String categoryIcon = "//a[@id='%s']/..";
 
     public static String insuranceTypesLocator = "//div[@data-id='Insurance']//span[text()='%s']";
+    public static String energyTypesLocator = "//div[@data-id='Energy']//span[text()='%s']";
+    public static String broadbandTypesLocator = "//div[@data-id='Broadband']//span[text()='%s']";
 
     public static String getPaidTitleText = "Get paid to compare";
 
@@ -63,6 +65,14 @@ public class QuidcoComparePageObject {
             "Pet Insurance",
             "Van Insurance",
             "Bike Insurance");
+    public static  List<String> energyTypes = Arrays.asList(
+            "Electricity",
+            "Gas",
+            "Duel Fuel");
+    public static  List<String> broadbandTypes = Arrays.asList(
+            "Home Broadband",
+            "Office Broadband",
+            "Mobile Broadband");
 
     public static String compareGridOptions = "//div[@class='card__header--split-title']/h4[text()='%s']";
 

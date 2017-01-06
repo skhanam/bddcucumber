@@ -24,7 +24,12 @@ Feature: As a Quidco logged in  user I want to explore compare feature for diffe
       | TabName      |
       | How it works |
 
-  Scenario: As a logged in user, I want to select any insurance from how it works tab
+  @QA-277,@QA-278,@QA-279
+  Scenario: As a logged in user, I want to see different icons available for respective product category under how it works tab
     And I click How it works tab
     And I click Insurance icon
-    Then I can see all the insurances available
+    Then I can see appropriate category options available
+    And I click Energy icon
+    Then I can see appropriate category options available
+    And I click Broadband icon
+    Then I can see appropriate category options available
