@@ -88,14 +88,14 @@ public class LandingPageStepdef extends BaseStepdef {
         landingPage.clickCategory(categoryName);
 
     }
-    @Then("^I should be on the correct page$")
-    public void i_should_be_on_the_correct_page() {
-
+    @Then("^I should see correct label on the page$")
+    public void i_should_see_correct_label_on_the_page() {
+        landingPage.verify_category_label();
     }
 
-    @Then("^I should see category specific retailers listed$")
-    public void i_should_see_category_specific_retailers_listed() {
-
+    @Then("^I should see some retailers listed$")
+    public void i_should_see_some_retailers_listed() throws Exception {
+        landingPage.check_if_retailers_listed();
     }
 
 }
