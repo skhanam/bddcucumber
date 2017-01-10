@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LandingPageObject;
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.quidco.app.pageStepdef.BaseStepdef.homePage;
@@ -14,7 +15,16 @@ public class LandingPage extends BasePage {
     private static LandingPage landingPage = new LandingPage();
 
     public static LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
-    ;
+
+    public static String getCategoryTitle() {
+        return categoryTitle;
+    }
+
+    public static void setCategoryTitle(String categoryTitle) {
+        LandingPage.categoryTitle = categoryTitle;
+    }
+
+    public static String categoryTitle;
 
     private LandingPage() {
     }
@@ -52,6 +62,16 @@ public class LandingPage extends BasePage {
         waitForElementDisplay(LandingPageObject.join_quidco_btn);
         LandingPageObject.join_quidco_btn.click();
         return SignupPage.getInstance();
+    }
+
+    public void clickCategory(String categoryName){
+        setCategoryTitle(categoryName);
+        waitForElementDisplay(landingPageObject.categoryLink);
+        landingPageObject.categoryLink.click();
+    }
+
+    public void verify_category_label(){
+        Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText());
     }
 }
 

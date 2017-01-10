@@ -3,6 +3,7 @@ package com.quidco.app.pageStepdef;
 import com.quidco.app.utility.JavaUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 /**
@@ -80,6 +81,20 @@ public class LandingPageStepdef extends BaseStepdef {
     @When("^I click Join Quidco now$")
     public void i_click_join_quidco_btn() {
         signupPage = landingPage.click_join_quidco_now_btn();
+
+    }
+    @When("^I click category \"([^\"]*)\"$")
+    public void i_click_category(String categoryName)  {
+        landingPage.clickCategory(categoryName);
+
+    }
+    @Then("^I should be on the correct page$")
+    public void i_should_be_on_the_correct_page() {
+
+    }
+
+    @Then("^I should see category specific retailers listed$")
+    public void i_should_see_category_specific_retailers_listed() {
 
     }
 
