@@ -1,7 +1,10 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.LandingPageObject;
+import com.quidco.app.utility.JavaUtils;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.quidco.app.pageStepdef.BaseStepdef.homePage;
@@ -66,12 +69,19 @@ public class LandingPage extends BasePage {
 
     public void clickCategory(String categoryName){
         setCategoryTitle(categoryName);
-        waitForElementDisplay(landingPageObject.categoryLink);
-        landingPageObject.categoryLink.click();
+        WebElement categoryLink = driver.findElement(By.xpath(String.format(landingPageObject.categoryLink,categoryName)));
+        scrollElementIntoMiddle(categoryLink);
+        waitForElementDisplay(categoryLink);
+        categoryLink.click();
     }
 
     public void verify_category_label(){
-        Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText());
+        Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText().trim());
+    }
+    public void check_if_retailers_listed() throws Exception {
+       String retailersFound =  JavaUtils.getSubstringWithPattern("[0-9]+",landingPageObject.numberOfRetailersFoundLabel.getText().trim());
+       int retailersNumber = Integer.valueOf(retailersFound);
+       Assert.assertFalse(retailersNumber == 0);
     }
 }
 
