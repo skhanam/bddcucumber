@@ -81,6 +81,7 @@ public class LandingPage extends BasePage {
     public void check_if_retailers_listed() throws Exception {
        String retailersFound =  JavaUtils.getSubstringWithPattern("[0-9]+",landingPageObject.numberOfRetailersFoundLabel.getText().trim());
        int retailersNumber = Integer.valueOf(retailersFound);
+        System.out.println("Number of retailers are : " + retailersNumber);
        Assert.assertFalse(retailersNumber == 0);
     }
 }
