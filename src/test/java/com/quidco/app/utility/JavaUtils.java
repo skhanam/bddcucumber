@@ -10,7 +10,7 @@ public class JavaUtils {
     public static String getTestEmail(){
         Random random = new Random(System.nanoTime());
         int randomInt = random.nextInt(1000000000);
-        return  "quidco-tester"+randomInt+"@quidco.com";
+        return  "auto-"+randomInt+"@quidco.com";
     }
 
 }
