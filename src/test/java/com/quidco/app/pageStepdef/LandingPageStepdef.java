@@ -83,7 +83,7 @@ public class LandingPageStepdef extends BaseStepdef {
         signupPage = landingPage.click_join_quidco_now_btn();
 
     }
-    @When("^I click category \"([^\"]*)\"$")
+    @When("^I click category ([^\"]*)$")
     public void i_click_category(String categoryName)  {
         landingPage.clickCategory(categoryName);
 
