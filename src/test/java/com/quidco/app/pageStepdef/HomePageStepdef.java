@@ -94,10 +94,4 @@ public class HomePageStepdef extends BaseStepdef {
         homePage.verifyCheckoutSuccessfull();
     }
 
-
-
-
-
-
-
 }

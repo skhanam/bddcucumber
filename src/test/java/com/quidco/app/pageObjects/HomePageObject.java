@@ -70,13 +70,4 @@ public class HomePageObject {
     @FindBy(css = ".page-main-title")
     public static WebElement orderPlacedtitle;
 
-
-
-
-
-
-
-
-
-
 }
