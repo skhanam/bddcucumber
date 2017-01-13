@@ -17,6 +17,19 @@ Feature: As a logged in user , i can search different retailers on quidco.com
       |John Lewis     |
 
 
-      Scenario: Search Products
-        When I search for "Washing Machine"
-        Then I should see retailers for this product
+      Scenario: Buy a Product
+        When I search for "fitbit"
+        Then I should see 3 search results for the product
+        When I click buy now for first product displayed
+        Then Product description is displayed
+        When I click buy now
+        And I enter the mandatory shipping & payment details
+        And I click review order
+        And I Submit order
+        Then my checkout is successfull
+
+
+
+
+
+

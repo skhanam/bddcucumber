@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.HomePageObject;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,16 @@ public class HomePage extends BasePage {
 
     private static HomePage homePage = new HomePage();
 
+    public String getSearchTerm() {
+        return searchTerm;
+    }
+
+    public void setSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+    }
+
+    private String searchTerm;
+
 
     private HomePage() {
     }
@@ -25,6 +36,7 @@ public class HomePage extends BasePage {
     }
 
     public static HomePageObject homePageObject = PageFactory.initElements(driver, HomePageObject.class);
+
 
     public NotificationsPage clickAvatar() {
         homePageObject.avatarIcon.click();
@@ -75,12 +87,21 @@ public class HomePage extends BasePage {
     }
 
     public SearchResultsPage searchFor(String searchTerm) {
+        setSearchTerm(searchTerm);
         waitForElementDisplay(HomePageObject.searchInput);
         HomePageObject.searchInput.clear();
         HomePageObject.searchInput.sendKeys(searchTerm);
         return SearchResultsPage.getInstance();
     }
 
+    public void verify_presence_of_search_results_for_products(int numProducts){
+        waitForElementDisplay(homePageObject.productsLabel);
+        Assert.assertTrue( numProducts == homePageObject.products.size());
+    }
+    public void click_buy_now_for_indexed_product(int number){
+        execut
+
+    }
 
 
 

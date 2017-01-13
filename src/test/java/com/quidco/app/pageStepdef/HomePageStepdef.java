@@ -62,6 +62,10 @@ public class HomePageStepdef extends BaseStepdef {
         searchResultsPage.setSearchTerm(searchTerm);
     }
 
+    @And("^I should see ([0-9]+) search results for the product$")
+    public void i_should_see_search_results_for_the_products(int numProducts){
+        homePage.verify_presence_of_search_results_for_products(numProducts);
+    }
 
 
 
