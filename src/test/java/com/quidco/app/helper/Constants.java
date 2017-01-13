@@ -1,5 +1,9 @@
 package com.quidco.app.helper;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by thadeus on 28/06/16.
  */
@@ -13,5 +17,13 @@ public class Constants {
     public static final String  firefoxLinuxdriver="/src/test/resources/OS/Linux/Firefox/64/geckodriver";
     public static final String  firefoxMacdriver="/src/test/resources/OS/Mac/Firefox/geckodriver";
 
+    public static final Map<String,Integer> countMap = createMap();
 
+    private  static Map<String,Integer> createMap(){
+        Map<String,Integer> result = new HashMap<>();
+        result.put("first",1);
+        result.put("second",2);
+        result.put("third",3);
+        return Collections.unmodifiableMap(result);
+    }
 }
