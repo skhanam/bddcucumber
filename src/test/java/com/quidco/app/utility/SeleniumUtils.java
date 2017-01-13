@@ -111,4 +111,9 @@ public abstract  class SeleniumUtils {
         }
     }
 
+    public void executeJavascript(String selector){
+        return driver.
+
+    }
+
 }
