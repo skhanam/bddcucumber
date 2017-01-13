@@ -32,5 +32,12 @@ public class HomePageObject {
 
     public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
 
+    @FindBy(css = "::shadow .page-title-container")
+    public static WebElement productsLabel;
+
+    @FindBy(css = "::shadow msm-component-search-product-product a>div")
+    public static List<WebElement> products;
+
+    public static String
 
 }
