@@ -27,9 +27,3 @@ Feature: As a logged in user , i can search different retailers on quidco.com
         And I click review order
         And I Submit order
         Then my checkout is successfull
-
-
-
-
-
-
