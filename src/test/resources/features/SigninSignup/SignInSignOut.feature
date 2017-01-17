@@ -1,4 +1,4 @@
-@login-logout
+@regression @login-logout
 Feature: Login Logout
 
   Background:  User goes to the sign in page.

@@ -1,4 +1,4 @@
-@browse-categories
+@regression @browse-categories
 Feature: As a Quidco user I want to explore compare feature for different services.
   The user is not logged in to for this feature.
   Background:  As a user I want to go to the compare page.

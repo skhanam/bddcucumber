@@ -1,4 +1,4 @@
-@logged-in-qc
+@regression @logged-in-qc
 Feature: As a Quidco logged in  user I want to explore compare feature for different services.
 
   Background:  As a user I want to go to the compare page.

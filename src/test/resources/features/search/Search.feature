@@ -1,4 +1,4 @@
-@search
+@regression @search
 Feature: As a logged in user , i can search different retailers on quidco.com
 
   Background: Logging as a premium user and go to account summary  page.
