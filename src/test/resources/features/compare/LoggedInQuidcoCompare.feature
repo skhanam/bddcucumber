@@ -1,5 +1,5 @@
 @regression @logged-in-qc
-Feature: As a Quidco logged in  user I want to explore compare feature for different services.
+Feature: As a Quidco logged in  user I want to explore compare feature for different services like Insurance, Broadband, Energy.
 
   Background:  As a user I want to go to the compare page.
     Given I am logged in premium user
