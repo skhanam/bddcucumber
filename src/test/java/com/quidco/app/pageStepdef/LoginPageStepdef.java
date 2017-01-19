@@ -2,6 +2,7 @@ package com.quidco.app.pageStepdef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Cookie;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -59,6 +60,10 @@ public class LoginPageStepdef extends BaseStepdef {
 
     @And("^I click sign in with facebook$")
     public void i_click_sign_in_with_facebook() {
+        String temp = driver.getCurrentUrl();
+        driver.navigate().to("https://facebook.com");
+        driver.manage().deleteAllCookies();
+        driver.navigate().to(temp);
         facebookLoginPage = loginPage.clickSignInWithFacebook();
     }
 }
