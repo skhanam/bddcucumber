@@ -21,8 +21,8 @@ Feature: As a logged in user , i can search different retailers on quidco.com
         When I search for "fitbit"
         Then I should see 3 search results for the product
         When I click buy now for first product displayed
-        Then Product description is displayed
-        When I click buy now
+#        Then Product description is displayed
+        When I click buy now on product description page
         And I enter the mandatory shipping & payment details
         And I click review order
         And I Submit order

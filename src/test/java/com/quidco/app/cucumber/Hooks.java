@@ -18,6 +18,10 @@ public class Hooks extends BasePage {
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
         driver.get(QuidcoAppUrl + "/access_beta.php");
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+        currentUrl = new StringBuilder().append(QuidcoAppUrl).append("?set_v4_cookie=true").toString();
+        driver.navigate().to(currentUrl);
 
     }
 

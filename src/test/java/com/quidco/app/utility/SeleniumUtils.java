@@ -111,9 +111,8 @@ public abstract  class SeleniumUtils {
         }
     }
 
-    public void executeJavascript(String selector){
-        return driver.
-
+    public void executeJS(String jsCode){
+         ((JavascriptExecutor)driver).executeScript(jsCode);
     }
 
 }

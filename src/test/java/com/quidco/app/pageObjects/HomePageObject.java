@@ -38,6 +38,45 @@ public class HomePageObject {
     @FindBy(css = "::shadow msm-component-search-product-product a>div")
     public static List<WebElement> products;
 
-    public static String
+    public static String productBuyNowBtn = "::shadow msm-component-search-product-product .btn";
+
+    @FindBy(css = ".page-title-container")
+    public static WebElement shippingAndPaymentsTitle;
+
+    @FindBy(css = "#addressFullName")
+    public static WebElement addressFullName;
+    @FindBy(css = "#addressLine1")
+    public static WebElement addressLine1;
+    @FindBy(css = "#addressLine2")
+    public static WebElement addressLine2;
+    @FindBy(css = "#addressCity")
+    public static WebElement addressCity;
+    @FindBy(css = "#addressPostcode")
+    public static WebElement addressPostcode;
+    @FindBy(css = "#phoneNumber")
+    public static WebElement phoneNumber;
+    @FindBy(css = "#cardName")
+    public static WebElement cardName;
+    @FindBy(css = "#cardNumber")
+    public static WebElement cardNumber;
+    @FindBy(css = "#cardExpiryMonth")
+    public static WebElement cardExpiryMonth;
+    @FindBy(css = "#cardExpiryYear")
+    public static WebElement cardExpiryYear;
+    @FindBy(css = "#cardCVC")
+    public static WebElement cardCVC;
+    @FindBy(css = "msm-form-product .btn")
+    public static WebElement reviewOrSubmitOrderBtn;
+    @FindBy(css = ".page-main-title")
+    public static WebElement orderPlacedtitle;
+
+
+
+
+
+
+
+
+
 
 }
