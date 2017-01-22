@@ -66,6 +66,35 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_should_see_search_results_for_the_products(int numProducts){
         homePage.verify_presence_of_search_results_for_products(numProducts);
     }
+    @When("^I click buy now for ([^\"]*) product displayed$")
+    public void i_click_buy_now_for_products_displayed(String productNumber ) throws InterruptedException {
+        homePage.click_buy_now_for_indexed_product(productNumber);
+    }
+
+    @When("^I click buy now on product description page$")
+    public void i_click_buy_now_on_product_description_page() throws InterruptedException {
+        homePage.click_buy_now_on_product_description_page();
+    }
+
+    @And("^I enter the mandatory shipping & payment details$")
+    public void i_enter_the_mandatory_shipping_payment_details(){
+        homePage.enterShippingDetails();
+    }
+    @And("^I click review order$")
+    public void i_click_review_order(){
+        homePage.clickReviewOrSubmitOrder();
+    }
+    @And("^I Submit order$")
+    public void i_submit_order(){
+        homePage.clickReviewOrSubmitOrder();
+    }
+
+    @Then("^my checkout is successfull$")
+    public void my_checkout_is_successfull(){
+        homePage.verifyCheckoutSuccessfull();
+    }
+
+
 
 
 
