@@ -69,5 +69,4 @@ public class HomePageObject {
     public static WebElement reviewOrSubmitOrderBtn;
     @FindBy(css = ".page-main-title")
     public static WebElement orderPlacedtitle;
-
 }
