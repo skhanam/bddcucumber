@@ -11,7 +11,6 @@ import cucumber.api.java.en.When;
  */
 public class LandingPageStepdef extends BaseStepdef {
 
-
     @Given("^I am on the landing page$")
     public void i_am_on_the_landing_page() {
         landingPage.navigateToLandingPage();
@@ -21,12 +20,10 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_am_on_the_home_page() {
         landingPage.navigateToLandingPage();
         loginPage = landingPage.clickSignInOnNavigationBar();
-
     }
 
     @When("^I click on the signin link$")
     public void i_click_on_the_signin_link() {
-
         loginPage = landingPage.clickSignInOnNavigationBar();
     }
 

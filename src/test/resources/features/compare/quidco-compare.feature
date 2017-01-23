@@ -1,5 +1,5 @@
 @regression @quidco-compare
-Feature: As a Quidco user I want to explore compare feature for different services.
+Feature: As a Quidco Visitor user,  I want to explore compare feature for different services  like Insurance, Broadband, Energy
 The user is not logged in to for this feature.
   Background:  As a user I want to go to the compare page.
     Given I am on the landing page

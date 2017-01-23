@@ -1,5 +1,5 @@
 @regression @logged-in-qc
-Feature: As a Quidco logged in  user I want to explore compare feature for different services like Insurance, Broadband, Energy.
+Feature: As a Quidco Member user, I want to explore compare feature for different services like Insurance, Broadband, Energy.
 
   Background:  As a user I want to go to the compare page.
     Given I am logged in premium user
@@ -24,7 +24,7 @@ Feature: As a Quidco logged in  user I want to explore compare feature for diffe
       | TabName      |
       | How it works |
 
-  @QA-277,@QA-278,@QA-279
+
   Scenario: As a logged in user, I want to see different icons available for respective product category under how it works tab
     And I click How it works tab
     And I click Insurance icon
@@ -34,7 +34,7 @@ Feature: As a Quidco logged in  user I want to explore compare feature for diffe
     And I click Broadband icon
     Then I can see appropriate category options available
 
-  @QA-280,@QA-281,@QA-282
+
   Scenario: As a  logged in user, I navigate to how it works tab and click on broadband, i can get quotes from differnt broadband providers
   and I should be landing on the appropriate product page to see the quotes.
     And I click How it works tab
