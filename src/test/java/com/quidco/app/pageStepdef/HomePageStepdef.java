@@ -70,7 +70,6 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_click_buy_now_for_products_displayed(String productNumber ) throws InterruptedException {
         homePage.click_buy_now_for_indexed_product(productNumber);
     }
-
     @When("^I click buy now on product description page$")
     public void i_click_buy_now_on_product_description_page() throws InterruptedException {
         homePage.click_buy_now_on_product_description_page();

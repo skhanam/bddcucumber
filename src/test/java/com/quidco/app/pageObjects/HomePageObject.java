@@ -35,6 +35,7 @@ public class HomePageObject {
     @FindBy(css = "::shadow .page-title-container")
     public static WebElement productsLabel;
 
+
     @FindBy(css = "::shadow msm-component-search-product-product a>div")
     public static List<WebElement> products;
 
