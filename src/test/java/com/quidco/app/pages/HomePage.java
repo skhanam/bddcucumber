@@ -1,5 +1,6 @@
 package com.quidco.app.pages;
 
+import com.quidco.app.helper.CheckoutDetails;
 import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.HomePageObject;
 import org.junit.Assert;
@@ -18,6 +19,7 @@ import java.util.List;
 public class HomePage extends BasePage {
 
     private static HomePage homePage = new HomePage();
+    public CheckoutDetails checkoutDetails;
 
     public String getSearchTerm() {
         return searchTerm;
@@ -31,6 +33,7 @@ public class HomePage extends BasePage {
 
 
     private HomePage() {
+        checkoutDetails = new CheckoutDetails();
     }
 
     public static HomePage getInstance() {
@@ -112,23 +115,33 @@ public class HomePage extends BasePage {
         executeJS("var e = document.querySelectorAll('::shadow .product-title')[1]; e.click();");
     }
 
-    public void enterShippingDetails() {
-        homePageObject.addressFullName.sendKeys("Test Quidco");
-        homePageObject.addressLine1.sendKeys("Dummy Address Line 1");
-        homePageObject.addressLine2.sendKeys("Dummy Address Line 2");
-        homePageObject.addressCity.sendKeys("London");
-        homePageObject.addressPostcode.sendKeys("EC2A3JL");
-        //homePageObject.phoneNumber.sendKeys("");
-        homePageObject.cardName.sendKeys("Card Holder Name");
-        homePageObject.cardNumber.sendKeys("4444333322221111");
-        homePageObject.cardExpiryMonth.sendKeys("5");
-        homePageObject.cardExpiryYear.sendKeys("17");
-        homePageObject.cardCVC.sendKeys("516");
+    public void enterShippingDetails(boolean differentBillingAddress) {
+
+        homePageObject.addressFullName.sendKeys(checkoutDetails.shippingDetails.getAddressFullName());
+        homePageObject.addressLine1.sendKeys(checkoutDetails.shippingDetails.getAddressLine1());
+        homePageObject.addressLine2.sendKeys(checkoutDetails.shippingDetails.getAddressLine2());
+        homePageObject.addressCity.sendKeys(checkoutDetails.shippingDetails.getAddressCity());
+        homePageObject.addressPostcode.sendKeys(checkoutDetails.shippingDetails.getAddressPostCode());
+        homePageObject.cardName.sendKeys(checkoutDetails.cardDetails.getCardName());
+        homePageObject.cardNumber.sendKeys(checkoutDetails.cardDetails.getCardNumber());
+        homePageObject.cardExpiryMonth.sendKeys(checkoutDetails.cardDetails.getExpiryMonth());
+        homePageObject.cardExpiryYear.sendKeys(checkoutDetails.cardDetails.getExpiryYear());
+        homePageObject.cardCVC.sendKeys(checkoutDetails.cardDetails.getCvc());
+
+        if(differentBillingAddress)
+        {
+            homePageObject.billingLine1.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine1());
+            homePageObject.billingLine2.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine2());
+            homePageObject.billingCity.sendKeys(checkoutDetails.billingDetails.getBillingCity());
+            homePageObject.billingPostcode.sendKeys(checkoutDetails.billingDetails.getBillingPostcode());
+        }
     }
-    public void clickReviewOrSubmitOrder(){
+
+    public void clickReviewOrSubmitOrder() {
         homePageObject.reviewOrSubmitOrderBtn.click();
     }
-    public void verifyCheckoutSuccessfull(){
+
+    public void verifyCheckoutSuccessfull() {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
     }
 

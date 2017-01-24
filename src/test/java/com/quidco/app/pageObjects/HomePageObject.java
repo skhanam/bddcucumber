@@ -70,4 +70,18 @@ public class HomePageObject {
     public static WebElement reviewOrSubmitOrderBtn;
     @FindBy(css = ".page-main-title")
     public static WebElement orderPlacedtitle;
+
+    @FindBy(css = "#billingLine1")
+    public static WebElement billingLine1;
+    @FindBy(css = "#billingLine2")
+    public static WebElement billingLine2;
+    @FindBy(css = "#billingCity")
+    public static WebElement billingCity;
+    @FindBy(css = "#billingPostcode")
+    public static WebElement billingPostcode;
+
+
+
+
+
 }
