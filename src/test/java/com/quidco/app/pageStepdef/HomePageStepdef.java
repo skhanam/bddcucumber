@@ -77,7 +77,7 @@ public class HomePageStepdef extends BaseStepdef {
 
     @And("^I enter the mandatory shipping & payment details$")
     public void i_enter_the_mandatory_shipping_payment_details(){
-        homePage.enterShippingDetails();
+        homePage.enterShippingDetails(false);
     }
     @And("^I click review order$")
     public void i_click_review_order(){

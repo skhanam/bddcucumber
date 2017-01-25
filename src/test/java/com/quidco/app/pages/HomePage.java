@@ -107,8 +107,9 @@ public class HomePage extends BasePage {
     }
 
     public void click_buy_now_for_indexed_product(String productNumber) throws InterruptedException {
+        Thread.sleep(2000);
         executeJS("var e = document.querySelectorAll('::shadow msm-component-search-product-product .btn')[" + (Constants.countMap.get(productNumber) - 1) + "]; e.click();");
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
     public void click_buy_now_on_product_description_page() throws InterruptedException {
