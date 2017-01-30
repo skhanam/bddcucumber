@@ -125,7 +125,7 @@ public class QuidcoComparePage extends BasePage {
     }
     public void checkBroadbandList(){
         driver.switchTo().frame("quidco_compare");
-        preciseWait(quidcoCompareObject.broadbandPackagesList.get(0));
+        preciseWaitForElement(quidcoCompareObject.broadbandPackagesList.get(0));
         if(getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband") )
             Assert.assertEquals("true",quidcoCompareObject.broadband_cb.getAttribute("checked"));
         Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0 );

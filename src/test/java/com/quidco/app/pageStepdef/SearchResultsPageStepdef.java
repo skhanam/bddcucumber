@@ -10,9 +10,10 @@ public class SearchResultsPageStepdef extends BaseStepdef {
 
 
     @Then("^I should see retailers for this product$")
-    public void i_should_see_retailers_for_this_product(){
+    public void i_should_see_retailers_for_this_product() {
         searchResultsPage.verifyPresenceOfRetailers();
     }
+
     @Then("^I should see it as top retailer$")
     public void i_should_see_it_as_top_retailer() {
         searchResultsPage.validateRetailers();
@@ -22,9 +23,14 @@ public class SearchResultsPageStepdef extends BaseStepdef {
     public void i_should_also_see_similar_retailers_to_the_retailer() {
         searchResultsPage.validateSimilarRetailers();
     }
+
     @And("^I click close search$")
-    public void close_search(){
+    public void close_search() {
         searchResultsPage.closeSearch();
     }
 
+    @Then("^I click view more products$")
+    public void i_click_view_more_products_btn() {
+        searchResultsPage.clickViewMoreProducts();
+    }
 }

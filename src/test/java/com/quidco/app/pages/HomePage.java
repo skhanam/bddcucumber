@@ -102,8 +102,9 @@ public class HomePage extends BasePage {
     }
 
     public void verify_presence_of_search_results_for_products(int numProducts) {
-        waitForElementDisplay(homePageObject.productsLabel);
-        Assert.assertTrue(numProducts == homePageObject.products.size());
+        waitForElementDisplay(HomePageObject.productsLabel);
+        List<WebElement> products = preciseWaitForElements(HomePageObject.products);
+        Assert.assertTrue(numProducts == products.size());
     }
 
     public void click_buy_now_for_indexed_product(String productNumber) throws InterruptedException {

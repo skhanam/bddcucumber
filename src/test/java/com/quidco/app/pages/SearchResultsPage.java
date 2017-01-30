@@ -41,12 +41,13 @@ public class SearchResultsPage extends BasePage {
             @Override
             public Object apply(Object o) {
                 return driver.findElement(By.xpath(String.format(HomePageObject.topRetailerTitle, getSearchTerm())));
-            }});
+            }
+        });
         waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.topRetailerTitle, this.getSearchTerm()))));
         return this;
     }
 
-    public SearchResultsPage verifyPresenceOfRetailers(){
+    public SearchResultsPage verifyPresenceOfRetailers() {
         waitForElementDisplay(HomePageObject.multipleRetailersHeadingTitle);
         Assert.assertTrue(isListNotEmpty(HomePageObject.multiRetailersList));
         return this;
@@ -64,6 +65,11 @@ public class SearchResultsPage extends BasePage {
         waitForElementDisplay(SearchResultsPageObject.closeSearch);
         SearchResultsPageObject.closeSearch.click();
         return HomePage.getInstance();
+    }
+
+    public void clickViewMoreProducts() {
+        waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
+        SearchResultsPageObject.viewMoreProductsBtn.click();
     }
 
 }

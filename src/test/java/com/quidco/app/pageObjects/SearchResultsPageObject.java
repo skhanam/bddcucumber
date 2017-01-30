@@ -14,10 +14,14 @@ public class SearchResultsPageObject {
     public static WebElement similarRetailersTitle;
 
     @FindBy(xpath = "//div[@id='search-results-similar-retailers-container']/ul[@class='search-results-list']/li")
-    public static List<WebElement>  similarRetailers;
+    public static List<WebElement> similarRetailers;
 
     @FindBy(id = "close-search")
     public static WebElement closeSearch;
 
     public static String similarRetailersConstantString = "Similar retailers to ";
+
+    @FindBy(css = "::shadow button>span")
+    public static WebElement viewMoreProductsBtn;
+
 }
