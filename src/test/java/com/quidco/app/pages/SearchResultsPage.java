@@ -5,7 +5,9 @@ import com.quidco.app.pageObjects.HomePageObject;
 import com.quidco.app.pageObjects.SearchResultsPageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 /**
  * Created by ashishmohindroo on 12/16/16.
@@ -69,7 +71,14 @@ public class SearchResultsPage extends BasePage {
 
     public void clickViewMoreProducts() {
         waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
+        scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
         SearchResultsPageObject.viewMoreProductsBtn.click();
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("::shadow div.main-button-container> button.btn-is-loading")));
+        }catch (NoSuchElementException  e){
+
+        }
+
     }
 
 }
