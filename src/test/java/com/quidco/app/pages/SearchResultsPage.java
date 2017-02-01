@@ -38,9 +38,8 @@ public class SearchResultsPage extends BasePage {
 
     public SearchResultsPage validateRetailers() {
 
-        scrollElementIntoViewIfNeeded(HomePageObject.retailersHeadingTitle);
         waitForElementDisplay(HomePageObject.retailersHeadingTitle);
-
+        scrollElementByOffset(HomePageObject.retailersHeadingTitle,-100);
         flwait.until(new Function() {
             @Override
             public Object apply(Object o) {
@@ -73,7 +72,7 @@ public class SearchResultsPage extends BasePage {
 
     public void clickViewMoreProducts() {
         waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
-        scrollElementIntoViewIfNeeded(SearchResultsPageObject.viewMoreProductsBtn);
+        scrollElementByOffset(SearchResultsPageObject.viewMoreProductsBtn,-100);
         SearchResultsPageObject.viewMoreProductsBtn.click();
         try {
             wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("::shadow div.main-button-container> button.btn-is-loading")));
