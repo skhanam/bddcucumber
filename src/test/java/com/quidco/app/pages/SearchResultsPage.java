@@ -38,7 +38,9 @@ public class SearchResultsPage extends BasePage {
 
     public SearchResultsPage validateRetailers() {
 
+        scrollElementIntoViewIfNeeded(HomePageObject.retailersHeadingTitle);
         waitForElementDisplay(HomePageObject.retailersHeadingTitle);
+
         flwait.until(new Function() {
             @Override
             public Object apply(Object o) {
