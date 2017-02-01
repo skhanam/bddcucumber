@@ -71,7 +71,7 @@ public class SearchResultsPage extends BasePage {
 
     public void clickViewMoreProducts() {
         waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
-        scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
+        scrollElementIntoViewIfNeeded(SearchResultsPageObject.viewMoreProductsBtn);
         SearchResultsPageObject.viewMoreProductsBtn.click();
         try {
             wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("::shadow div.main-button-container> button.btn-is-loading")));
