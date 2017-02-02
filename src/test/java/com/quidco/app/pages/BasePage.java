@@ -73,9 +73,7 @@ public abstract class BasePage extends SeleniumUtils {
                         break;
                 }
                 driver = new ChromeDriver(dc);
-                System.out.println("Current Dimensions" + driver.manage().window().getSize());
                 driver.manage().window().setPosition(new Point(0,0));
-                System.out.println("Setting dimensions to 1024 by 768");
                 driver.manage().window().setSize(new Dimension(1004, 748));
         }
         wait = new WebDriverWait(driver, 10);
