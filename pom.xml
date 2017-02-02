@@ -18,7 +18,7 @@
         <target.version>1.8</target.version>
         <!-- Database dependency version -->
         <!--configurable variables-->
-        <env>https://staging1.quidco.com</env>
+        <env>https://staging10.quidco.com</env>
         <browser>chrome</browser>
 
     </properties>
