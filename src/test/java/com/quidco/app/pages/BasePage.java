@@ -3,9 +3,7 @@ package com.quidco.app.pages;
 import com.quidco.app.helper.Constants;
 import com.quidco.app.utility.PropertyReader;
 import com.quidco.app.utility.SeleniumUtils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -75,6 +73,8 @@ public abstract class BasePage extends SeleniumUtils {
                         break;
                 }
                 driver = new ChromeDriver(dc);
+                driver.manage().window().setPosition(new Point(0,0));
+                driver.manage().window().setSize(new Dimension(1004, 748));
         }
         wait = new WebDriverWait(driver, 10);
         flwait = new FluentWait(driver).pollingEvery(5, TimeUnit.SECONDS).withTimeout(15,TimeUnit.SECONDS).ignoring(NoSuchElementException.class);

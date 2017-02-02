@@ -6,9 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by thadeus on 11/04/16.
- */
 public class LoginPage extends BasePage{
 
     private static LoginPage loginPage = new LoginPage();

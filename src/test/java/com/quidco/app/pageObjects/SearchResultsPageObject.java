@@ -21,7 +21,7 @@ public class SearchResultsPageObject {
 
     public static String similarRetailersConstantString = "Similar retailers to ";
 
-    @FindBy(css = "::shadow button>span")
+    @FindBy(css = "::shadow button")
     public static WebElement viewMoreProductsBtn;
 
 }
