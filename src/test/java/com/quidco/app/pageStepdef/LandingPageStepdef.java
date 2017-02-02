@@ -22,6 +22,11 @@ public class LandingPageStepdef extends BaseStepdef {
         loginPage = landingPage.clickSignInOnNavigationBar();
     }
 
+    @Given("^I am on discover page$")
+    public void i_am_on_discover_page(){
+        discoverPage = landingPage.navigateToDiscoverPage();
+    }
+
     @When("^I click on the signin link$")
     public void i_click_on_the_signin_link() {
         loginPage = landingPage.clickSignInOnNavigationBar();
@@ -95,6 +100,8 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_should_see_some_retailers_listed() throws Exception {
         landingPage.check_if_retailers_listed();
     }
+
+
 
 }
 

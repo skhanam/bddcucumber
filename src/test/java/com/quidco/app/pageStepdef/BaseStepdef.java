@@ -11,6 +11,7 @@ public class BaseStepdef extends SeleniumUtils {
     public static LandingPage landingPage = LandingPage.getInstance();
     public static HomePage homePage;
     public static LoginPage loginPage;
+    public static DiscoverPage discoverPage;
     public static FacebookLoginPage facebookLoginPage;
     public static PaypalLoginPage paypalLoginPage;
     public static NotificationsPage notificationsPage;

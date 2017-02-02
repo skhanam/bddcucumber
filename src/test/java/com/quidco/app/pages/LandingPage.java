@@ -75,6 +75,11 @@ public class LandingPage extends BasePage {
         categoryLink.click();
     }
 
+    public DiscoverPage navigateToDiscoverPage(){
+        driver.navigate().to("https://www.quidco.com/discover/test-page-101");
+        return DiscoverPage.getInstance();
+    }
+
     public void verify_category_label(){
         Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText().trim());
     }
