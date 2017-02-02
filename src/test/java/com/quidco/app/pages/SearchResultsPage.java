@@ -39,7 +39,7 @@ public class SearchResultsPage extends BasePage {
     public SearchResultsPage validateRetailers() {
 
         waitForElementDisplay(HomePageObject.retailersHeadingTitle);
-        scrollElementByOffset(HomePageObject.retailersHeadingTitle,-100);
+        scrollElementIntoMiddle(HomePageObject.retailersHeadingTitle);
         flwait.until(new Function() {
             @Override
             public Object apply(Object o) {
@@ -58,6 +58,7 @@ public class SearchResultsPage extends BasePage {
 
     public SearchResultsPage validateSimilarRetailers() {
         scrollElementIntoView(SearchResultsPageObject.similarRetailersTitle);
+        waitForElementDisplay(SearchResultsPageObject.similarRetailersTitle);
         Assert.assertEquals(SearchResultsPageObject.similarRetailersTitle.getText(), SearchResultsPageObject.similarRetailersConstantString + this.getSearchTerm());
         Assert.assertNotEquals(0, searchResultsPageObject.similarRetailers.size());
         return this;
@@ -72,11 +73,11 @@ public class SearchResultsPage extends BasePage {
 
     public void clickViewMoreProducts() {
         waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
-        scrollElementByOffset(SearchResultsPageObject.viewMoreProductsBtn,-100);
-        SearchResultsPageObject.viewMoreProductsBtn.click();
+        scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
+        executeJS("$('::shadow button')[0].click();");
         try {
             wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("::shadow div.main-button-container> button.btn-is-loading")));
-        }catch (NoSuchElementException  e){
+        } catch (NoSuchElementException e) {
 
         }
 

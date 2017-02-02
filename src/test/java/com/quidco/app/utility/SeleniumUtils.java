@@ -66,23 +66,6 @@ public abstract class SeleniumUtils {
             e.printStackTrace();
         }
     }
-    public void scrollElementByOffset(WebElement element , int offset){
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);window.scrollBy(0,arguments[1])", element,offset);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-    }
-    public void scrollElementIntoViewIfNeeded(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded();", element);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void scrollElementIntoViewatBottom(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", element);
