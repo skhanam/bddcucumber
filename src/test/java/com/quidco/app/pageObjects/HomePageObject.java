@@ -20,8 +20,8 @@ public class HomePageObject {
     @FindBy(id = "store-q1search")
     public static WebElement searchInput;
 
-    @FindBy(xpath =  "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']")
-    public static WebElement retailersHeadingTitle;
+    public static String retailersHeadingTitle = "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']";
+
     @FindBy(xpath =  "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
     public static WebElement multipleRetailersHeadingTitle;
 

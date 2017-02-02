@@ -32,6 +32,9 @@ public abstract class SeleniumUtils {
         return wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
+    public WebElement waitForPresenceOfElement(By by ){
+        return wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
     public boolean isListNotEmpty(final List<WebElement> elments) {
         if (elments == null)
             return false;
