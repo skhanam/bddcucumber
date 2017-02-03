@@ -1,5 +1,6 @@
 package com.quidco.app.pages;
 
+import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.LandingPageObject;
 import com.quidco.app.utility.JavaUtils;
 import org.junit.Assert;
@@ -76,7 +77,7 @@ public class LandingPage extends BasePage {
     }
 
     public DiscoverPage navigateToDiscoverPage(){
-        driver.navigate().to("https://www.quidco.com/discover/test-page-101");
+        driver.navigate().to(Constants.discoverPageURL);
         return DiscoverPage.getInstance();
     }
 

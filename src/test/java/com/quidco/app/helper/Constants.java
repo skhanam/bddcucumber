@@ -17,6 +17,8 @@ public class Constants {
     public static final String  firefoxLinuxdriver="/src/test/resources/OS/Linux/Firefox/64/geckodriver";
     public static final String  firefoxMacdriver="/src/test/resources/OS/Mac/Firefox/geckodriver";
 
+    public static final String discoverPageURL = "https://www.quidco.com/discover/test-page-101";
+
     public static final Map<String,Integer> countMap = createMap();
 
     private  static Map<String,Integer> createMap(){
