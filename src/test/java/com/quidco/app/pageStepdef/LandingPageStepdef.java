@@ -23,7 +23,7 @@ public class LandingPageStepdef extends BaseStepdef {
     }
 
     @Given("^I am on discover page$")
-    public void i_am_on_discover_page(){
+    public void i_am_on_discover_page() {
         discoverPage = landingPage.navigateToDiscoverPage();
     }
 
@@ -86,11 +86,13 @@ public class LandingPageStepdef extends BaseStepdef {
         signupPage = landingPage.click_join_quidco_now_btn();
 
     }
+
     @When("^I click category ([^\"]*)$")
-    public void i_click_category(String categoryName)  {
+    public void i_click_category(String categoryName) {
         landingPage.clickCategory(categoryName);
 
     }
+
     @Then("^I should see correct label on the page$")
     public void i_should_see_correct_label_on_the_page() {
         landingPage.verify_category_label();
@@ -100,9 +102,6 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_should_see_some_retailers_listed() throws Exception {
         landingPage.check_if_retailers_listed();
     }
-
-
-
 }
 
 

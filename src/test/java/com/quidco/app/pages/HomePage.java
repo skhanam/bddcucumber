@@ -61,6 +61,10 @@ public class HomePage extends BasePage {
         Actions builder = new Actions(driver);
         builder.moveToElement(homePageObject.avatarIcon).build().perform();
     }
+    public void moveToFavouriteIcon() {
+        Actions builder = new Actions(driver);
+        builder.moveToElement(homePageObject.favIcon).build().perform();
+    }
 
     public void verifyDropDownOptions(List<String> options) {
         for (String option : options) {
@@ -130,8 +134,7 @@ public class HomePage extends BasePage {
         homePageObject.cardExpiryYear.sendKeys(checkoutDetails.cardDetails.getExpiryYear());
         homePageObject.cardCVC.sendKeys(checkoutDetails.cardDetails.getCvc());
 
-        if(differentBillingAddress)
-        {
+        if (differentBillingAddress) {
             homePageObject.billingLine1.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine1());
             homePageObject.billingLine2.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine2());
             homePageObject.billingCity.sendKeys(checkoutDetails.billingDetails.getBillingCity());
@@ -146,6 +149,22 @@ public class HomePage extends BasePage {
     public void verifyCheckoutSuccessfull() {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
     }
+
+    public void toggleFavouriteBtn(){
+        homePageObject.favToggleBtn.click();
+    }
+
+    public void verifyIfRetailerAddedToFavourite(){
+        Assert.assertEquals("Looks like the Retailer cannot be added as favourties for some reason","Favourited "+getSearchTerm(),homePageObject.alertText);
+    }
+    public void verifyIfRetailerRemovedFromFavourite(){
+        Assert.assertEquals("Looks like the Retailer cannot be removed from favourites for some reason","Removed "+getSearchTerm()+" from Favourites ",homePageObject.alertText);
+    }
+
+    public void checkIfRetailerAddedUnderBookmarks(){
+        waitForElementDisplay(driver.findElement(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
+    }
+
 
 
 }

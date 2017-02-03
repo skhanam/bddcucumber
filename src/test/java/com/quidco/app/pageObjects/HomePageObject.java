@@ -12,6 +12,10 @@ public class HomePageObject {
 
     @FindBy(css = ".user")
     public static WebElement avatarIcon;
+    @FindBy(css = ".category-icons-container li.bookmarks")
+    public static WebElement favIcon;
+
+    public static String favDDItem = "li.dropdown.open li.dropdown-item>a[title='%s']";
 
     public static String userDropdownOptions = "//li[contains(@class,'user-activity')]//ul[contains(@class,'dropdown-menu')]" +
             "//li/a/span[contains(text(),'%s')]";
@@ -79,9 +83,9 @@ public class HomePageObject {
     public static WebElement billingCity;
     @FindBy(css = "#billingPostcode")
     public static WebElement billingPostcode;
-
-
-
+    @FindBy(css = ".retailer-cashback-summary-buttons #follow_link_text")
+    public static WebElement favToggleBtn;
+    public static String alertText  = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")][text()=\"%s\"]";
 
 
 }

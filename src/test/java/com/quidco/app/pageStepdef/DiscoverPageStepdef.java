@@ -12,7 +12,7 @@ import cucumber.api.java.en.When;
  */
 public class DiscoverPageStepdef extends BaseStepdef {
 
-    @When("^I click retailer \"([^\"]*)\"$")
+    @When("^I click retailer \"([^\"]*)\" on discover page$")
     public void i_click_retailer(String retailerName){
         discoverPage.click_random_retailer();
     }
