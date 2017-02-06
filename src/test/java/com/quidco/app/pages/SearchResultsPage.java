@@ -6,6 +6,7 @@ import com.quidco.app.pageObjects.SearchResultsPageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -79,7 +80,17 @@ public class SearchResultsPage extends BasePage {
         } catch (NoSuchElementException e) {
 
         }
+    }
 
+    public HomePage clickRetailer() {
+        WebElement retailer = waitForPresenceOfElement(By.cssSelector(searchResultsPageObject.retailerName));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        retailer.click();
+        return HomePage.getInstance();
     }
 
 }

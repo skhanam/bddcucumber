@@ -2,6 +2,7 @@ package com.quidco.app.pageStepdef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 /**
  * Created by ashishmohindroo on 12/16/16.
@@ -32,5 +33,10 @@ public class SearchResultsPageStepdef extends BaseStepdef {
     @Then("^I click view more products$")
     public void i_click_view_more_products_btn() {
         searchResultsPage.clickViewMoreProducts();
+    }
+
+    @When("^I click the retailer on search results page$")
+    public void i_click_retailer_on_search_results_page(){
+       homePage = searchResultsPage.clickRetailer();
     }
 }

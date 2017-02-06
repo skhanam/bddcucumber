@@ -5,9 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-/**
- * Created by ashishmohindroo on 12/16/16.
- */
 public class SearchResultsPageObject {
 
     @FindBy(xpath = "//div[@id='search-results-similar-retailers-container']/h3")
@@ -23,5 +20,7 @@ public class SearchResultsPageObject {
 
     @FindBy(css = "::shadow button")
     public static WebElement viewMoreProductsBtn;
+
+    public static String retailerName = "#search-results-top-retailer-container .retailer-name>a";
 
 }

@@ -61,6 +61,10 @@ public class HomePage extends BasePage {
         Actions builder = new Actions(driver);
         builder.moveToElement(homePageObject.avatarIcon).build().perform();
     }
+    public void moveToFavouriteIcon() {
+        Actions builder = new Actions(driver);
+        builder.moveToElement(homePageObject.favIcon).build().perform();
+    }
 
     public void verifyDropDownOptions(List<String> options) {
         for (String option : options) {
@@ -130,8 +134,7 @@ public class HomePage extends BasePage {
         homePageObject.cardExpiryYear.sendKeys(checkoutDetails.cardDetails.getExpiryYear());
         homePageObject.cardCVC.sendKeys(checkoutDetails.cardDetails.getCvc());
 
-        if(differentBillingAddress)
-        {
+        if (differentBillingAddress) {
             homePageObject.billingLine1.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine1());
             homePageObject.billingLine2.sendKeys(checkoutDetails.billingDetails.getBillingAddressLine2());
             homePageObject.billingCity.sendKeys(checkoutDetails.billingDetails.getBillingCity());
@@ -146,6 +149,54 @@ public class HomePage extends BasePage {
     public void verifyCheckoutSuccessfull() {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
     }
+
+    public void AddToFavouriteBtn(){
+        preciseWaitForElements(driver.findElements(By.cssSelector(".favourite-container")));
+        if(isElementPresent(By.cssSelector(homePageObject.removeFromFavBtn)))
+        {
+            driver.findElement(By.cssSelector(homePageObject.removeFromFavBtn)).click();
+
+        }
+        WebElement e = waitForPresenceOfElement(By.cssSelector(homePageObject.addToFavBtn));
+        e.click();
+    }
+    public void removeFromFavouriteBtn(){
+        preciseWaitForElements(driver.findElements(By.cssSelector(homePageObject.favContainer)));
+        if(isElementPresent(By.cssSelector(homePageObject.addToFavBtn)))
+        {
+            driver.findElement(By.cssSelector(homePageObject.addToFavBtn)).click();
+
+        }
+        WebElement e = waitForPresenceOfElement(By.cssSelector(homePageObject.removeFromFavBtn));
+        e.click();
+    }
+
+
+    public void verifyIfRetailerAddedToFavourite(){
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals("Looks like the Retailer cannot be added as favourties for some reason","Favourited "+getSearchTerm(),driver.findElement(By.xpath(String.format(homePageObject.alertText))).getText());
+    }
+    public void verifyIfRetailerRemovedFromFavourite(){
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals("Looks like the Retailer cannot be removed from favourites for some reason","Removed "+getSearchTerm()+" from Favourites",driver.findElement(By.xpath(String.format(homePageObject.alertText))).getText());
+    }
+
+    public void checkIfRetailerAddedUnderBookmarks(){
+        Assert.assertTrue(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
+    }
+    public void checkIfRetailerRemovedUnderBookmarks(){
+        Assert.assertFalse(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
+    }
+
+
 
 
 }

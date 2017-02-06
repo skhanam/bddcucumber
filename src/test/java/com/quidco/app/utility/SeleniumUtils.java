@@ -35,6 +35,10 @@ public abstract class SeleniumUtils {
     public WebElement waitForPresenceOfElement(By by ){
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
+
+    public void waitForNotPresenceOfElement(By by ){
+         wait.until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(by)));
+    }
     public boolean isListNotEmpty(final List<WebElement> elments) {
         if (elments == null)
             return false;
@@ -52,6 +56,17 @@ public abstract class SeleniumUtils {
             return false;
         }
     }
+    public boolean isElementPresent(By by) {
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(by));
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
 
     public void check_checkbox_by_js(final String css_selector) {
         executor.executeScript("$(arguments[0]).get(0).checked = true;", css_selector);
@@ -107,12 +122,13 @@ public abstract class SeleniumUtils {
     }
 
     public void preciseWaitForElement(WebElement e) {
-        flwait.until(new Function() {
-            @Override
-            public Object apply(Object o) {
-                return e;
-            }
-        });
+            flwait.until(new Function() {
+                @Override
+                public Object apply(Object o) {
+                    return e;
+                }
+            });
+
 
     }
 

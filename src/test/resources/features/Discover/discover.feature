@@ -5,7 +5,7 @@ Feature: As a logged in user , i can go to discover and explore more interesting
     Given I am on discover page
 
   Scenario:
-    When I click retailer "Groupon"
+    When I click retailer "Groupon" on discover page
     Then User lands on the correct page
 
 
