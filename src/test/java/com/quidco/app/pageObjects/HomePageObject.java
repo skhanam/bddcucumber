@@ -26,12 +26,11 @@ public class HomePageObject {
 
     public static String retailersHeadingTitle = "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']";
 
-    @FindBy(xpath =  "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
+    @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
     public static WebElement multipleRetailersHeadingTitle;
 
     @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//li")
     public static List<WebElement> multiRetailersList;
-
 
 
     public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
@@ -83,9 +82,12 @@ public class HomePageObject {
     public static WebElement billingCity;
     @FindBy(css = "#billingPostcode")
     public static WebElement billingPostcode;
-    @FindBy(css = ".retailer-cashback-summary-buttons #follow_link_text")
+    @FindBy(css = ".retailer-cashback-summary-desktop .retailer-cashback-summary-buttons #follow_link_text")
     public static WebElement favToggleBtn;
-    public static String alertText  = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")][text()=\"%s\"]";
 
+    public static String favContainer = ".favourite-container";
 
+    public static String alertText = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")]";
+    public static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
+    public static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
 }

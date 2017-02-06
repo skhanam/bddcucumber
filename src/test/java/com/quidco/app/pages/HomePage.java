@@ -150,20 +150,52 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
     }
 
-    public void toggleFavouriteBtn(){
-        homePageObject.favToggleBtn.click();
+    public void AddToFavouriteBtn(){
+        preciseWaitForElements(driver.findElements(By.cssSelector(".favourite-container")));
+        if(isElementPresent(By.cssSelector(homePageObject.removeFromFavBtn)))
+        {
+            driver.findElement(By.cssSelector(homePageObject.removeFromFavBtn)).click();
+
+        }
+        WebElement e = waitForPresenceOfElement(By.cssSelector(homePageObject.addToFavBtn));
+        e.click();
+    }
+    public void removeFromFavouriteBtn(){
+        preciseWaitForElements(driver.findElements(By.cssSelector(homePageObject.favContainer)));
+        if(isElementPresent(By.cssSelector(homePageObject.addToFavBtn)))
+        {
+            driver.findElement(By.cssSelector(homePageObject.addToFavBtn)).click();
+
+        }
+        WebElement e = waitForPresenceOfElement(By.cssSelector(homePageObject.removeFromFavBtn));
+        e.click();
     }
 
+
     public void verifyIfRetailerAddedToFavourite(){
-        Assert.assertEquals("Looks like the Retailer cannot be added as favourties for some reason","Favourited "+getSearchTerm(),homePageObject.alertText);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals("Looks like the Retailer cannot be added as favourties for some reason","Favourited "+getSearchTerm(),driver.findElement(By.xpath(String.format(homePageObject.alertText))).getText());
     }
     public void verifyIfRetailerRemovedFromFavourite(){
-        Assert.assertEquals("Looks like the Retailer cannot be removed from favourites for some reason","Removed "+getSearchTerm()+" from Favourites ",homePageObject.alertText);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals("Looks like the Retailer cannot be removed from favourites for some reason","Removed "+getSearchTerm()+" from Favourites",driver.findElement(By.xpath(String.format(homePageObject.alertText))).getText());
     }
 
     public void checkIfRetailerAddedUnderBookmarks(){
-        waitForElementDisplay(driver.findElement(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
+        Assert.assertTrue(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
     }
+    public void checkIfRetailerRemovedUnderBookmarks(){
+        Assert.assertFalse(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
+    }
+
 
 
 

@@ -21,6 +21,6 @@ public class SearchResultsPageObject {
     @FindBy(css = "::shadow button")
     public static WebElement viewMoreProductsBtn;
 
-    @FindBy(css = "#search-results-top-retailer-container .retailer-name")
-    public static WebElement  retailerName;
+    public static String retailerName = "#search-results-top-retailer-container .retailer-name>a";
+
 }

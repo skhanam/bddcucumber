@@ -97,14 +97,26 @@ public class HomePageStepdef extends BaseStepdef {
 
     @And("^I add retailer to favourite$")
     public void i_add_retailer_to_favourites(){
-        homePage.toggleFavouriteBtn();
+        homePage.AddToFavouriteBtn();
         homePage.verifyIfRetailerAddedToFavourite();
+    }
+    @And("^I remove retailer from favourite$")
+    public void i_remove_retailer_from_favourites(){
+        homePage.removeFromFavouriteBtn();
+        homePage.verifyIfRetailerRemovedFromFavourite();
     }
 
     @Then("^I should see this retailer added under bookmarks$")
     public void i_should_see_this_retailer_under_bookmarks(){
+
        i_am_on_favourite_icon();
        homePage.checkIfRetailerAddedUnderBookmarks();
+    }
+    @Then("^I should not see this retailer under bookmarks$")
+    public void i_should_not_see_this_retailer_under_bookmarks(){
+
+       i_am_on_favourite_icon();
+       homePage.checkIfRetailerRemovedUnderBookmarks();
     }
 
 }

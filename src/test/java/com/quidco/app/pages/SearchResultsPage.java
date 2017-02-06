@@ -83,7 +83,13 @@ public class SearchResultsPage extends BasePage {
     }
 
     public HomePage clickRetailer() {
-        searchResultsPageObject.retailerName.click();
+        WebElement retailer = waitForPresenceOfElement(By.cssSelector(searchResultsPageObject.retailerName));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        retailer.click();
         return HomePage.getInstance();
     }
 
