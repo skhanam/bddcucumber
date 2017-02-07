@@ -1,5 +1,7 @@
 @regression @favourites
-Feature: As a logged in user , i can search different retailers / merchants using Quidco Search
+Feature: As a logged in user , I can add & remove any retailer as favourites.
+
+  This feature represents if the user is able to add or remove any merchant as favourites.
 
   Background: Logging as a premium user and go to account summary  page.
     Given I am logged in premium user
