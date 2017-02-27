@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class NotificationsPageObject {
 
-    @FindBy(css = ".sign-out>a[title='Logout']")
+    @FindBy(css = "a#cas-sign-out")
     public static WebElement signOutLink;
     public static String tabLocator = "//div[contains(@class,'horizontal-tabs')]/ul/li/a[text()='%s']";
     public static String titleLocator = "//div[@class='account-notifications']" +
