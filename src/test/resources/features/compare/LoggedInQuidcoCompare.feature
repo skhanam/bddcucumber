@@ -15,7 +15,7 @@ Feature: As a Quidco Member user, I want to explore compare feature for differen
     Then I can see the following grid comparison options:
       | Electricity |
       | Gas         |
-      | Duel Fuel   |
+      | Dual Fuel   |
 
   Scenario Outline: As a user , I want to go to How it works page and i should be able to find the relevant content.
     And I click <TabName> tab
