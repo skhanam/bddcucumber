@@ -24,7 +24,7 @@ public abstract class BasePage extends SeleniumUtils {
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String os = System.getProperty("os.name");
-    public static String QuidcoAppUrl;
+    public static String quidcoAppUrl;
     public static String browserType;
 
     protected static String username;
@@ -35,7 +35,7 @@ public abstract class BasePage extends SeleniumUtils {
 
 
     public BasePage() {
-        QuidcoAppUrl = properties.getProperty("URL");
+        quidcoAppUrl = properties.getProperty("URL");
     }
 
     public static WebDriver getDriverInstance() throws IOException {
@@ -55,6 +55,8 @@ public abstract class BasePage extends SeleniumUtils {
                     case "WINDOWS":
                         System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + Constants.firefoxWindowsdriver);
                         break;
+                        default:
+                            System.out.println("NO OS FOUND!!!");
                 }
                 driver = new FirefoxDriver(dc);
                 break;

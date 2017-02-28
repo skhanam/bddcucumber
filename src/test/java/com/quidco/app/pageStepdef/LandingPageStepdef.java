@@ -52,6 +52,8 @@ public class LandingPageStepdef extends BaseStepdef {
                 landingPage.setUsername("adsfsd@adfasf.com");
                 landingPage.setPassword("lkjjlkl");
                 break;
+                default:
+                    System.out.println("No User Type Selected");
         }
     }
 
@@ -73,7 +75,7 @@ public class LandingPageStepdef extends BaseStepdef {
     @Given("^I am logged in ([^\"]*) user$")
     public void i_am_logged_in_user(String userType) {
         i_am_an_existing_user(userType);
-        landingPage.IamloggedinUser();
+        landingPage.iamloggedinUser();
     }
 
     @And("I click quidco compare")

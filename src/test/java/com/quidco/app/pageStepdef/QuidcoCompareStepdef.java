@@ -12,7 +12,7 @@ import java.util.List;
 public class QuidcoCompareStepdef extends BaseStepdef {
     @Then("I should see tabs: ([^\"]*)")
     public void i_should_see_tabs(List<String> tabOptions) {
-        quidcoComparePage.AreTabsDisplayed(tabOptions);
+        quidcoComparePage.areTabsDisplayed(tabOptions);
     }
 
     @And("^I click ([^\"]*) tab$")

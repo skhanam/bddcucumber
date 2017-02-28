@@ -60,7 +60,7 @@ public class QuidcoComparePage extends BasePage {
     }
 
 
-    public void AreTabsDisplayed(List<String> options) {
+    public void areTabsDisplayed(List<String> options) {
         scrollElementIntoView(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, options.get(0)))));
         for (String option : options) {
             waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, option))));
@@ -89,12 +89,14 @@ public class QuidcoComparePage extends BasePage {
                 quidcoCompareObject.getPaidCaraousel.click();
                 validateText(QuidcoComparePageObject.getPaidTitle, quidcoCompareObject.getPaidTitleText);
                 break;
+                default:
+                    System.out.println("Looks like tab not present");
         }
     }
 
     public void checkNumberOfFAQs(int numberOfFAQs) {
         setNumberOfFaqs(numberOfFAQs);
-        Assert.assertEquals(new Integer(quidcoCompareObject.faqTitles.size()), new Integer(numberOfFAQs));
+        Assert.assertEquals(Integer.valueOf(quidcoCompareObject.faqTitles.size()), Integer.valueOf(numberOfFAQs));
     }
 
     public void validateFAQContent() {

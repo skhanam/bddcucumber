@@ -10,15 +10,15 @@ public class NotificationsPageObject {
 
     @FindBy(css = "a#cas-sign-out")
     public static WebElement signOutLink;
-    public static String tabLocator = "//div[contains(@class,'horizontal-tabs')]/ul/li/a[text()='%s']";
-    public static String titleLocator = "//div[@class='account-notifications']" +
+    public final static String tabLocator = "//div[contains(@class,'horizontal-tabs')]/ul/li/a[text()='%s']";
+    public final static String titleLocator = "//div[@class='account-notifications']" +
             "/div[@class='container']//h4[contains(text(),'%s')]";
-    public static String LinksLocator = "//div[@class='notification-annotation']//p/a[contains(text(),'%s')]";
-    public static String buttonLocator = "//div[@class='account-notifications']/div[@class='container']//p[contains(@class,'huge')]/a/button[text()='%s']";
-    public static String activityTabTitle = "//*[@id=\"left_nav\"]/ul/li[1]/a[contains(text(),'%s')]";
-    public static String paymentsTabTitle = "//div[@id='payments_page']//div[contains(@class,'price-header')]/h1[contains(text(),'%s')]";
-    public static String referQuidcoTitle = "//*[@id=\"page-content\"]/div[5]/div/div[3]/div/h2[contains(text(),'%s')]";
-    public static String myreviewsTitle = "//*[@id=\"page-content\"]/div[5]/div/div[1]/div/h1[contains(text(),'%s')]";
-    public static String settingsTitle = "//*[@id=\"page-content\"]/div[4]/div/div[2]/h1[contains(text(),'%s')]";
+    public final static String LinksLocator = "//div[@class='notification-annotation']//p/a[contains(text(),'%s')]";
+    public final static String buttonLocator = "//div[@class='account-notifications']/div[@class='container']//p[contains(@class,'huge')]/a/button[text()='%s']";
+    public final static String activityTabTitle = "//*[@id=\"left_nav\"]/ul/li[1]/a[contains(text(),'%s')]";
+    public final static String paymentsTabTitle = "//div[@id='payments_page']//div[contains(@class,'price-header')]/h1[contains(text(),'%s')]";
+    public final static String referQuidcoTitle = "//*[@id=\"page-content\"]/div[5]/div/div[3]/div/h2[contains(text(),'%s')]";
+    public final static String myreviewsTitle = "//*[@id=\"page-content\"]/div[5]/div/div[1]/div/h1[contains(text(),'%s')]";
+    public final static String settingsTitle = "//*[@id=\"page-content\"]/div[4]/div/div[2]/h1[contains(text(),'%s')]";
 
 }

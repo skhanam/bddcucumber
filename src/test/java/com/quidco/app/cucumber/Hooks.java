@@ -17,7 +17,7 @@ public class Hooks extends BasePage {
 
     @Before
     public void beforeScenario(Scenario scenario) throws Exception {
-        driver.get(QuidcoAppUrl + "/access_beta.php");
+        driver.get(quidcoAppUrl + "/access_beta.php");
     }
 
     public void embedScreenshot(Scenario scenario) {

@@ -38,7 +38,7 @@ public class LandingPage extends BasePage {
     }
 
     public void navigateToLandingPage() {
-        driver.get(QuidcoAppUrl);
+        driver.get(quidcoAppUrl);
     }
 
     public LoginPage clickSignInOnNavigationBar() {
@@ -47,7 +47,7 @@ public class LandingPage extends BasePage {
         return LoginPage.getInstance();
     }
 
-    public void IamloggedinUser() {
+    public void iamloggedinUser() {
 
         navigateToLandingPage();
         loginPage = clickSignInOnNavigationBar();
@@ -85,10 +85,10 @@ public class LandingPage extends BasePage {
         Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText().trim());
     }
     public void check_if_retailers_listed() throws Exception {
-       String retailersFound =  JavaUtils.getSubstringWithPattern("[0-9]+",landingPageObject.numberOfRetailersFoundLabel.getText().trim());
-       int retailersNumber = Integer.valueOf(retailersFound);
-        System.out.println("Number of retailers are : " + retailersNumber);
-       Assert.assertFalse(retailersNumber == 0);
+        String retailersFound =  JavaUtils.getSubstringWithPattern("[0-9]+",landingPageObject.numberOfRetailersFoundLabel.getText().trim());
+        int retailersNumber = Integer.parseInt(retailersFound);
+        System.out.println("Number of retailers are : " + retailersFound);
+        Assert.assertFalse(retailersNumber == 0);
     }
 }
 

@@ -97,7 +97,7 @@ public class HomePageStepdef extends BaseStepdef {
 
     @And("^I add retailer to favourite$")
     public void i_add_retailer_to_favourites(){
-        homePage.AddToFavouriteBtn();
+        homePage.addToFavouriteBtn();
         homePage.verifyIfRetailerAddedToFavourite();
     }
     @And("^I remove retailer from favourite$")

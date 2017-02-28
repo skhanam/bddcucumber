@@ -79,6 +79,8 @@ public class HomePage extends BasePage {
                 case "Settings":
                     waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.userDropdownOptionsWithSingleLine, option))));
                     break;
+                    default:
+                        System.out.println("Looks like drop down not available");
             }
         }
     }
@@ -150,7 +152,7 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
     }
 
-    public void AddToFavouriteBtn(){
+    public void addToFavouriteBtn(){
         preciseWaitForElements(driver.findElements(By.cssSelector(".favourite-container")));
         if(isElementPresent(By.cssSelector(homePageObject.removeFromFavBtn)))
         {
