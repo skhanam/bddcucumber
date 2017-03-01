@@ -11,7 +11,8 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "@favourites",
+//@CucumberOptions(tags = "{@favourites,@manage-favs}",
+@CucumberOptions(tags = "@manage-favs",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = {"com.quidco.app.pages", "com.quidco.app.pageStepdef",

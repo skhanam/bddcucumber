@@ -79,8 +79,8 @@ public class HomePage extends BasePage {
                 case "Settings":
                     waitForElementDisplay(driver.findElement(By.xpath(String.format(HomePageObject.userDropdownOptionsWithSingleLine, option))));
                     break;
-                    default:
-                        System.out.println("Looks like drop down not available");
+                default:
+                    System.out.println("Looks like drop down not available");
             }
         }
     }
@@ -185,6 +185,21 @@ public class HomePage extends BasePage {
         Assert.assertFalse(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
     }
 
+    public void click_manage_favs(){
+        WebElement option = waitForElementDisplay(homePageObject.manageFavouritesDropdown);
+        option.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(homePageObject.favouritesHeaderTitle)));
+    }
+    public void removeAllRetailersAsFav(){
+        List<WebElement> numOfRetailers = driver.findElements(By.cssSelector("div.settings-field .icon-primary-expand-bg"));
+        int number = numOfRetailers.size();
+        for(WebElement w: numOfRetailers)
+        {
+
+        }
+
+
+    }
 
 
 

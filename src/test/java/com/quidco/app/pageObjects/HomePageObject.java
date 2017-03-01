@@ -86,10 +86,16 @@ public class HomePageObject {
     public static WebElement billingPostcode;
     @FindBy(css = ".retailer-cashback-summary-desktop .retailer-cashback-summary-buttons #follow_link_text")
     public static WebElement favToggleBtn;
+    @FindBy(css = "div.favourites a[href='/settings/favourites/']")
+    public static WebElement manageFavouritesDropdown;
+    public static String favouritesHeaderTitle = "div.settings";
+
+
 
     public final static String favContainer = ".favourite-container";
 
     public final static String alertText = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")]";
     public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
     public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
+
 }
