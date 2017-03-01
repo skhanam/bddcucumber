@@ -18,7 +18,7 @@ public class SearchResultsPageObject {
 
     public static String similarRetailersConstantString = "Similar retailers to ";
 
-    @FindBy(css = "::shadow button")
+    @FindBy(xpath = "//msm-component-search-product-list/div/button")
     public static WebElement viewMoreProductsBtn;
 
     public static String retailerName = "#search-results-top-retailer-container .retailer-name>a";

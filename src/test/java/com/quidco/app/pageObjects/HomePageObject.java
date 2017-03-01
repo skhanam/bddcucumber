@@ -35,11 +35,12 @@ public class HomePageObject {
 
     public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
 
-    @FindBy(css = "::shadow .page-title-container")
+
+    @FindBy(xpath = "//msm-app-marketplace-search//h3[@class='page-title-container']")
     public  static WebElement productsLabel;
 
 
-    @FindBy(css = "::shadow msm-component-search-product-product a>div")
+    @FindBy(xpath = "//msm-component-search-product-list/msm-component-search-product-product")
     public  static List<WebElement> products;
 
     public final static String productBuyNowBtn = "::shadow msm-component-search-product-product .btn";

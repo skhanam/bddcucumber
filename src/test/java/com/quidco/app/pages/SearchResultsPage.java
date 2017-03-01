@@ -71,12 +71,12 @@ public class SearchResultsPage extends BasePage {
         return HomePage.getInstance();
     }
 
-    public void clickViewMoreProducts() {
-        waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
-        scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
-        executeJS("$('::shadow button')[0].click();");
+    public void clickViewMoreProducts()  {
+        scrollElementIntoViewatBottom(SearchResultsPageObject.viewMoreProductsBtn);
+        WebElement viewMoreBtn = waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
+        viewMoreBtn.click();
         try {
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("::shadow div.main-button-container> button.btn-is-loading")));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//msm-component-search-product-list/div/button[contains(@class,'btn-is-loading')]")));
         } catch (NoSuchElementException e) {
 
         }
