@@ -47,6 +47,12 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_am_on_favourite_icon(){
         homePage.moveToFavouriteIcon();
     }
+
+    @When("^I click Manage Favourites option under favourite icon$")
+    public void i_click_manage_favourites_option_under_favourite_icon(){
+        homePage.click_manage_favs();
+    }
+
     @Then("^I should see drop down with options:$")
     public void i_should_see_drop_down_with_options(List<String> options) {
         homePage.verifyDropDownOptions(options);
@@ -109,14 +115,20 @@ public class HomePageStepdef extends BaseStepdef {
     @Then("^I should see this retailer added under bookmarks$")
     public void i_should_see_this_retailer_under_bookmarks(){
 
-       i_am_on_favourite_icon();
-       homePage.checkIfRetailerAddedUnderBookmarks();
+        i_am_on_favourite_icon();
+        homePage.checkIfRetailerAddedUnderBookmarks();
     }
     @Then("^I should not see this retailer under bookmarks$")
     public void i_should_not_see_this_retailer_under_bookmarks(){
 
-       i_am_on_favourite_icon();
-       homePage.checkIfRetailerRemovedUnderBookmarks();
+        i_am_on_favourite_icon();
+        homePage.checkIfRetailerRemovedUnderBookmarks();
+    }
+    @And("^There are no existing favourite retailers$")
+    public void there_are_no_existing_favourite_retailers(){
+        i_am_on_favourite_icon();
+        i_click_manage_favourites_option_under_favourite_icon();
+
     }
 
 }
