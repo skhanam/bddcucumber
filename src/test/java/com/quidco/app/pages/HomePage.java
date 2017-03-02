@@ -185,21 +185,13 @@ public class HomePage extends BasePage {
         Assert.assertFalse(isElementPresent(By.cssSelector(String.format(homePageObject.favDDItem,getSearchTerm()))));
     }
 
-    public void click_manage_favs(){
+    public FavPage click_manage_favs(){
         WebElement option = waitForElementDisplay(homePageObject.manageFavouritesDropdown);
         option.click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(homePageObject.favouritesHeaderTitle)));
+        return FavPage.getInstance();
     }
-    public void removeAllRetailersAsFav(){
-        List<WebElement> numOfRetailers = driver.findElements(By.cssSelector("div.settings-field .icon-primary-expand-bg"));
-        int number = numOfRetailers.size();
-        for(WebElement w: numOfRetailers)
-        {
 
-        }
-
-
-    }
 
 
 
