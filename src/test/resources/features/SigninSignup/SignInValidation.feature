@@ -13,9 +13,9 @@ Feature: User with invalid credentials cannot login
     And I see wrong credentials message
 
     Examples:
-    |username|password|
-    |quidco.tester@gmail.com|wrongpassword|
-    |wrongemail@email.com|quidcotester@01|
+      | username                | password        |
+      | quidco.tester@gmail.com | wrongpassword   |
+      | wrongemail@email.com    | quidcotester@01 |
 
   Scenario Outline: user with invalid facebook credentials cannot login
 
@@ -26,5 +26,5 @@ Feature: User with invalid credentials cannot login
     And I see wrong credentials message for facebook
 
     Examples:
-      |username|password|
-      |quidco.tester@gmail.com|wrongpassword|
+      | username                | password      |
+      | quidco.tester@gmail.com | wrongpassword |

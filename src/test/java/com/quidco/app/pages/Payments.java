@@ -8,22 +8,18 @@ import org.openqa.selenium.support.FindBy;
  */
 public class Payments extends BasePage {
 
+    String paymentLink = ".dropdown-item.payments>p>a:contains(%s)";
     @FindBy(css = ".how-much.hidden-xs>p")
     private WebElement paymentMethod;
-
     @FindBy(css = "#user-avatar")
     private WebElement controlPanel;
     @FindBy(css = ".dropdown-item.payments>p>a")
-     private WebElement paymentsLink;
+    private WebElement paymentsLink;
     @FindBy(css = ".blue-text")
     private WebElement accountBalanceOnPayment;
 
-    String paymentLink = ".dropdown-item.payments>p>a:contains(%s)";
-
-
-
-    public void clickAndGoToPaymentsPage(){
-     waitForElementDisplay(controlPanel);
+    public void clickAndGoToPaymentsPage() {
+        waitForElementDisplay(controlPanel);
 
 //      builder.click(controlPanel).build().perform();
 //        builder.moveToElement(paymentsLink).

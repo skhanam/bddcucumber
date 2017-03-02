@@ -11,8 +11,9 @@ import java.util.Properties;
  */
 public class PropertyReader {
 
-    public static final  Properties prop = new Properties();
+    public static final Properties prop = new Properties();
     public static InputStream inputStream = null;
+
     PropertyReader() {
 
     }
@@ -23,14 +24,11 @@ public class PropertyReader {
                 inputStream = new FileInputStream(System.getProperty("user.dir")
                         + "/target/classes/config.properties");
                 prop.load(inputStream);
-            }
-            catch (FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
                 e.printStackTrace();
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
-            }
-            finally {
+            } finally {
                 try {
                     inputStream.close();
                 } catch (IOException e) {

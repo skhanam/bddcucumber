@@ -12,6 +12,7 @@ import java.util.List;
 public class NotificationsPage extends BasePage {
 
     private static NotificationsPage notificationsPage = new NotificationsPage();
+    protected NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver, NotificationsPageObject.class);
 
     private NotificationsPage() {
     }
@@ -19,8 +20,6 @@ public class NotificationsPage extends BasePage {
     public static NotificationsPage getInstance() {
         return notificationsPage;
     }
-
-    protected NotificationsPageObject notificationsPageObject = PageFactory.initElements(driver, NotificationsPageObject.class);
 
     public LogoutPage clickSignOutLink() {
         waitForElementDisplay(notificationsPageObject.signOutLink);
@@ -58,19 +57,19 @@ public class NotificationsPage extends BasePage {
     public NotificationsPage validateTitleOnAppropriateTab(String title, String tabName) {
         switch (tabName) {
             case "Activity":
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.activityTabTitle,title))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.activityTabTitle, title))));
                 break;
             case "Payments":
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.paymentsTabTitle,title))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.paymentsTabTitle, title))));
                 break;
             case "Refer Quidco":
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.referQuidcoTitle,title))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.referQuidcoTitle, title))));
                 break;
             case "My reviews":
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.myreviewsTitle,title))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.myreviewsTitle, title))));
                 break;
             case "Settings":
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.settingsTitle,title))));
+                waitForElementDisplay(driver.findElement(By.xpath(String.format(NotificationsPageObject.settingsTitle, title))));
                 break;
         }
         return this;

@@ -33,6 +33,4 @@ public class OnBoardingPageObject {
     public static Select select_YearOfBirth;
 
 
-
-
 }

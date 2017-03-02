@@ -9,15 +9,16 @@ import org.openqa.selenium.support.PageFactory;
 public class SignupPage extends BasePage {
 
     private static SignupPage signupPage = new SignupPage();
+    protected SignupPageObject signupPageObject = PageFactory.initElements(driver, SignupPageObject.class);
 
-    private SignupPage(){}
+    private SignupPage() {
+    }
 
-    public static SignupPage getInstance(){
+    public static SignupPage getInstance() {
         return signupPage;
     }
-    protected SignupPageObject signupPageObject = PageFactory.initElements(driver,SignupPageObject.class);
 
-    public SignupPage fill_in_mandatory_details(){
+    public SignupPage fill_in_mandatory_details() {
         waitForElementDisplay(signupPageObject.firstname);
         signupPageObject.firstname.sendKeys("Quidco");
         signupPageObject.surname.sendKeys("Tester");
@@ -27,13 +28,13 @@ public class SignupPage extends BasePage {
         return this;
     }
 
-    public SignupPage toggleTermsCheckbox(){
+    public SignupPage toggleTermsCheckbox() {
         check_checkbox_by_js("#agree_to_terms_join");
         return this;
     }
 
 
-    public OnboardingPage click_join_in(){
+    public OnboardingPage click_join_in() {
         scrollElementIntoViewatBottom(signupPageObject.join_btn);
         signupPageObject.join_btn.click();
         return OnboardingPage.getInstance();

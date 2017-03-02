@@ -10,46 +10,36 @@ import java.util.List;
  */
 public class HomePageObject {
 
+    public final static String productBuyNowBtn = "::shadow msm-component-search-product-product .btn";
+    public final static String favContainer = ".favourite-container";
+    public final static String alertText = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")]";
+    public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
+    public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
     @FindBy(css = ".user")
     public static WebElement avatarIcon;
     @FindBy(css = ".category-icons-container li.bookmarks")
     public static WebElement favIcon;
-
     public static String favDDItem = "li.dropdown.open li.dropdown-item>a[title='%s']";
-
     public static String userDropdownOptions = "//li[contains(@class,'user-activity')]//ul[contains(@class,'dropdown-menu')]" +
             "//li/a/span[contains(text(),'%s')]";
     public static String userDropdownOptionsWithSingleLine = "//li[contains(@class,'user-activity')]//ul[contains(@class,'dropdown-menu')]" +
             "//li/a[contains(text(),'%s')]";
     @FindBy(id = "store-q1search")
-    public  static WebElement searchInput;
-
-    public  static String retailersHeadingTitle = "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']";
-
+    public static WebElement searchInput;
+    public static String retailersHeadingTitle = "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']";
     @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
-    public  static WebElement multipleRetailersHeadingTitle;
-
+    public static WebElement multipleRetailersHeadingTitle;
     @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//li")
-    public  static List<WebElement> multiRetailersList;
-
-
+    public static List<WebElement> multiRetailersList;
     public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
-
-
     @FindBy(xpath = "//msm-app-marketplace-search//h3[@class='page-title-container']")
-    public  static WebElement productsLabel;
-
-
+    public static WebElement productsLabel;
     @FindBy(xpath = "//msm-component-search-product-list/msm-component-search-product-product")
-    public  static List<WebElement> products;
-
-    public final static String productBuyNowBtn = "::shadow msm-component-search-product-product .btn";
-
+    public static List<WebElement> products;
     @FindBy(css = ".page-title-container")
-    public  static WebElement shippingAndPaymentsTitle;
-
+    public static WebElement shippingAndPaymentsTitle;
     @FindBy(css = "#addressFullName")
-    public  static WebElement addressFullName;
+    public static WebElement addressFullName;
     @FindBy(css = "#addressLine1")
     public static WebElement addressLine1;
     @FindBy(css = "#addressLine2")
@@ -74,7 +64,6 @@ public class HomePageObject {
     public static WebElement reviewOrSubmitOrderBtn;
     @FindBy(css = ".page-main-title")
     public static WebElement orderPlacedtitle;
-
     @FindBy(css = "#billingLine1")
     public static WebElement billingLine1;
     @FindBy(css = "#billingLine2")
@@ -88,13 +77,5 @@ public class HomePageObject {
     @FindBy(css = "div.favourites a[href='/settings/favourites/']")
     public static WebElement manageFavouritesDropdown;
     public static String favouritesHeaderTitle = "div.settings";
-
-
-
-    public final static String favContainer = ".favourite-container";
-
-    public final static String alertText = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")]";
-    public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
-    public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
 
 }

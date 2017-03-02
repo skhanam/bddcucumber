@@ -36,7 +36,7 @@ public class SearchResultsPageStepdef extends BaseStepdef {
     }
 
     @When("^I click the retailer on search results page$")
-    public void i_click_retailer_on_search_results_page(){
-       homePage = searchResultsPage.clickRetailer();
+    public void i_click_retailer_on_search_results_page() {
+        homePage = searchResultsPage.clickRetailer();
     }
 }

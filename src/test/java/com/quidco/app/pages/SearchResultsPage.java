@@ -15,17 +15,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  */
 public class SearchResultsPage extends BasePage {
 
-    private static SearchResultsPage searchResultsPage = new SearchResultsPage();
-
     public static SearchResultsPageObject searchResultsPageObject = PageFactory.initElements(driver, SearchResultsPageObject.class);
-
+    private static SearchResultsPage searchResultsPage = new SearchResultsPage();
     private String searchTerm = null;
+
+    private SearchResultsPage() {
+    }
 
     public static SearchResultsPage getInstance() {
         return searchResultsPage;
-    }
-
-    private SearchResultsPage() {
     }
 
     public String getSearchTerm() {
@@ -71,7 +69,7 @@ public class SearchResultsPage extends BasePage {
         return HomePage.getInstance();
     }
 
-    public void clickViewMoreProducts()  {
+    public void clickViewMoreProducts() {
         scrollElementIntoViewatBottom(SearchResultsPageObject.viewMoreProductsBtn);
         WebElement viewMoreBtn = waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
         viewMoreBtn.click();

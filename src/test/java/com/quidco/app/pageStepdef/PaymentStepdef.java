@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
  * Created by thadeus on 11/04/16.
  */
 public class PaymentStepdef {
-Payments pay = PageFactory.initElements(BasePage.driver,Payments.class);
+    Payments pay = PageFactory.initElements(BasePage.driver, Payments.class);
 
     @Then("^I click on the payment link$")
     public void i_click_on_the_payment_link() throws Throwable {

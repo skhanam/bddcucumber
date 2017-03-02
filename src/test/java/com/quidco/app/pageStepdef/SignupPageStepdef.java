@@ -21,5 +21,4 @@ public class SignupPageStepdef extends BaseStepdef {
     }
 
 
-
 }

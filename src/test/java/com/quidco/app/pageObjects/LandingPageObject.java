@@ -23,7 +23,7 @@ public class LandingPageObject {
     @FindBy(xpath = "//div[@id='page-content']//div[@class='header-over-image']//button")
     public static WebElement join_quidco_btn;
 
-    public static String  categoryLink= "//div[@id='categories_footer']//a[text()='%s']";
+    public static String categoryLink = "//div[@id='categories_footer']//a[text()='%s']";
 
     @FindBy(css = "#dLabel")
     public static WebElement categoryLabel;
