@@ -1,5 +1,6 @@
 package com.quidco.app.pageStepdef;
 
+import com.quidco.app.pages.FavPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -48,9 +49,10 @@ public class HomePageStepdef extends BaseStepdef {
         homePage.moveToFavouriteIcon();
     }
 
-    @When("^I click Manage Favourites option under favourite icon$")
-    public void i_click_manage_favourites_option_under_favourite_icon(){
-        homePage.click_manage_favs();
+    @When("^I click Manage Favourites option under menu$")
+    public FavPage i_click_manage_favourites_option_under_menu(){
+       return  homePage.click_manage_favs();
+
     }
 
     @Then("^I should see drop down with options:$")
@@ -123,12 +125,6 @@ public class HomePageStepdef extends BaseStepdef {
 
         i_am_on_favourite_icon();
         homePage.checkIfRetailerRemovedUnderBookmarks();
-    }
-    @And("^There are no existing favourite retailers$")
-    public void there_are_no_existing_favourite_retailers(){
-        i_am_on_favourite_icon();
-        i_click_manage_favourites_option_under_favourite_icon();
-
     }
 
 }
