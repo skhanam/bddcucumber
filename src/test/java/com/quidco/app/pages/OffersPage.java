@@ -8,6 +8,6 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class OffersPage extends BasePage {
 
-    OffersPageObject offersPageObject = PageFactory.initElements(driver,OffersPageObject.class);
+    OffersPageObject offersPageObject = PageFactory.initElements(driver, OffersPageObject.class);
 
 }

@@ -8,20 +8,22 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class PaypalLoginPage extends BasePage {
     private static PaypalLoginPage facebookLoginPage = new PaypalLoginPage();
+    protected PaypalLoginPageObject paypalLoginPageObject = PageFactory.initElements(driver, PaypalLoginPageObject.class);
 
-    private PaypalLoginPage(){}
+    private PaypalLoginPage() {
+    }
 
-    public static PaypalLoginPage getInstance(){
+    public static PaypalLoginPage getInstance() {
         return facebookLoginPage;
     }
-    protected PaypalLoginPageObject paypalLoginPageObject = PageFactory.initElements(driver,PaypalLoginPageObject.class);
 
-    public PaypalLoginPage enterUsernameAndPassword(String username, String password){
+    public PaypalLoginPage enterUsernameAndPassword(String username, String password) {
         paypalLoginPageObject.emailInput.sendKeys(username);
         paypalLoginPageObject.passwordInput.sendKeys(password);
         return this;
     }
-    public HomePage clickLogin(){
+
+    public HomePage clickLogin() {
         paypalLoginPageObject.loginBtn.click();
         return HomePage.getInstance();
     }

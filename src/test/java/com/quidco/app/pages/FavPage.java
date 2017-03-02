@@ -1,6 +1,6 @@
 package com.quidco.app.pages;
 
-import com.quidco.app.pageObjects.FacebookLoginPageObject;
+import com.quidco.app.pageObjects.FavPageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -14,26 +14,30 @@ import java.util.List;
 public class FavPage extends BasePage {
 
     private static FavPage favPage = new FavPage();
+    protected FavPageObject favPageObject = PageFactory.initElements(driver, FavPageObject.class);
 
-    private FavPage(){}
+    private FavPage() {
+    }
 
-    public static FavPage getInstance(){
+    public static FavPage getInstance() {
         return favPage;
     }
-//    protected FacebookLoginPageObject facebookLoginPageObject = PageFactory.initElements(driver,FacebookLoginPageObject.class);
-    public void removeAllRetailersAsFav(){
-        List<WebElement> numOfRetailers = driver.findElements(By.cssSelector("div.settings-field .icon-primary-expand-bg"));
-        for(WebElement e: numOfRetailers)
-        {
-            e.click();
-            WebElement remove_btn = waitForElementDisplay(driver.findElement(By.cssSelector("input.remove-favourite")));
-            scrollElementIntoMiddle(remove_btn);
-            remove_btn.click();
-            flwait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("input.remove-favourite")));
-            numOfRetailers = driver.findElements(By.cssSelector("div.settings-field .icon-primary-expand-bg"));
 
+    public void removeAllRetailersAsFav() {
+        List<WebElement> numOfRetailers = favPageObject.expandBtns;
+        for (WebElement e : numOfRetailers) {
+            e.click();
+            waitForElementDisplay(favPageObject.removeBtn);
+            scrollElementIntoMiddle(favPageObject.removeBtn);
+            favPageObject.removeBtn.click();
+            flwait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(FavPageObject.removebtnFormat)));
+            numOfRetailers = favPageObject.expandBtns;
         }
 
+
+    }
+
+    public void validateMerchantsUnderFavouritesBar() {
 
     }
 

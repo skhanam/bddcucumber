@@ -16,9 +16,12 @@ import static com.quidco.app.pageStepdef.BaseStepdef.loginPage;
  */
 public class LandingPage extends BasePage {
 
+    public static LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
+    public static String categoryTitle;
     private static LandingPage landingPage = new LandingPage();
 
-    public static LandingPageObject landingPageObject = PageFactory.initElements(driver, LandingPageObject.class);
+    private LandingPage() {
+    }
 
     public static String getCategoryTitle() {
         return categoryTitle;
@@ -26,11 +29,6 @@ public class LandingPage extends BasePage {
 
     public static void setCategoryTitle(String categoryTitle) {
         LandingPage.categoryTitle = categoryTitle;
-    }
-
-    public static String categoryTitle;
-
-    private LandingPage() {
     }
 
     public static LandingPage getInstance() {
@@ -58,7 +56,8 @@ public class LandingPage extends BasePage {
         homePage = loginPage.enterUsernameAndPassWord(landingPage.getUsername(), landingPage.getPassword()).clickSignInBtn();
         waitForElementDisplay(homePage.homePageObject.avatarIcon);
     }
-    public QuidcoComparePage clickQuidcoCompare(){
+
+    public QuidcoComparePage clickQuidcoCompare() {
         waitForElementDisplay(landingPageObject.waysToEarn_dropdown);
         actions.moveToElement(landingPageObject.waysToEarn_dropdown).build().perform();
         waitForElementDisplay(landingPageObject.quidcoCompareLink);
@@ -66,30 +65,31 @@ public class LandingPage extends BasePage {
         return QuidcoComparePage.getInstance();
     }
 
-    public SignupPage click_join_quidco_now_btn(){
+    public SignupPage click_join_quidco_now_btn() {
         waitForElementDisplay(LandingPageObject.join_quidco_btn);
         LandingPageObject.join_quidco_btn.click();
         return SignupPage.getInstance();
     }
 
-    public void clickCategory(String categoryName){
+    public void clickCategory(String categoryName) {
         setCategoryTitle(categoryName);
-        WebElement categoryLink = driver.findElement(By.xpath(String.format(landingPageObject.categoryLink,categoryName)));
+        WebElement categoryLink = driver.findElement(By.xpath(String.format(landingPageObject.categoryLink, categoryName)));
         scrollElementIntoMiddle(categoryLink);
         waitForElementDisplay(categoryLink);
         categoryLink.click();
     }
 
-    public DiscoverPage navigateToDiscoverPage(){
+    public DiscoverPage navigateToDiscoverPage() {
         driver.navigate().to(Constants.discoverPageURL);
         return DiscoverPage.getInstance();
     }
 
-    public void verify_category_label(){
-        Assert.assertEquals(getCategoryTitle(),landingPageObject.categoryLabel.getText().trim());
+    public void verify_category_label() {
+        Assert.assertEquals(getCategoryTitle(), landingPageObject.categoryLabel.getText().trim());
     }
+
     public void check_if_retailers_listed() throws Exception {
-        String retailersFound =  JavaUtils.getSubstringWithPattern("[0-9]+",landingPageObject.numberOfRetailersFoundLabel.getText().trim());
+        String retailersFound = JavaUtils.getSubstringWithPattern("[0-9]+", landingPageObject.numberOfRetailersFoundLabel.getText().trim());
         int retailersNumber = Integer.parseInt(retailersFound);
         System.out.println("Number of retailers are : " + retailersFound);
         Assert.assertFalse(retailersNumber == 0);

@@ -52,8 +52,8 @@ public class LandingPageStepdef extends BaseStepdef {
                 landingPage.setUsername("adsfsd@adfasf.com");
                 landingPage.setPassword("lkjjlkl");
                 break;
-                default:
-                    System.out.println("No User Type Selected");
+            default:
+                System.out.println("No User Type Selected");
         }
     }
 

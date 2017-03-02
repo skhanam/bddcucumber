@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class OnboardingPage extends BasePage {
 
     private static OnboardingPage onboardingPage = new OnboardingPage();
+    OnBoardingPageObject onBoardingPageObject = PageFactory.initElements(driver, OnBoardingPageObject.class);
 
     private OnboardingPage() {
     }
@@ -16,8 +17,6 @@ public class OnboardingPage extends BasePage {
     public static OnboardingPage getInstance() {
         return onboardingPage;
     }
-
-    OnBoardingPageObject onBoardingPageObject = PageFactory.initElements(driver, OnBoardingPageObject.class);
 
     public OnboardingPage click_get_started() {
         waitForElementDisplay(onBoardingPageObject.getStarted);

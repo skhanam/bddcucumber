@@ -12,18 +12,18 @@ public class JavaUtils {
     public static String getTestEmail() {
         Random random = new Random(System.nanoTime());
         int randomInt = random.nextInt(1000000000);
-        return  "auto-"+randomInt+"@quidco.com";
+        return "auto-" + randomInt + "@quidco.com";
     }
 
     public static String getSubstringWithPattern(String pattern, String line) throws Exception {
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(line);
-        if(m.groupCount()>1){
+        if (m.groupCount() > 1) {
             System.out.println("More than one matches found");
-            throw new  Exception("More than one matches found");
+            throw new Exception("More than one matches found");
         }
         m.find();
         return m.group(0);
-        }
     }
+}
 

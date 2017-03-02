@@ -20,17 +20,15 @@ import static com.quidco.app.helper.Constants.countMap;
  */
 public class SearchResultsPage extends BasePage {
 
-    private static SearchResultsPage searchResultsPage = new SearchResultsPage();
-
     public static SearchResultsPageObject searchResultsPageObject = PageFactory.initElements(driver, SearchResultsPageObject.class);
-
+    private static SearchResultsPage searchResultsPage = new SearchResultsPage();
     private String searchTerm = null;
+
+    private SearchResultsPage() {
+    }
 
     public static SearchResultsPage getInstance() {
         return searchResultsPage;
-    }
-
-    private SearchResultsPage() {
     }
 
     public String getSearchTerm() {

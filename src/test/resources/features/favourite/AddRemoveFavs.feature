@@ -13,12 +13,12 @@ Feature: As a logged in user , I can add & remove any retailer as favourites.
     And I add retailer to favourite
     Then I should see this retailer added under bookmarks
 
-    Scenario: Remove a retailer from the favourite list
-      When I search for "Argos"
-      Then I should see it as top retailer
-      When I click the retailer on search results page
-      And I remove retailer from favourite
-      Then I should not see this retailer under bookmarks
+  Scenario: Remove a retailer from the favourite list
+    When I search for "Argos"
+    Then I should see it as top retailer
+    When I click the retailer on search results page
+    And I remove retailer from favourite
+    Then I should not see this retailer under bookmarks
 
 
 
