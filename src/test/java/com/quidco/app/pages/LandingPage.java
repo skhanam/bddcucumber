@@ -40,6 +40,11 @@ public class LandingPage extends BasePage {
     public void navigateToLandingPage() {
         driver.get(quidcoAppUrl);
     }
+    public LoginPage navigateToSignInPage() {
+        driver.get(quidcoAppUrl+"/sign-in/");
+        return LoginPage.getInstance();
+    }
+
 
     public LoginPage clickSignInOnNavigationBar() {
         waitForElementDisplay(landingPageObject.signInLink);
@@ -49,8 +54,7 @@ public class LandingPage extends BasePage {
 
     public void iamloggedinUser() {
 
-        navigateToLandingPage();
-        loginPage = clickSignInOnNavigationBar();
+        loginPage = navigateToSignInPage();
         homePage = loginPage.enterUsernameAndPassWord(landingPage.getUsername(), landingPage.getPassword()).clickSignInBtn();
         waitForElementDisplay(homePage.homePageObject.avatarIcon);
     }

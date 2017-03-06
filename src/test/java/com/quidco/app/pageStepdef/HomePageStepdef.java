@@ -66,15 +66,15 @@ public class HomePageStepdef extends BaseStepdef {
 
     @And("^I should see ([0-9]+) search results for the product$")
     public void i_should_see_search_results_for_the_products(int numProducts){
-        homePage.verify_presence_of_search_results_for_products(numProducts);
+        searchResultsPage.verify_presence_of_search_results_for_products(numProducts);
     }
     @When("^I click buy now for ([^\"]*) product displayed$")
     public void i_click_buy_now_for_products_displayed(String productNumber ) throws InterruptedException {
-        homePage.click_buy_now_for_indexed_product(productNumber);
+        searchResultsPage.clickBuyNowForProduct(productNumber);
     }
     @When("^I click buy now on product description page$")
     public void i_click_buy_now_on_product_description_page() throws InterruptedException {
-        homePage.click_buy_now_on_product_description_page();
+        searchResultsPage.clickBuyNowOnProductDetailPage();
     }
 
     @And("^I enter the mandatory shipping & payment details$")

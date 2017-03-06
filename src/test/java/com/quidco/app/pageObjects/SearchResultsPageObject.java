@@ -23,4 +23,9 @@ public class SearchResultsPageObject {
 
     public static String retailerName = "#search-results-top-retailer-container .retailer-name>a";
 
+    public static String buyNowBtnLoc = "//msm-component-search-product-list/msm-component-search-product-product[%s]//div[contains(@class,'product-buy-now-container')]/a";
+
+    @FindBy(xpath = "//msm-marketplace-product-detail-right//msm-marketplace-product-buy-now/div/a")
+    public static WebElement  buyNowBtnProductDetailsPage;
+
 }

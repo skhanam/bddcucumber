@@ -107,27 +107,13 @@ public class HomePage extends BasePage {
         return SearchResultsPage.getInstance();
     }
 
-    public void verify_presence_of_search_results_for_products(int numProducts) {
-        waitForElementDisplay(HomePageObject.productsLabel);
-        List<WebElement> products = preciseWaitForElements(HomePageObject.products);
-        Assert.assertTrue(numProducts == products.size());
-    }
-
-    public void click_buy_now_for_indexed_product(String productNumber) throws InterruptedException {
-        Thread.sleep(2000);
-        executeJS("var e = document.querySelectorAll('::shadow msm-component-search-product-product .btn')[" + (Constants.countMap.get(productNumber) - 1) + "]; e.click();");
-        Thread.sleep(3000);
-    }
-
-    public void click_buy_now_on_product_description_page() throws InterruptedException {
-        executeJS("var e = document.querySelectorAll('::shadow .product-title')[1]; e.click();");
-    }
 
     public void enterShippingDetails(boolean differentBillingAddress) {
 
+        waitForElementDisplay(homePageObject.addressFullName);
         homePageObject.addressFullName.sendKeys(checkoutDetails.shippingDetails.getAddressFullName());
         homePageObject.addressLine1.sendKeys(checkoutDetails.shippingDetails.getAddressLine1());
-        homePageObject.addressLine2.sendKeys(checkoutDetails.shippingDetails.getAddressLine2());
+//        homePageObject.addressLine2.sendKeys(checkoutDetails.shippingDetails.getAddressLine2());
         homePageObject.addressCity.sendKeys(checkoutDetails.shippingDetails.getAddressCity());
         homePageObject.addressPostcode.sendKeys(checkoutDetails.shippingDetails.getAddressPostCode());
         homePageObject.cardName.sendKeys(checkoutDetails.cardDetails.getCardName());
@@ -150,6 +136,7 @@ public class HomePage extends BasePage {
 
     public void verifyCheckoutSuccessfull() {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
+        Assert.assertEquals("Some problem in the placing the order",homePageObject.orderPlacedtitle.getText().trim(),"Your Order has been placed");
     }
 
     public void addToFavouriteBtn(){

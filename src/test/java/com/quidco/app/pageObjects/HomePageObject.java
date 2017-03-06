@@ -48,17 +48,17 @@ public class HomePageObject {
     @FindBy(css = ".page-title-container")
     public  static WebElement shippingAndPaymentsTitle;
 
-    @FindBy(css = "#addressFullName")
+    @FindBy(css = "#shippingFullName")
     public  static WebElement addressFullName;
-    @FindBy(css = "#addressLine1")
+    @FindBy(css = "#shippingLine1")
     public static WebElement addressLine1;
-    @FindBy(css = "#addressLine2")
+    @FindBy(css = "#shippingLine2")
     public static WebElement addressLine2;
-    @FindBy(css = "#addressCity")
+    @FindBy(css = "#shippingCity")
     public static WebElement addressCity;
-    @FindBy(css = "#addressPostcode")
+    @FindBy(css = "#shippingPostcode")
     public static WebElement addressPostcode;
-    @FindBy(css = "#phoneNumber")
+    @FindBy(css = "#shippingTelephoneNumber")
     public static WebElement phoneNumber;
     @FindBy(css = "#cardName")
     public static WebElement cardName;
@@ -70,7 +70,7 @@ public class HomePageObject {
     public static WebElement cardExpiryYear;
     @FindBy(css = "#cardCVC")
     public static WebElement cardCVC;
-    @FindBy(css = "msm-form-product .btn")
+    @FindBy(xpath = "//div[contains(@class,'msm-form-product-container')]//msm-navigation-button//button")
     public static WebElement reviewOrSubmitOrderBtn;
     @FindBy(css = ".page-main-title")
     public static WebElement orderPlacedtitle;

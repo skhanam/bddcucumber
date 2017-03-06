@@ -1,6 +1,7 @@
 package com.quidco.app.pages;
 
 import com.google.common.base.Function;
+import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.HomePageObject;
 import com.quidco.app.pageObjects.SearchResultsPageObject;
 import org.junit.Assert;
@@ -9,6 +10,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
+
+import static com.quidco.app.helper.Constants.countMap;
 
 /**
  * Created by ashishmohindroo on 12/16/16.
@@ -91,6 +96,25 @@ public class SearchResultsPage extends BasePage {
         }
         retailer.click();
         return HomePage.getInstance();
+    }
+
+    public void verify_presence_of_search_results_for_products(int numProducts) {
+        waitForElementDisplay(HomePageObject.productsLabel);
+        List<WebElement> products = preciseWaitForElements(HomePageObject.products);
+        Assert.assertTrue(numProducts == products.size());
+    }
+
+
+    public SearchResultsPage clickBuyNowForProduct(String productIndex){
+
+        WebElement buyNow = waitForPresenceOfElement(By.xpath(String.format(searchResultsPageObject.buyNowBtnLoc, countMap.get(productIndex))));
+        buyNow.click();
+        return  this;
+    }
+
+    public void clickBuyNowOnProductDetailPage(){
+        WebElement buyNow = waitForElementDisplay(searchResultsPageObject.buyNowBtnProductDetailsPage);
+        buyNow.click();
     }
 
 }
