@@ -33,6 +33,7 @@ public class DiscoverPage extends BasePage{
 
     public void verify_correct_landing_page(){
         switchToPopWindow();
-        Assert.assertEquals(driver.findElement(By.cssSelector(discoverPageObjects.retailerHeaderTitle)).getText(),String.format(discoverPageObjects.retailerHeaderTitleText,retailerName));
+        preciseWaitForElement(discoverPageObjects.retailerHeaderTitle);
+       Assert.assertTrue(discoverPageObjects.retailerHeaderTitle.getText().contains(retailerName));
     }
 }

@@ -18,9 +18,6 @@ public class DiscoverPageObjects {
     public String merchantBtnLoc = ".merchant_btn";
     public String merchantNameLoc = ".merchant_url";
 
-
-    public String retailerHeaderTitle = ".retailer-description-summary>h1";
-
-    public String retailerHeaderTitleText = "%s offers & cashback";
-
+    @FindBy(css = ".retailer-description-summary>h1")
+    public WebElement retailerHeaderTitle;
 }
