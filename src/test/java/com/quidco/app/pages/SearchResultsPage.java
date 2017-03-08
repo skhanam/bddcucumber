@@ -77,7 +77,7 @@ public class SearchResultsPage extends BasePage {
     }
 
     public void clickViewMoreProducts()  {
-        scrollElementIntoViewatBottom(SearchResultsPageObject.viewMoreProductsBtn);
+        scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
         WebElement viewMoreBtn = waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
         viewMoreBtn.click();
         try {
