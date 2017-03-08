@@ -10,5 +10,5 @@ Feature: As a logged in user , i can checkout the product successfully without a
     When I click buy now on product description page
     And I enter the mandatory shipping & payment details
     And I click review order
-    And I Submit order
-    Then my checkout is successfull
+#    And I Submit order
+#    Then my checkout is successfull
