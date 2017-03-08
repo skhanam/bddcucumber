@@ -67,7 +67,7 @@ public class QuidcoComparePageObject {
     public static  List<String> energyTypes = Arrays.asList(
             "Electricity",
             "Gas",
-            "Dual Fuel");
+            "Duel Fuel");
     public static  List<String> broadbandTypes = Arrays.asList(
             "Home Broadband",
             "Office Broadband",
