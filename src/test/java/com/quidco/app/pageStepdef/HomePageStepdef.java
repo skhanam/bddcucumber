@@ -84,10 +84,20 @@ public class HomePageStepdef extends BaseStepdef {
     @And("^I click review order$")
     public void i_click_review_order(){
         homePage.clickReviewOrSubmitOrder();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     @And("^I Submit order$")
     public void i_submit_order(){
         homePage.clickReviewOrSubmitOrder();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("^my checkout is successfull$")

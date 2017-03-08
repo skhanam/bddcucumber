@@ -116,6 +116,7 @@ public class HomePage extends BasePage {
 //        homePageObject.addressLine2.sendKeys(checkoutDetails.shippingDetails.getAddressLine2());
         homePageObject.addressCity.sendKeys(checkoutDetails.shippingDetails.getAddressCity());
         homePageObject.addressPostcode.sendKeys(checkoutDetails.shippingDetails.getAddressPostCode());
+        homePageObject.phoneNumber.sendKeys(checkoutDetails.shippingDetails.getShippingTelephoneNumber());
         homePageObject.cardName.sendKeys(checkoutDetails.cardDetails.getCardName());
         homePageObject.cardNumber.sendKeys(checkoutDetails.cardDetails.getCardNumber());
         homePageObject.cardExpiryMonth.sendKeys(checkoutDetails.cardDetails.getExpiryMonth());
@@ -136,7 +137,6 @@ public class HomePage extends BasePage {
 
     public void verifyCheckoutSuccessfull() {
         wait.until(ExpectedConditions.visibilityOf(homePageObject.orderPlacedtitle));
-        Assert.assertEquals("Some problem in the placing the order",homePageObject.orderPlacedtitle.getText().trim(),"Your Order has been placed");
     }
 
     public void addToFavouriteBtn(){
