@@ -21,7 +21,7 @@ public class LogoutPage extends  BasePage {
     public void verifySignOutMessage(){
 
         waitForElementDisplay(logoutPageObject.signOutMessage);
-        Assert.assertTrue(logoutPageObject.signOutMessage.getText().equalsIgnoreCase("You have successfully signed out - Sign back in"));
+        Assert.assertTrue(logoutPageObject.signOutMessage.getText().trim().equalsIgnoreCase("You have successfully signed out - Sign back in"));
     }
 
 

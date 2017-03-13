@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LogoutPageObject {
 
-    @FindBy(css = ".alert-auth>h2")
+    @FindBy(css = "#messages_area .alert-text")
     public static WebElement signOutMessage;
 
 }
