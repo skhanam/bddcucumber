@@ -63,7 +63,6 @@ public class HomePageObject {
     public static WebElement cardCVC;
     @FindBy(xpath = "//div[contains(@class,'msm-form-product-container')]//msm-navigation-button//button")
     public static WebElement reviewOrSubmitOrderBtn;
-
     @FindBy(xpath = "//div[contains(@class,\"page-main-title\")][contains(text(),\"Your Order has been placed\")]")
     public static WebElement orderPlacedtitle;
     @FindBy(css = "#billingLine1")
