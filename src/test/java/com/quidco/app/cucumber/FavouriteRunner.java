@@ -11,13 +11,13 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = {"@favourites","@manage-favs"},
+@CucumberOptions(tags = {"@favourites,@manage-favs"},
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = {"com.quidco.app.pages", "com.quidco.app.pageStepdef",
                 "com.quidco.app.helper", "com.quidco.app.cucumber",
                 "com.quidco.app.page", "com.quidco.app.utility"},
-        features = {"src/test/resources/features"}
+        features = {"src/test/resources/features/favourite"}
 )
 
 public class FavouriteRunner extends BasePage {
