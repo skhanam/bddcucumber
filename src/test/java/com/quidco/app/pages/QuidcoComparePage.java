@@ -19,6 +19,19 @@ import java.util.List;
  */
 public class QuidcoComparePage extends BasePage {
 
+    public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
+    private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
+    private String tabName;
+    private int numberOfFaqs;
+    private String category;
+
+    private QuidcoComparePage() {
+    }
+
+    public static QuidcoComparePage getInstance() {
+        return quidcoComparePage;
+    }
+
     public String getTabName() {
         return tabName;
     }
@@ -26,8 +39,6 @@ public class QuidcoComparePage extends BasePage {
     public void setTabName(String tabName) {
         this.tabName = tabName;
     }
-
-    private String tabName;
 
     public int getNumberOfFaqs() {
         return numberOfFaqs;
@@ -37,10 +48,6 @@ public class QuidcoComparePage extends BasePage {
         this.numberOfFaqs = numberOfFaqs;
     }
 
-    private int numberOfFaqs;
-
-    private String category;
-
     public String getCategory() {
         return category;
     }
@@ -48,17 +55,6 @@ public class QuidcoComparePage extends BasePage {
     public void setCategory(String category) {
         this.category = category;
     }
-
-    private static QuidcoComparePage quidcoComparePage = new QuidcoComparePage();
-
-    public static QuidcoComparePageObject quidcoCompareObject = PageFactory.initElements(driver, QuidcoComparePageObject.class);
-
-    private QuidcoComparePage() {
-    }
-    public static QuidcoComparePage getInstance() {
-        return quidcoComparePage;
-    }
-
 
     public void areTabsDisplayed(List<String> options) {
         scrollElementIntoView(driver.findElement(By.xpath(String.format(quidcoCompareObject.quidcoCompareTabs, options.get(0)))));
@@ -89,8 +85,8 @@ public class QuidcoComparePage extends BasePage {
                 quidcoCompareObject.getPaidCaraousel.click();
                 validateText(QuidcoComparePageObject.getPaidTitle, quidcoCompareObject.getPaidTitleText);
                 break;
-                default:
-                    System.out.println("Looks like tab not present");
+            default:
+                System.out.println("Looks like tab not present");
         }
     }
 
@@ -119,46 +115,49 @@ public class QuidcoComparePage extends BasePage {
         }
     }
 
-    public void clickGetaQuote(String gridOption){
+    public void clickGetaQuote(String gridOption) {
         setCategory(gridOption);
-        waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))));
-        scrollElementIntoMiddle(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))));
-        driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn,gridOption))).click();
+        waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))));
+        scrollElementIntoMiddle(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))));
+        driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))).click();
     }
-    public void checkBroadbandList(){
+
+    public void checkBroadbandList() {
         driver.switchTo().frame("quidco_compare");
         preciseWaitForElement(quidcoCompareObject.broadbandPackagesList.get(0));
-        if(getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband") )
-            Assert.assertEquals("true",quidcoCompareObject.broadband_cb.getAttribute("checked"));
-        Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0 );
+        if (getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband"))
+            Assert.assertEquals("true", quidcoCompareObject.broadband_cb.getAttribute("checked"));
+        Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0);
         driver.switchTo().defaultContent();
     }
-    public QuidcoComparePage clickIconCategoryUnderHowitWorksTab(String categoryName){
+
+    public QuidcoComparePage clickIconCategoryUnderHowitWorksTab(String categoryName) {
         setCategory(categoryName);
-        WebElement categoryIcon = driver.findElement(By.xpath(String.format(QuidcoComparePageObject.categoryIcon,categoryName)));
+        WebElement categoryIcon = driver.findElement(By.xpath(String.format(QuidcoComparePageObject.categoryIcon, categoryName)));
         scrollElementIntoMiddle(categoryIcon);
         waitForElementDisplay(categoryIcon);
         categoryIcon.click();
         return this;
     }
-    public void checkCategoryOptionsVisible(){
-    switch (getCategory()){
-        case QuidcoComparePageObject.INSURANCE:
-            for(String insurance: quidcoCompareObject.insuranceTypes){
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceTypesLocator,insurance))));
-            }
-            break;
-        case QuidcoComparePageObject.ENERGY:
-            for(String energyType: quidcoCompareObject.energyTypes){
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.energyTypesLocator,energyType))));
-            }
-            break;
-        case QuidcoComparePageObject.BROADBAND:
-            for(String broadbandType: quidcoCompareObject.broadbandTypes){
-                waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.broadbandTypesLocator,broadbandType))));
-            }
 
-    }
+    public void checkCategoryOptionsVisible() {
+        switch (getCategory()) {
+            case QuidcoComparePageObject.INSURANCE:
+                for (String insurance : quidcoCompareObject.insuranceTypes) {
+                    waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.insuranceTypesLocator, insurance))));
+                }
+                break;
+            case QuidcoComparePageObject.ENERGY:
+                for (String energyType : quidcoCompareObject.energyTypes) {
+                    waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.energyTypesLocator, energyType))));
+                }
+                break;
+            case QuidcoComparePageObject.BROADBAND:
+                for (String broadbandType : quidcoCompareObject.broadbandTypes) {
+                    waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.broadbandTypesLocator, broadbandType))));
+                }
+
+        }
 
     }
 }

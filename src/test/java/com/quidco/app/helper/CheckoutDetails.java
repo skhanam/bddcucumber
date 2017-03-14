@@ -8,7 +8,7 @@ public class CheckoutDetails {
     public CardDetails cardDetails;
     public BillingDetails billingDetails;
 
-    public CheckoutDetails(){
+    public CheckoutDetails() {
         shippingDetails = new ShippingDetails();
         cardDetails = new CardDetails();
         billingDetails = new BillingDetails();
@@ -16,19 +16,19 @@ public class CheckoutDetails {
 
     public class ShippingDetails {
 
-        ShippingDetails(){
-            addressFullName = "Quidco Tester";
-            addressLine1 = "Great Eastern Street";
-            addressCity = "London";
-            addressPostCode = "EC2A3JL";
-            shippingTelephoneNumber = "075573939393";
-        }
         private String addressFullName;
         private String addressLine1;
         private String addressLine2;
         private String addressCity;
         private String addressPostCode;
         private String shippingTelephoneNumber;
+        ShippingDetails() {
+            addressFullName = "Quidco Tester";
+            addressLine1 = "Great Eastern Street";
+            addressCity = "London";
+            addressPostCode = "EC2A3JL";
+            shippingTelephoneNumber = "075573939393";
+        }
 
         public String getAddressFullName() {
             return addressFullName;
@@ -86,7 +86,7 @@ public class CheckoutDetails {
         private String expiryYear;
         private String cvc;
 
-        CardDetails(){
+        CardDetails() {
             cardName = "Quidco Tester";
             cardNumber = "4242424242424242";
             expiryMonth = "05";
@@ -141,7 +141,7 @@ public class CheckoutDetails {
         private String billingCity;
         private String billingPostcode;
 
-        BillingDetails(){
+        BillingDetails() {
             billingAddressLine1 = "Great Eastern Street";
             billingCity = "London";
             billingPostcode = "EC2A3JL";

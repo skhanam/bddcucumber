@@ -6,49 +6,53 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
+    protected static LoginPageObjects loginPageObjects = PageFactory.initElements(driver, LoginPageObjects.class);
     private static LoginPage loginPage = new LoginPage();
 
-    private LoginPage(){}
+    private LoginPage() {
+    }
 
-    public static LoginPage getInstance(){
+    public static LoginPage getInstance() {
         return loginPage;
     }
 
-    protected static LoginPageObjects loginPageObjects = PageFactory.initElements(driver,LoginPageObjects.class);
-
-    public LoginPage enterUsernameAndPassWord(String username,String password){
+    public LoginPage enterUsernameAndPassWord(String username, String password) {
         waitForElementDisplay(loginPageObjects.usernameInput);
         loginPageObjects.usernameInput.sendKeys(username);
         loginPageObjects.passwordInput.sendKeys(password);
         return this;
     }
-    public HomePage clickSignInBtn(){
+
+    public HomePage clickSignInBtn() {
         waitForElementDisplay(loginPageObjects.signInBtn);
         loginPageObjects.signInBtn.click();
-        if(isElementVisible(loginPageObjects.continueBtn)){
+        if (isElementVisible(loginPageObjects.continueBtn)) {
             loginPageObjects.continueBtn.click();
             waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
         }
         return HomePage.getInstance();
     }
-    public void checkWrongCredentialsMessage(){
+
+    public void checkWrongCredentialsMessage() {
         waitForElementDisplay(loginPageObjects.alertMessage);
-        Assert.assertEquals(loginPageObjects.alertMessage.getText().trim(),"Invalid username or password.");
+        Assert.assertEquals(loginPageObjects.alertMessage.getText().trim(), "Invalid username or password.");
 
     }
-    public void checkWrongCredentialsMessageForFacebook(){
+
+    public void checkWrongCredentialsMessageForFacebook() {
         waitForElementDisplay(loginPageObjects.alertMessageForFacebook);
-        Assert.assertEquals(loginPageObjects.alertMessageForFacebook.getText().trim(),"Log in as Quidco Tester");
+        Assert.assertEquals(loginPageObjects.alertMessageForFacebook.getText().trim(), "Log in as Quidco Tester");
     }
 
-    public SignupPage clickJoinIn(){
+    public SignupPage clickJoinIn() {
         waitForElementDisplay(loginPageObjects.joinNowBtn);
         loginPageObjects.joinNowBtn.click();
         return SignupPage.getInstance();
     }
-    public FacebookLoginPage clickSignInWithFacebook(){
+
+    public FacebookLoginPage clickSignInWithFacebook() {
         WebElement facebookBtn = waitForElementDisplay(loginPageObjects.signInWithFacebookBtn);
         facebookBtn.click();
         return FacebookLoginPage.getInstance();

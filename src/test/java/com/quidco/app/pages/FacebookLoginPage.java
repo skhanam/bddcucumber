@@ -8,21 +8,23 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class FacebookLoginPage extends BasePage {
     private static FacebookLoginPage facebookLoginPage = new FacebookLoginPage();
+    protected FacebookLoginPageObject facebookLoginPageObject = PageFactory.initElements(driver, FacebookLoginPageObject.class);
 
-    private FacebookLoginPage(){}
+    private FacebookLoginPage() {
+    }
 
-    public static FacebookLoginPage getInstance(){
+    public static FacebookLoginPage getInstance() {
         return facebookLoginPage;
     }
-    protected FacebookLoginPageObject facebookLoginPageObject = PageFactory.initElements(driver,FacebookLoginPageObject.class);
 
-    public FacebookLoginPage enterUsernameAndPassword(String username,String password){
+    public FacebookLoginPage enterUsernameAndPassword(String username, String password) {
         waitForElementDisplay(facebookLoginPageObject.emailInput);
         facebookLoginPageObject.emailInput.sendKeys(username);
         facebookLoginPageObject.passwordInput.sendKeys(password);
         return this;
     }
-    public HomePage clickLogin(){
+
+    public HomePage clickLogin() {
         facebookLoginPageObject.loginBtn.click();
         return HomePage.getInstance();
     }

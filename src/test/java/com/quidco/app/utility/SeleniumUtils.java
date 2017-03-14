@@ -32,13 +32,14 @@ public abstract class SeleniumUtils {
         return wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
-    public WebElement waitForPresenceOfElement(By by ){
+    public WebElement waitForPresenceOfElement(By by) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    public void waitForNotPresenceOfElement(By by ){
-         wait.until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(by)));
+    public void waitForNotPresenceOfElement(By by) {
+        wait.until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(by)));
     }
+
     public boolean isListNotEmpty(final List<WebElement> elments) {
         if (elments == null)
             return false;
@@ -56,6 +57,7 @@ public abstract class SeleniumUtils {
             return false;
         }
     }
+
     public boolean isElementPresent(By by) {
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(by));
@@ -122,19 +124,19 @@ public abstract class SeleniumUtils {
     }
 
     public void preciseWaitForElement(WebElement e) {
-            flwait.until(new Function() {
-                @Override
-                public Object apply(Object o) {
-                    return e;
-                }
-            });
+        flwait.until(new Function() {
+            @Override
+            public Object apply(Object o) {
+                return e;
+            }
+        });
 
 
     }
 
     public List<WebElement> preciseWaitForElements(List<WebElement> elements) {
 
-        return (List<WebElement>)flwait.until(new Function() {
+        return (List<WebElement>) flwait.until(new Function() {
             @Override
             public Object apply(Object o) {
                 return elements;
