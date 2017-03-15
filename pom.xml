@@ -20,6 +20,7 @@
         <!--configurable variables-->
         <env>http://staging20.quidco.com</env>
         <browser>chrome</browser>
+        <mobile>false</mobile>
 
     </properties>
     <dependencies>

@@ -5,6 +5,7 @@ import com.quidco.app.utility.PropertyReader;
 import com.quidco.app.utility.SeleniumUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,6 +13,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -79,6 +82,17 @@ public abstract class BasePage extends SeleniumUtils {
         flwait = new FluentWait(driver).pollingEvery(5, TimeUnit.SECONDS).withTimeout(15, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
         executor = (JavascriptExecutor) driver;
         actions = new Actions(driver);
+
+        if(Boolean.parseBoolean(properties.getProperty("MOBILE")) == true){
+            Map<String, String> mobileEmulation = new HashMap<String, String>();
+            mobileEmulation.put("deviceName", "Google Nexus 5");
+
+            Map<String, Object> chromeOptions = new HashMap<String, Object>();
+            chromeOptions.put("mobileEmulation", mobileEmulation);
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            WebDriver driver = new ChromeDriver(capabilities);
+        }
         return driver;
     }
 
