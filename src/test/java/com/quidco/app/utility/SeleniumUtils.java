@@ -35,6 +35,9 @@ public abstract class SeleniumUtils {
     public WebElement waitForPresenceOfElement(By by) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
+    public List<WebElement> waitForPresenceOfAllElements(By by) {
+        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+    }
 
     public void waitForNotPresenceOfElement(By by) {
         wait.until(ExpectedConditions.not(ExpectedConditions.presenceOfElementLocated(by)));

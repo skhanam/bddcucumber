@@ -1,7 +1,6 @@
 package com.quidco.app.pages;
 
 import com.google.common.base.Function;
-import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.HomePageObject;
 import com.quidco.app.pageObjects.SearchResultsPageObject;
 import org.junit.Assert;
@@ -74,7 +73,7 @@ public class SearchResultsPage extends BasePage {
         return HomePage.getInstance();
     }
 
-    public void clickViewMoreProducts()  {
+    public void clickViewMoreProducts() {
         scrollElementIntoMiddle(SearchResultsPageObject.viewMoreProductsBtn);
         WebElement viewMoreBtn = waitForElementDisplay(SearchResultsPageObject.viewMoreProductsBtn);
         viewMoreBtn.click();
@@ -103,16 +102,39 @@ public class SearchResultsPage extends BasePage {
     }
 
 
-    public SearchResultsPage clickBuyNowForProduct(String productIndex){
+    public SearchResultsPage clickBuyNowForProduct(String productIndex) {
 
         WebElement buyNow = waitForPresenceOfElement(By.xpath(String.format(searchResultsPageObject.buyNowBtnLoc, countMap.get(productIndex))));
         buyNow.click();
-        return  this;
+        return this;
     }
 
-    public void clickBuyNowOnProductDetailPage(){
+    public void clickBuyNowOnProductDetailPage() {
         WebElement buyNow = waitForElementDisplay(searchResultsPageObject.buyNowBtnProductDetailsPage);
         buyNow.click();
+    }
+
+    public void checkPresenceOfOtherSellers(int number) {
+
+        waitForElementDisplay(searchResultsPageObject.otherSellersTitle);
+        String otherSellersTitle = searchResultsPageObject.otherSellersTitle.getText().trim();
+        System.out.println(otherSellersTitle);
+        String pattern = searchResultsPageObject.buyAtOtherSellersPattern;
+        Assert.assertTrue(otherSellersTitle.matches(pattern));
+        List<WebElement> additionalSellers = waitForPresenceOfAllElements(By.xpath(searchResultsPageObject.additionalSellersLoc));
+        Assert.assertTrue(additionalSellers.size() > 0);
+    }
+
+    public SearchResultsPage clickViewMoreSellers(){
+
+        scrollElementIntoMiddle(searchResultsPageObject.viewMoreSellersBtn);
+        searchResultsPageObject.viewMoreSellersBtn.click();
+        return this;
+    }
+
+    public void verifyMoreSellers(){
+        List<WebElement> addSellers  = waitForPresenceOfAllElements(By.xpath(searchResultsPageObject.additionalSellersLoc));
+        Assert.assertTrue(addSellers.size() > 3);
     }
 
 }

@@ -39,4 +39,19 @@ public class SearchResultsPageStepdef extends BaseStepdef {
     public void i_click_retailer_on_search_results_page() {
         homePage = searchResultsPage.clickRetailer();
     }
+
+    @And("^I should see \"([0-9]+)\" other sellers$")
+    public void i_should_see_other_sellers(int number){
+        searchResultsPage.checkPresenceOfOtherSellers(number);
+    }
+
+    @When("^I click view more sellers$")
+    public void i_click_view_more_sellers() {
+        searchResultsPage.clickViewMoreSellers();
+    }
+
+    @Then("^I should see more sellers$")
+    public void i_should_see_more_sellers(){
+        searchResultsPage.verifyMoreSellers();
+    }
 }
