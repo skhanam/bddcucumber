@@ -1,5 +1,5 @@
 @regression @login-logout @php7
-Feature: Login Logout
+Feature: login/logout - premium/existing/fb
 
   Background:  User goes to the sign in page.
     Given I am on the landing page
