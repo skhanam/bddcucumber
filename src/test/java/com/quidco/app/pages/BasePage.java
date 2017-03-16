@@ -74,6 +74,16 @@ public abstract class BasePage extends SeleniumUtils {
                         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + Constants.chromeWindowsdriver);
                         break;
                 }
+                if(Boolean.parseBoolean(properties.getProperty("MOBILE")) == true){
+                    Map<String, String> mobileEmulation = new HashMap<String, String>();
+                    mobileEmulation.put("deviceName", "Google Nexus 5");
+
+                    Map<String, Object> chromeOptions = new HashMap<String, Object>();
+                    chromeOptions.put("mobileEmulation", mobileEmulation);
+//                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                    dc.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+//                    driver = new ChromeDriver(dc);
+                }
                 driver = new ChromeDriver(dc);
                 driver.manage().window().setPosition(new Point(0, 0));
                 driver.manage().window().setSize(new Dimension(1004, 748));
@@ -83,16 +93,7 @@ public abstract class BasePage extends SeleniumUtils {
         executor = (JavascriptExecutor) driver;
         actions = new Actions(driver);
 
-        if(Boolean.parseBoolean(properties.getProperty("MOBILE")) == true){
-            Map<String, String> mobileEmulation = new HashMap<String, String>();
-            mobileEmulation.put("deviceName", "Google Nexus 5");
 
-            Map<String, Object> chromeOptions = new HashMap<String, Object>();
-            chromeOptions.put("mobileEmulation", mobileEmulation);
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-            WebDriver driver = new ChromeDriver(capabilities);
-        }
         return driver;
     }
 
