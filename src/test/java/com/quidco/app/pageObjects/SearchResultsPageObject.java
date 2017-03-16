@@ -28,4 +28,14 @@ public class SearchResultsPageObject {
     @FindBy(xpath = "//msm-marketplace-product-detail-right//msm-marketplace-product-buy-now/div/a")
     public static WebElement  buyNowBtnProductDetailsPage;
 
+    @FindBy(xpath = "//msm-marketplace-merchants-list//div[@class='title-container']")
+    public static WebElement otherSellersTitle;
+
+    @FindBy(xpath = "//msm-marketplace-merchants-list/div//button")
+    public static WebElement viewMoreSellersBtn;
+
+    public String additionalSellersLoc = "//msm-marketplace-additional-seller";
+
+    public static String buyAtOtherSellersPattern = "Buy at [0-9]+ other sellers";
+
 }
