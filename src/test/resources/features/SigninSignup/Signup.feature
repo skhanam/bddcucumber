@@ -1,4 +1,4 @@
-@regression @signup
+@regression @signup @php7
 Feature: Signup
 
   Background: User goes to the sign in page.

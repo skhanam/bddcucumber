@@ -1,4 +1,4 @@
-@regression @login-logout
+@regression @login-logout @php7
 Feature: Login Logout
 
   Background:  User goes to the sign in page.

@@ -1,4 +1,4 @@
-@regression @user-experience
+@regression @user-experience @php7
 Feature: Logged in user experience
   As a logged in user, I should see different dropdown options.
 

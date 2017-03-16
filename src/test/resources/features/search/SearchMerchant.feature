@@ -1,4 +1,4 @@
-@regression @search-merchant
+@regression @search-merchant @php7
 Feature: As a logged in user , i can search different retailers / merchants using Quidco Search
 
   Background: Logging as a premium user and go to account summary  page.

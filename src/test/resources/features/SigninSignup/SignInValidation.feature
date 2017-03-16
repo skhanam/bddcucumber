@@ -1,4 +1,4 @@
-@regression @signup-validation
+@regression @signup-validation @php7
 Feature: User with invalid credentials cannot login
 
   Background:  User goes to the sign in page.

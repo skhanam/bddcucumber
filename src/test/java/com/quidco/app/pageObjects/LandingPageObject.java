@@ -30,4 +30,7 @@ public class LandingPageObject {
 
     @FindBy(css = ".vertical-margin-large-top")
     public static WebElement numberOfRetailersFoundLabel;
+
+    @FindBy(css = "#modal-country .modal-footer button")
+    public static WebElement exploreBtn;
 }

@@ -37,9 +37,27 @@ public class LandingPage extends BasePage {
 
     public void navigateToLandingPage() {
         driver.get(quidcoAppUrl);
+        if (isElementVisible(landingPageObject.exploreBtn)) {
+            landingPageObject.exploreBtn.click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
+
     public LoginPage navigateToSignInPage() {
-        driver.get(quidcoAppUrl+"/sign-in/");
+        driver.get(quidcoAppUrl + "/sign-in/");
+        if (isElementVisible(landingPageObject.exploreBtn)) {
+            landingPageObject.exploreBtn.click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         return LoginPage.getInstance();
     }
 
