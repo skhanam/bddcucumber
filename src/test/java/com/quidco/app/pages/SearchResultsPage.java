@@ -137,4 +137,10 @@ public class SearchResultsPage extends BasePage {
         Assert.assertTrue(addSellers.size() > 3);
     }
 
+    public void verifyMoreProducts(){
+        waitForElementDisplay(HomePageObject.productsLabel);
+        List<WebElement> products = preciseWaitForElements(HomePageObject.products);
+        Assert.assertTrue(products.size() > 2);
+    }
+
 }

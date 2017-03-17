@@ -76,6 +76,10 @@ public class HomePageStepdef extends BaseStepdef {
     public void i_should_see_search_results_for_the_products(int numProducts){
         searchResultsPage.verify_presence_of_search_results_for_products(numProducts);
     }
+    @Then("^I should see more products$")
+    public void i_should_see_more_products(){
+        searchResultsPage.verifyMoreProducts();
+    }
 
     @When("^I click buy now for ([^\"]*) product displayed$")
     public void i_click_buy_now_for_products_displayed(String productNumber ) throws InterruptedException {

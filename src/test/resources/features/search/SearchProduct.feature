@@ -6,6 +6,6 @@ Feature: As a logged in user , i can search different products using Quidco Sear
 
   Scenario: list of products displayed and view more
     When I search for "fitbit"
-    Then I should see 3 search results for the product
+    Then I should see 2 search results for the product
     When I click view more products
-    Then I should see 6 search results for the product
+    Then I should see more products
