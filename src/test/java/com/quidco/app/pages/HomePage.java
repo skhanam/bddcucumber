@@ -163,6 +163,7 @@ public class HomePage extends BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        waitForPresenceOfElement(By.xpath(String.format(homePageObject.alertText));
         Assert.assertEquals("Looks like the Retailer cannot be added as favourties for some reason", "Favourited " + getSearchTerm(), driver.findElement(By.xpath(String.format(homePageObject.alertText))).getText());
     }
 
