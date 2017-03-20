@@ -14,7 +14,7 @@
                        org.apache.commons.validator.Field,
                        org.springframework.validation.Errors"
          depends="required"
-         msg="errors.twofields">
+         message="errors.twofields">
          <javascript><![CDATA[
             function validateTwoFields(form) {
                 var bValid = true;
