@@ -46,7 +46,7 @@
               </field>
               <field property="postalCode"
                      depends="required,mask">
-                  <msg
+                  <message
                     name="mask"
                     key="errors.zip"/>
 
@@ -70,7 +70,7 @@
               </field>
               <field property="password"
                      depends="required,twofields">
-                  <msg
+                  <message
                     name="twofields"
                     key="errors.twofields"/>
 
@@ -110,7 +110,7 @@
               </field>
               <field property="address.postalCode"
                      depends="required,mask">
-                  <msg
+                  <message
                     name="mask"
                     key="errors.zip"/>
 
@@ -132,7 +132,7 @@
               </field>
               <field property="phoneNumber"
                      depends="mask">
-                  <msg
+                  <message
                     name="mask"
                     key="errors.phone"/>
 
