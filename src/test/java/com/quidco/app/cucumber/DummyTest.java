@@ -39,7 +39,7 @@ public class DummyTest {
     }
 
 
-    class Student {
+    private static class Student {
         private String name;
         private int age;
 
