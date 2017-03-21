@@ -7,13 +7,13 @@ public class User {
     public User() {
     }
 
-    private int userId;
+    private int user_id;
 
-    public int getUserId() {
-        return userId;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 }
