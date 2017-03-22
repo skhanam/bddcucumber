@@ -1,7 +1,6 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.helper.CheckoutDetails;
-import com.quidco.app.helper.Constants;
 import com.quidco.app.pageObjects.HomePageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;

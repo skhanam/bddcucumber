@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by ashishmohindroo on 11/10/16.
@@ -150,6 +151,14 @@ public abstract class SeleniumUtils {
     public void sleep(int seconds) {
         try {
             Thread.sleep(seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sleep(TimeUnit unit, int value){
+        try {
+            unit.sleep(value);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
