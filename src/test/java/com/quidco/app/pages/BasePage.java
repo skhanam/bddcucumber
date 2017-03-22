@@ -1,8 +1,10 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.helper.Constants;
+import com.quidco.app.utility.Api.QuidcoApi;
 import com.quidco.app.utility.PropertyReader;
 import com.quidco.app.utility.SeleniumUtils;
+import org.junit.BeforeClass;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.io.IOException;
 import java.util.Properties;
@@ -80,6 +83,12 @@ public abstract class BasePage extends SeleniumUtils {
         executor = (JavascriptExecutor) driver;
         actions = new Actions(driver);
         return driver;
+    }
+   @BeforeClass
+    public static void induceUsersToEnvironment() throws IOException {
+        QuidcoApi api = new QuidcoApi();
+        api.createUser(Constants.NORMAL_USER_EMAIL, Constants.NORMAL_USER_PWD);
+        api.createUser(Constants.PREMIUM_USER_EMAIL, Constants.PREMIUM_USER_PWD);
     }
 
     public String getUsername() {

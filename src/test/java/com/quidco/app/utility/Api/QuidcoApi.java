@@ -1,8 +1,7 @@
-package com.quidco.app.cucumber;
+package com.quidco.app.utility.Api;
 
 import com.google.gson.Gson;
-import com.quidco.app.utility.Api.*;
-import com.quidco.app.utility.Api.Credentials;
+import com.quidco.app.helper.Constants;
 import okhttp3.*;
 
 import java.io.IOException;
@@ -50,12 +49,6 @@ public class QuidcoApi {
     }
 
     OkHttpClient client = new OkHttpClient();
-
-    public static void main(String[] args) throws IOException {
-
-        QuidcoApi api = new QuidcoApi();
-        api.createUser("qwer3qwer@gmail.com", "asfsadf");
-    }
 
     public void createUser(String email, String pwd) {
         try {

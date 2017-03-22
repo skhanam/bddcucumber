@@ -1,5 +1,6 @@
 package com.quidco.app.pageStepdef;
 
+import com.quidco.app.helper.Constants;
 import com.quidco.app.utility.JavaUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -36,21 +37,21 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_am_an_existing_user(String userType) {
         switch (userType) {
             case "normal":
-                landingPage.setUsername("quidco.tester@gmail.com");
-                landingPage.setPassword("quidcotester@9");
+                landingPage.setUsername(Constants.NORMAL_USER_EMAIL);
+                landingPage.setPassword(Constants.NORMAL_USER_PWD);
                 break;
             case "premium":
-                landingPage.setUsername("quidco.tester+premium@gmail.com");
-                landingPage.setPassword("quidcotester@01");
+                landingPage.setUsername(Constants.PREMIUM_USER_EMAIL);
+                landingPage.setPassword(Constants.PREMIUM_USER_PWD);
                 break;
             case "facebook":
-                landingPage.setUsername("quidco.tester@gmail.com");
-                landingPage.setPassword("quidcotester@01");
+                landingPage.setUsername(Constants.FACEBOOK_USER_EMAIL);
+                landingPage.setPassword(Constants.FACEBOOK_USER_PWD);
 
                 break;
             case "paypal":
-                landingPage.setUsername("adsfsd@adfasf.com");
-                landingPage.setPassword("lkjjlkl");
+                landingPage.setUsername(Constants.PAYPAL_USER_EMAIL);
+                landingPage.setPassword(Constants.PAYPAL_USER_PWD);
                 break;
             default:
                 System.out.println("No User Type Selected");

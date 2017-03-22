@@ -19,6 +19,20 @@ public class Constants {
 
     public static final String discoverPageURL = "https://www.quidco.com/discover/test-page-101";
 
+
+    /*  Below are the username and passwords for our tests */
+    public static final String NORMAL_USER_EMAIL= "quidco.tester@gmail.com";
+    public static final String NORMAL_USER_PWD= "quidcotester@9";
+    public static final String PREMIUM_USER_EMAIL= "quidco.tester+premium@gmail.com";
+    public static final String PREMIUM_USER_PWD= "quidcotester@01";
+    public static final String FACEBOOK_USER_EMAIL= "quidco.tester@gmail.com";
+    public static final String FACEBOOK_USER_PWD= "quidcotester@01";
+    public static final String PAYPAL_USER_EMAIL= "cannotfind@quidco.com";
+    public static final String PAYPAL_USER_PWD= "notused";
+
+    public final static String SIGN_IN_URL = "https://ml.cashbacksrv.com/auth/login?token=true";
+    public final static String JOIN_US_URL = "https://ml.cashbacksrv.com/auth/register-user";
+
     public static final Map<String, Integer> countMap = createMap();
 
     private static Map<String, Integer> createMap() {
