@@ -1,6 +1,7 @@
 package com.quidco.app.cucumber;
 
 import com.quidco.app.pages.BasePage;
+import com.quidco.app.utility.Api.QuidcoApi;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
