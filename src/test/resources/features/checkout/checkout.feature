@@ -14,8 +14,8 @@ Feature: As a logged in user , i can checkout the product successfully without a
 #    Then my checkout is successfull
 
   Scenario: When I search for product, I should see other/ more sellers
-    When I search for "apple"
+    When I search for "iphone"
     And I click buy now for first product displayed
-    Then I should see "9" other sellers
-    When I click view more sellers
-    Then I should see more sellers
+    Then I should see "2" other sellers
+#    When I click view more sellers
+#    Then I should see more sellers
