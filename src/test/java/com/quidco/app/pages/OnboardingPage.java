@@ -1,9 +1,11 @@
 package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.OnBoardingPageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -50,6 +52,8 @@ public class OnboardingPage extends BasePage {
     }
 
     public HomePage click_finish() {
+        scrollElementIntoMiddle(onBoardingPageObject.nextStep);
+        sleep(TimeUnit.SECONDS,1);
         scrollElementIntoMiddle(onBoardingPageObject.nextStep);
         sleep(TimeUnit.SECONDS,1);
         new Actions(driver).moveToElement(onBoardingPageObject.nextStep).click().build().perform();
