@@ -28,7 +28,7 @@ public abstract class BasePage extends SeleniumUtils {
     public static String browserType;
     public static String user_subscription;
     protected static String username;
-    private static String password = "quidcotester@01";
+    private static String password = "quidcoqatest";
 
 
     public BasePage() {
@@ -74,6 +74,7 @@ public abstract class BasePage extends SeleniumUtils {
                 driver = new ChromeDriver(dc);
                 driver.manage().window().setPosition(new Point(0, 0));
                 driver.manage().window().setSize(new Dimension(1004, 748));
+
         }
         wait = new WebDriverWait(driver, 10);
         flwait = new FluentWait(driver).pollingEvery(5, TimeUnit.SECONDS).withTimeout(15, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
