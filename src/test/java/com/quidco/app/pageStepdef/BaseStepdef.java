@@ -19,6 +19,7 @@ public class BaseStepdef extends SeleniumUtils {
     public static SignupPage signupPage;
     public static OnboardingPage onboardingPage;
     public static QuidcoComparePage quidcoComparePage;
+    public static QuidcoOpinionsPage quidcoOpinionsPage;
     public static SearchResultsPage searchResultsPage;
 
 }

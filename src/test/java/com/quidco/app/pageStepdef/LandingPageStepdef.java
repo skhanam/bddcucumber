@@ -83,16 +83,19 @@ public class LandingPageStepdef extends BaseStepdef {
         quidcoComparePage = landingPage.clickQuidcoCompare();
     }
 
+    @When("I click quidco opinions")
+    public void i_click_quidco_opinions() {
+        quidcoOpinionsPage = landingPage.clickQuidcoOpinions();
+    }
+
     @When("^I click Join Quidco now$")
     public void i_click_join_quidco_btn() {
         signupPage = landingPage.click_join_quidco_now_btn();
-
     }
 
     @When("^I click category ([^\"]*)$")
     public void i_click_category(String categoryName) {
         landingPage.clickCategory(categoryName);
-
     }
 
     @Then("^I should see correct label on the page$")

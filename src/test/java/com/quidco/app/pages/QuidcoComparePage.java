@@ -156,7 +156,6 @@ public class QuidcoComparePage extends BasePage {
                 for (String broadbandType : quidcoCompareObject.broadbandTypes) {
                     waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.broadbandTypesLocator, broadbandType))));
                 }
-
         }
 
     }

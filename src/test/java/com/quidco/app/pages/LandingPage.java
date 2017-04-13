@@ -83,6 +83,14 @@ public class LandingPage extends BasePage {
         return QuidcoComparePage.getInstance();
     }
 
+    public QuidcoOpinionsPage clickQuidcoOpinions() {
+        waitForElementDisplay(landingPageObject.waysToEarn_dropdown);
+        actions.moveToElement(landingPageObject.waysToEarn_dropdown).build().perform();
+        waitForElementDisplay(landingPageObject.quidcoOpinionsLink);
+        landingPageObject.quidcoOpinionsLink.click();
+        return QuidcoOpinionsPage.getInstance();
+    }
+
     public SignupPage click_join_quidco_now_btn() {
         waitForElementDisplay(LandingPageObject.join_quidco_btn);
         LandingPageObject.join_quidco_btn.click();

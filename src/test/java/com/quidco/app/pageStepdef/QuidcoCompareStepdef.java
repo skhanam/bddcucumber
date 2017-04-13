@@ -42,10 +42,8 @@ public class QuidcoCompareStepdef extends BaseStepdef {
         quidcoComparePage.verifyGridOptions(options);
     }
 
-
     @When("^I Get a quote for ([^\"]*)$")
     public void i_Get_a_quote_for_service(String serviceOption) {
-
         quidcoComparePage.clickGetaQuote(serviceOption);
     }
 
