@@ -32,7 +32,7 @@ public class LandingPageStepdef extends BaseStepdef {
         switch (userType) {
             case "normal":
                 landingPage.setUsername("quidco.tester@gmail.com");
-                landingPage.setPassword("quidcotester@3");
+                landingPage.setPassword("quidcotester");
                 break;
             case "premium":
                 landingPage.setUsername("quidco.tester+premium@gmail.com");

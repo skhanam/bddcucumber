@@ -2,7 +2,7 @@
 Feature: As a logged in user on account summary
 
   Background: Logging as a premium user and go to account summary  page.
-    Given I am logged in premium user
+    Given I am logged in normal user
     And I click Account Summary dropdown option
 
   Scenario: As a loggedIn user on account summary page.

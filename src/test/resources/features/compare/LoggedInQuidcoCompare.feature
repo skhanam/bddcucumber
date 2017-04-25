@@ -2,7 +2,7 @@
 Feature: As a Quidco Member user, I want to explore compare feature for different services like Insurance, Broadband, Energy.
 
   Background:  As a user I want to go to the compare page.
-    Given I am logged in premium user
+    Given I am logged in normal user
     When I click quidco compare
 
   Scenario: As a user, I want to see list of broadband options
