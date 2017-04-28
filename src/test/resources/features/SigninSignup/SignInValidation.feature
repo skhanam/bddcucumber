@@ -15,7 +15,7 @@ Feature: User with invalid credentials cannot login
     Examples:
       | username                | password        |
       | quidco.tester1@gmail.com | wrongpassword   |
-      | wrongemail@email.com    | quidcotester@01 |
+      | wrongemail1@email.com    | quidcotester@01 |
 
   Scenario Outline: user with invalid facebook credentials cannot login
 
