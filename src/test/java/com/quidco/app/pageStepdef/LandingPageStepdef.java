@@ -36,12 +36,12 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_am_an_existing_user(String userType) {
         switch (userType) {
             case "normal":
-                landingPage.setUsername("quidco.tester+1@gmail.com");
-                landingPage.setPassword("quidcotester");
+                landingPage.setUsername("normal.user@quidco.com");
+                landingPage.setPassword("p@$$w0rd");
                 break;
             case "premium":
-                landingPage.setUsername("quidco.tester+premium+1@gmail.com");
-                landingPage.setPassword("quidcoqatest");
+                landingPage.setUsername("premium.user@quidco.com");
+                landingPage.setPassword("p@$$w0rd");
                 break;
             case "facebook":
                 landingPage.setUsername("quidco.tester@gmail.com");
