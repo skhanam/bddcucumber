@@ -40,7 +40,7 @@ public class LandingPageStepdef extends BaseStepdef {
                 landingPage.setPassword("quidcotester");
                 break;
             case "premium":
-                landingPage.setUsername("quidco.tester+premium@gmail.com");
+                landingPage.setUsername("quidco.tester+premium+1@gmail.com");
                 landingPage.setPassword("quidcoqatest");
                 break;
             case "facebook":
