@@ -15,8 +15,10 @@ public class HomePageObject {
     public final static String alertText = "//div[@id=\"followAlert\"]//p[contains(@class,\"alert-text\")]";
     public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
     public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
+
     @FindBy(css = ".user")
     public static WebElement avatarIcon;
+
     @FindBy(css = ".category-icons-container li.bookmarks")
     public static WebElement favIcon;
     public static String favDDItem = "li.dropdown.open li.dropdown-item>a[title='%s']";

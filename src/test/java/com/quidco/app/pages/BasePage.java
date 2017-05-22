@@ -88,22 +88,27 @@ public abstract class BasePage extends SeleniumUtils {
     }
 
     public void setUsername(String uname) {
+
         username = uname;
     }
 
     public String getPassword() {
+
         return password;
     }
 
     public void setPassword(String pwd) {
+
         password = pwd;
     }
 
     public String getUserSubscription() {
+
         return user_subscription;
     }
 
     public void setUserSubscription(String user_subs) {
+
         user_subscription = user_subs;
     }
 }

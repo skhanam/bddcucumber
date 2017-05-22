@@ -12,8 +12,9 @@ import java.util.List;
  * Created by thadeus on 11/04/16.
  */
 public class HomePageStepdef extends BaseStepdef {
+
     @Then("^I click signOut$")
-    public void i_click_signOut() {
+    public void i_click_signOut() throws InterruptedException {
         notificationsPage = homePage.clickAvatar();
         logoutPage = notificationsPage.clickSignOutLink();
     }

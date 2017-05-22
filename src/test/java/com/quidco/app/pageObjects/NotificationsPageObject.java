@@ -18,7 +18,8 @@ public class NotificationsPageObject {
     public final static String referQuidcoTitle = "//*[@id=\"page-content\"]/div[5]/div/div[3]/div/h2[contains(text(),'%s')]";
     public final static String myreviewsTitle = "//*[@id=\"page-content\"]/div[5]/div/div[1]/div/h1[contains(text(),'%s')]";
     public final static String settingsTitle = "//*[@id=\"page-content\"]/div[4]/div/div[2]/h1[contains(text(),'%s')]";
-    @FindBy(css = "a#cas-sign-out")
+
+    @FindBy(id = "cas-sign-out")
     public static WebElement signOutLink;
 
 }

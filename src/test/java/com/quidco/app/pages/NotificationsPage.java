@@ -2,6 +2,7 @@ package com.quidco.app.pages;
 
 import com.quidco.app.pageObjects.NotificationsPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -21,7 +22,10 @@ public class NotificationsPage extends BasePage {
         return notificationsPage;
     }
 
-    public LogoutPage clickSignOutLink() {
+    public LogoutPage clickSignOutLink() throws InterruptedException {
+        Thread.sleep(1500);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].removeAttribute('class')", notificationsPageObject.signOutLink);
         waitForElementDisplay(notificationsPageObject.signOutLink);
         notificationsPageObject.signOutLink.click();
         return LogoutPage.getInstance();
