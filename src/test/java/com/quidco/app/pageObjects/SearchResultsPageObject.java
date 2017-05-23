@@ -21,7 +21,7 @@ public class SearchResultsPageObject {
     @FindBy(xpath = "//msm-component-search-product-list/div/button")
     public static WebElement viewMoreProductsBtn;
 
-    public static String retailerName = "#search-results-top-retailer-container .retailer-name>a";
+    public static String retailerName = ".mixpanel-search-merchant-link>p";
 
     public static String buyNowBtnLoc = "//msm-component-search-product-list/msm-component-search-product-product[%s]//div[contains(@class,'product-buy-now-container')]/a";
 

@@ -35,6 +35,7 @@ public class SearchResultsPage extends BasePage {
     }
 
     public void setSearchTerm(String searchTerm) {
+
         this.searchTerm = searchTerm;
     }
 

@@ -123,7 +123,7 @@ public class HomePageStepdef extends BaseStepdef {
     }
 
     @And("^I add retailer to favourite$")
-    public void i_add_retailer_to_favourites() {
+    public void i_add_retailer_to_favourites() throws InterruptedException {
         homePage.addToFavouriteBtn();
         homePage.verifyIfRetailerAddedToFavourite();
     }

@@ -8,7 +8,7 @@ Feature: As a logged in user , I can manage favourites.
     And There are no existing favourite retailers
 
   Scenario: Add a retailer to a favourite list
-    When I search for "Argos"
+    When I search for "Expedia"
     Then I should see it as top retailer
     When I click the retailer on search results page
     And I add retailer to favourite
@@ -19,6 +19,6 @@ Feature: As a logged in user , I can manage favourites.
     When I am on favourite icon
     And I click Manage Favourites option under menu
     Then I should see below merchants added under favourites
-      | Argos     |
-      | Debenhams |
+      | Expedia     |
+      | Debenhams   |
 

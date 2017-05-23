@@ -28,12 +28,12 @@ public class HomePageObject {
             "//li/a[contains(text(),'%s')]";
     @FindBy(id = "store-q1search")
     public static WebElement searchInput;
-    public static String retailersHeadingTitle = "//div[@id='search-results-top-retailer-container']/h3[text()='Retailers']";
+    public static String retailersHeadingTitle = "//*[@id='search-results-top-retailer-container']/h3";
     @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//h3[text()='Retailers']")
     public static WebElement multipleRetailersHeadingTitle;
     @FindBy(xpath = "//div[@id='search-results-multiple-retailers-container']//li")
     public static List<WebElement> multiRetailersList;
-    public static String topRetailerTitle = "//div[@id='search-results-top-retailer-container']//div[@class='retailer-info']//p[text()='%s']";
+    public static String topRetailerTitle = "//*[@id='search-results-top-retailer-container']/ul/li/div/div/a/p";
     @FindBy(xpath = "//msm-app-marketplace-search//h3[@class='page-title-container']")
     public static WebElement productsLabel;
     @FindBy(xpath = "//msm-component-search-product-list/msm-component-search-product-product")
