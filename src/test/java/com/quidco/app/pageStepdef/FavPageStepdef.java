@@ -16,7 +16,9 @@ public class FavPageStepdef extends BaseStepdef {
     public void I_should_see_below_merchants_added_under_favourites(List<String> merchantNames) {
 
         for (String s : merchantNames) {
-            waitForPresenceOfElement(By.xpath("//div[@role=\"button\"]/div[@class=\"icon-primary-expand-bg\"]/../..//p/a[text()=\"" + s + "\"]"));
+            driver.get(driver.getCurrentUrl());
+            waitForPresenceOfElement(By.xpath("//a[text()=\'" + s + "\']"));
+            //waitForPresenceOfElement(By.xpath("//div[@role=\"button\"]/div[@class=\"icon-primary-expand-bg\"]/../..//p/a[text()=\"" + s + "\"]"));
         }
     }
 

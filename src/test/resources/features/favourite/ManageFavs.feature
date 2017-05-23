@@ -19,6 +19,6 @@ Feature: As a logged in user , I can manage favourites.
     When I am on favourite icon
     And I click Manage Favourites option under menu
     Then I should see below merchants added under favourites
-      | Expedia     |
-      | Debenhams   |
+      | Expedia                |
+      | Debenhams (In-store)   |
 

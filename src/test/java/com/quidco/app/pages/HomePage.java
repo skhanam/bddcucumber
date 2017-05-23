@@ -136,13 +136,15 @@ public class HomePage extends BasePage {
     }
 
     public void addToFavouriteBtn() throws InterruptedException {
+        Thread.sleep(1000);
         preciseWaitForElements(driver.findElements(By.cssSelector(".favourite-container")));
+        Thread.sleep(1000);
         if (isElementPresent(By.cssSelector(homePageObject.removeFromFavBtn))) {
             driver.findElement(By.cssSelector(homePageObject.removeFromFavBtn)).click();
         }
+
         Thread.sleep(1000);
         WebElement e = waitForPresenceOfElement(By.cssSelector(homePageObject.addToFavBtn));
-        Thread.sleep(1000);
         e.click();
     }
 
