@@ -10,9 +10,8 @@ Feature: As a logged in user , i can search different retailers / merchants usin
     And I should also see Similar retailers to the retailer
     And I click close search
     Examples:
-      | RetailerName    |
-      | Marks & Spencer |
-      | Argos           |
-      | Debenhams       |
-      | John Lewis      |
+      | RetailerName               |
+      | Marks & Spencer            |
+      | Debenhams (In-store)       |
+      | John Lewis                 |
 
