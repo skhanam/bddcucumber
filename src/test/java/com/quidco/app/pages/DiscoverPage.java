@@ -23,11 +23,20 @@ public class DiscoverPage extends BasePage {
 
     public void click_random_retailer() {
         int randomNumber = new Random().nextInt(discoverPageObjects.merchantDivs.size() - 1) + 1;
-        WebElement div = discoverPageObjects.merchantDivs.get(randomNumber);
-        retailerName = div.findElement(By.cssSelector(discoverPageObjects.merchantNameLoc)).getText();
-        System.out.println("Going to click Merchant ->  " + retailerName);
-        WebElement merchantBtn = div.findElement(By.cssSelector(discoverPageObjects.merchantBtnLoc));
-        merchantBtn.click();
+        if (randomNumber<0) {
+            randomNumber *= -1 ;
+            WebElement div = discoverPageObjects.merchantDivs.get(randomNumber);
+            retailerName = div.findElement(By.cssSelector(discoverPageObjects.merchantNameLoc)).getText();
+            System.out.println("Going to click Merchant ->  " + retailerName);
+            WebElement merchantBtn = div.findElement(By.cssSelector(discoverPageObjects.merchantBtnLoc));
+            merchantBtn.click();
+        } else {
+            WebElement div = discoverPageObjects.merchantDivs.get(randomNumber);
+            retailerName = div.findElement(By.cssSelector(discoverPageObjects.merchantNameLoc)).getText();
+            System.out.println("Going to click Merchant ->  " + retailerName);
+            WebElement merchantBtn = div.findElement(By.cssSelector(discoverPageObjects.merchantBtnLoc));
+            merchantBtn.click();
+        }
     }
 
     public void verify_correct_landing_page() {
