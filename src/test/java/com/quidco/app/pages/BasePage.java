@@ -21,6 +21,7 @@ import java.util.logging.Logger;
  */
 public abstract class BasePage extends SeleniumUtils {
 
+    public static WebDriver driver = null;
     public static Logger logger = Logger.getLogger(BasePage.class.getName());
     public static Properties properties = PropertyReader.getPropertyReader();
     public static String os = System.getProperty("os.name");
