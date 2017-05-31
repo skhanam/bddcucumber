@@ -10,27 +10,35 @@ import javax.swing.*;
  */
 public class SurveyPage extends BasePage {
 
+   private static SurveyPage surveyPage = new SurveyPage();
+   protected static SurveyPageObjects surveyPageObjects = PageFactory.initElements(driver, SurveyPageObjects.class);
 
-    SurveyPageObjects surveyPageObjects = PageFactory.initElements(driver, SurveyPageObjects.class);
-   // private static SurveyPage surveyPage = new SurveyPage();
-   // protected SurveyPageObjects surveyPageObjects = PageFactory.initElements(driver, SurveyPageObjects.class);
+   public SurveyPage(){
 
-   // private SurveyPage(){
+    }
 
-   // }
+    public static SurveyPage getInstance() {
+        return surveyPage;
+    }
 
 
-    public SurveyPage clickOnOpinions(){
-        surveyPageObjects.
+    public SurveyPage clickOnOpinions() {
+       waitForElementDisplay(surveyPageObjects.waysToEarnButton);
+       actions.moveToElement(surveyPageObjects.waysToEarnButton).build().perform();
+        surveyPageObjects.opinionsOption.click();
+        return this;
     }
 
     public void validateSurveyPage(){
-        surveyPageObjects.
+        waitForElementDisplay(surveyPageObjects.completeYourProfileButton);
+        surveyPageObjects.completeYourProfileButton.isDisplayed();
     }
    public void clickOnUpdateProfileOption(){
-
+       waitForElementDisplay(surveyPageObjects.completeYourProfileButton);
+       surveyPageObjects.completeYourProfileButton.click();
    }
    public void validateProfilePage(){
-
+       waitForElementDisplay(surveyPageObjects.titleOfProfilePage);
+       surveyPageObjects.titleOfProfilePage.isDisplayed();
    }
 }

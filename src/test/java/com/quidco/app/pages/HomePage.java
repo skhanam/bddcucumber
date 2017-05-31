@@ -27,6 +27,7 @@ public class HomePage extends BasePage {
     }
 
     public static HomePage getInstance() {
+
         return homePage;
     }
 

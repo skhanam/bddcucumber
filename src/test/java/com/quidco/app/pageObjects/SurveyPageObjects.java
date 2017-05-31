@@ -3,6 +3,8 @@ package com.quidco.app.pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
+
 /**
  * Created by laxmimaddali on 5/30/17.
  */

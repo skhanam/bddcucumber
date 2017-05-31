@@ -20,5 +20,6 @@ public class BaseStepdef extends SeleniumUtils {
     public static OnboardingPage onboardingPage;
     public static QuidcoComparePage quidcoComparePage;
     public static SearchResultsPage searchResultsPage;
+    public static SurveyPage surveyPage1 = SurveyPage.getInstance();
 
 }
