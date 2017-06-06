@@ -16,7 +16,7 @@ public class HomePageObject {
     public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
     public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
 
-    @FindBy(css = ".user")
+    @FindBy(css = ".header-user-avatar__pic")
     public static WebElement avatarIcon;
 
     @FindBy(css = ".category-icons-container li.bookmarks")
