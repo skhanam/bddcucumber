@@ -3,7 +3,7 @@
   Feature: As a logged in user,i can update profile if no survey available
 
      Background: Logging as a premium user and go to account summary  page.
-          Given I am logged in normal user
+          Given I am logged in premium user
 
           Scenario: Update survey profile
 
