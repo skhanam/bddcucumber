@@ -17,7 +17,8 @@ public class DiscoverPage extends BasePage {
     private DiscoverPage() {
     }
 
-    public static DiscoverPage getInstance() {
+    public static DiscoverPage getInstance()
+    {
         return loginPage;
     }
 
