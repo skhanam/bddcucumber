@@ -4,6 +4,7 @@ import com.quidco.app.helper.CheckoutDetails;
 import com.quidco.app.pageObjects.HomePageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -40,11 +41,16 @@ public class HomePage extends BasePage {
     }
 
     public NotificationsPage clickAvatar() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].removeAttribute('class')", homePageObject.avatarIcon);
         homePageObject.avatarIcon.click();
         return NotificationsPage.getInstance();
     }
 
     public boolean isAvatarVisible() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].removeAttribute('class')", homePageObject.avatarIcon);
+
         try {
             homePageObject.avatarIcon.isDisplayed();
             return true;
@@ -54,11 +60,15 @@ public class HomePage extends BasePage {
     }
 
     public void moveToAvatarIcon() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].removeAttribute('class')", homePageObject.avatarIcon);
         Actions builder = new Actions(driver);
         builder.moveToElement(homePageObject.avatarIcon).build().perform();
     }
 
     public void moveToFavouriteIcon() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].removeAttribute('class')", homePageObject.avatarIcon);
         Actions builder = new Actions(driver);
         builder.moveToElement(homePageObject.favIcon).build().perform();
     }
