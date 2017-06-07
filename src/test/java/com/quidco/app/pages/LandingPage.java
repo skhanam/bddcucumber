@@ -72,7 +72,7 @@ public class LandingPage extends BasePage {
 
         loginPage = navigateToSignInPage();
         homePage = loginPage.enterUsernameAndPassWord(landingPage.getUsername(), landingPage.getPassword()).clickSignInBtn();
-        waitForElementDisplay(homePage.homePageObject.avatarIcon);
+        waitForElementDisplay(homePage.homePageObject.homeCategory);
     }
 
     public QuidcoComparePage clickQuidcoCompare() {

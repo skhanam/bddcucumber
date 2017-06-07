@@ -16,7 +16,10 @@ public class HomePageObject {
     public final static String removeFromFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.active";
     public final static String addToFavBtn = ".retailer-cashback-summary-desktop .favourite-container>a.inactive";
 
-    @FindBy(css = ".header-user-avatar__pic")
+    @FindBy(xpath = "//span[@class='home-text']")
+    public static WebElement homeCategory;
+
+    @FindBy(xpath = "//ul[@class='dropdown-menu mega-menu']/li/a[@href='/notifications/']")
     public static WebElement avatarIcon;
 
     @FindBy(css = ".category-icons-container li.bookmarks")
