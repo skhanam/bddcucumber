@@ -39,4 +39,9 @@ Feature: As a Quidco Visitor user,  I want to explore compare feature for differ
       | Mobile broadband   |
 
 
+    Scenario: As a user, I want to see Car insurance options are available
+      And I click Car insurance tab
+      Then I should see the Car insurance page is loaded
+
+
 

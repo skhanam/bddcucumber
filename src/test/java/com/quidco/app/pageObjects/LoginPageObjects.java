@@ -14,7 +14,7 @@ public class LoginPageObjects {
     public static WebElement passwordInput;
     @FindBy(id = "continue")
     public static WebElement continueBtn;
-    @FindBy(xpath = "//*[@id=\"sign-in-page-form\"]/div/div[1]/div[3]/input")
+    @FindBy(xpath = "//*[@id='sign-in-page-form']/div/div[1]/div[3]/input")
     public static WebElement signInBtn;
     @FindBy(css = "#page-content .form-group-facebook")
     public static WebElement signInWithFacebookBtn;
@@ -26,3 +26,5 @@ public class LoginPageObjects {
     public static WebElement joinNowBtn;
 
 }
+
+//*[@id="sign-in-page-form"]/div/div[1]/div[3]/input

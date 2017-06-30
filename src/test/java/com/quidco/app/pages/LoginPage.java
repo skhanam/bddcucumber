@@ -30,7 +30,7 @@ public class LoginPage extends BasePage {
         loginPageObjects.signInBtn.click();
         if (isElementVisible(loginPageObjects.continueBtn)) {
             loginPageObjects.continueBtn.click();
-            waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
+            //waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
         }
         return HomePage.getInstance();
     }

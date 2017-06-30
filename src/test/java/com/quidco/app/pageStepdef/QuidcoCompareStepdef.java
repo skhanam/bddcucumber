@@ -63,4 +63,10 @@ public class QuidcoCompareStepdef extends BaseStepdef {
     public void i_can_see_appropriate_category_options_available() {
         quidcoComparePage.checkCategoryOptionsVisible();
     }
+
+    @Then("^I should see the Car insurance page is loaded$")
+    public void i_should_see_the_Car_insurance_page_is_loaded(){
+        
+    }
+
 }
