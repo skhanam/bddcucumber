@@ -19,7 +19,7 @@ public class HomePageObject {
     @FindBy(xpath = "//span[@class='home-text']")
     public static WebElement homeCategory;
 
-    @FindBy(xpath = "//ul[@class='dropdown-menu mega-menu']/li/a[@href='/notifications/']")
+    @FindBy(xpath=".//*[@id='main-nav']/div[2]/div/div/div/ul/div/ul/li[2]/a/span/span[2]")
     public static WebElement avatarIcon;
 
     @FindBy(css = ".category-icons-container li.bookmarks")
