@@ -12,10 +12,6 @@ Feature: As a logged in user , I can manage favourites.
     Then I should see it as top retailer
     When I click the retailer on search results page
     And I add retailer to favourite
-#    When I search for "Debenhams"
-#    Then I should see it as top retailer
-#    When I click the retailer on search results page
-#    And I add retailer to favourite
     When I am on favourite icon
     And I click Manage Favourites option under menu
     Then I should see below <merchantname> added under favourites
