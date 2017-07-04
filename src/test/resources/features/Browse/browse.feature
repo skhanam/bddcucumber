@@ -1,4 +1,4 @@
-@regression @browse @php7
+@regression @browse
 Feature: As a visitor , I would like to browse through different categories available on quidco.
   The user is not logged in to for this feature.
 
