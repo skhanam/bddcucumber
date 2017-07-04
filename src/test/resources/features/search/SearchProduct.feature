@@ -1,4 +1,4 @@
-@regression @search-product
+@search-product
 Feature: As a logged in user , i can search different products using Quidco Search.
 
   Background: Logging as a premium user and go to account summary  page.

@@ -1,4 +1,4 @@
-@regression @checkout
+@checkout
 Feature: As a logged in user , i can checkout the product successfully without any issues.
 
   Background: Logging as a premium user and go to account summary  page.
