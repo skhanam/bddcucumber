@@ -1,4 +1,4 @@
-@regression @signup
+@regression @signup @clout
 Feature: Signup
 
   Background: User goes to the sign in page.

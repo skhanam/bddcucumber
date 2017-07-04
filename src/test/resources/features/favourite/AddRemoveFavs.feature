@@ -1,4 +1,4 @@
-@regression @favourites
+@regression @favourites @clout
 Feature: As a logged in user , I can add & remove any retailer as favourites.
 
   This feature represents if the user is able to add or remove any merchant as favourites.

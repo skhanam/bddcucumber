@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = "@php7",
+@CucumberOptions(tags = "@clout",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
         monochrome = true,
         glue = {"com.quidco.app.pages", "com.quidco.app.pageStepdef",
@@ -20,7 +20,7 @@ import java.util.logging.Level;
         features = {"src/test/resources/features"}
 )
 
-public class Php7Runner extends BasePage {
+public class CloutRunner extends BasePage {
 
     @BeforeClass
     public static void setUp() throws IOException {

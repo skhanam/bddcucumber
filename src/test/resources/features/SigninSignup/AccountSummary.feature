@@ -1,4 +1,4 @@
-@regression @account-summary
+@regression @account-summary @clout
 Feature: As a logged in user on account summary
 
   Background: Logging as a premium user and go to account summary  page.

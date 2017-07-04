@@ -1,4 +1,4 @@
-@survey @regression
+@survey @regression @clout
 
   Feature: As a logged in user,i can update profile if no survey available
 

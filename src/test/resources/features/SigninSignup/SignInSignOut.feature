@@ -1,4 +1,4 @@
-@regression @login-logout
+@regression @login-logout @clout
 Feature: login/logout - premium/existing/fb
 
   Background:  User goes to the sign in page.

@@ -1,4 +1,4 @@
-@regression @quidco-compare
+@regression @quidco-compare @clout
 Feature: As a Quidco Visitor user,  I want to explore compare feature for different services  like Insurance, Broadband, Energy
   The user is not logged in to for this feature.
 

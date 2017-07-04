@@ -1,4 +1,4 @@
-@regression @manage-favs
+@regression @manage-favs @clout
 Feature: As a logged in user , I can manage favourites.
 
   This feature represents if the user is able to go to manage favourites bookmarks and can see all retailers

@@ -1,4 +1,4 @@
-@postcode
+@postcode @clout
 
   Feature: As a logged in user,  i should find nearby retailer by postcode
 
