@@ -1,4 +1,4 @@
-@browse
+@browse @regression @clout
 Feature: As a logged in user , I would like to browse through different categories available on quidco.
 
 
