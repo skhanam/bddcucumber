@@ -119,12 +119,10 @@ public class LandingPage extends BasePage {
                         driver.findElement(By.linkText(clicks)).click();
 
                         if (driver.getTitle().equals("notWorkingUrlTitle")) {
-                            System.out.println("\"" + t + "\""
-                                    + " is not working.");
+
                         } else {
-//                            Assert.assertEquals();
-                            System.out.println("\"" + t + "\""
-                                    + " is working.");
+                            Assert.assertEquals(clicks,landingPageObject.categoryLabel.getText());
+
                         }
                         landingPage.showmore();
                     }
