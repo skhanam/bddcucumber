@@ -91,8 +91,18 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @When("^I click category ([^\"]*)$")
     public void i_click_category(String categoryName) {
-        landingPage.clickCategory(categoryName);
+//        landingPage.clickCategory(categoryName);
 
+    }
+
+    @When("^I click on Show more")
+    public void i_click_on_show_more(){
+        landingPage.showmore();
+    }
+
+    @Then("^I should see drop down of categories")
+    public void i_should_see_drop_down_of_categories(){
+        landingPage.clickCategory();
     }
 
     @Then("^I should see correct label on the page$")

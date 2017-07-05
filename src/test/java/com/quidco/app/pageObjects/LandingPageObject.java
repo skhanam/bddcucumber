@@ -33,4 +33,12 @@ public class LandingPageObject {
 
     @FindBy(css = "#modal-country .modal-footer button")
     public static WebElement exploreBtn;
+
+    @FindBy(xpath = ".//*[@id='menu-show-more']/a")
+    public static WebElement showMore;
+
+    @FindBy(css = ".category")
+    public static WebElement menuCategories;
+
+
 }

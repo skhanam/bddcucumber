@@ -5,29 +5,7 @@ Feature: As a visitor , I would like to browse through different categories avai
   Background:  As a user I want to go to the compare page.
     Given I am on the landing page
 
-  Scenario Outline: As a user , I want to browse through all the categories
-    When I click category <category>
-    Then I should see correct label on the page
+  Scenario: As a user , I want to browse through all the categories
+    When I click on Show more
+    Then I should see drop down of categories
     And I should see some retailers listed
-    Examples:
-      | category            |
-      | Entertainment       |
-      | Fashion             |
-      | Electricals         |
-      | Insurance & Finance |
-      | Utilities           |
-      | Department Stores   |
-      | Home & DIY          |
-      | Toys & Gifts        |
-      | Health & Beauty     |
-      | Parent & Kids       |
-      | Sports & Fitness    |
-      | Office & Business   |
-      | Auction & Selling   |
-      | Pets                |
-      | Cars                |
-      | Charity             |
-      | Food & Drink        |
-      | Luxury              |
-      | Telecoms            |
-      | Cycling             |
