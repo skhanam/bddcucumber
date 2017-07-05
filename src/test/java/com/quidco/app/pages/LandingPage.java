@@ -122,6 +122,7 @@ public class LandingPage extends BasePage {
                             System.out.println("\"" + t + "\""
                                     + " is not working.");
                         } else {
+//                            Assert.assertEquals();
                             System.out.println("\"" + t + "\""
                                     + " is working.");
                         }

@@ -1,4 +1,7 @@
-@regression @browse @clout
+// This is removed out of the current site QCO-5661
+
+
+
 Feature: As a visitor , I would like to browse through different categories available on quidco.
   The user is not logged in to for this feature.
 
