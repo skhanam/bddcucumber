@@ -9,8 +9,10 @@ import java.util.List;
  * Created by ashishmohindroo on 11/10/16.
  */
 public class LandingPageObject {
-    @FindBy(css = ".nav>.signin>a.link")
+
+    @FindBy(css = ".btn.primary")
     public static WebElement signInLink;
+
 
     @FindBy(css = ".signed-out")
     public static List<WebElement> frontPageSignInLinks;
