@@ -16,6 +16,10 @@ public class LandingPageObject {
 
     @FindBy(css = ".signed-out")
     public static List<WebElement> frontPageSignInLinks;
+
+    @FindBy(css = ".list.is-hidden>li>a")
+    public static WebElement browseCompare;
+
     @FindBy(xpath = "//ul[contains(@class,\"header-additional-links\")]//a[text()=\"Ways to Earn\"]/..")
     public static WebElement waysToEarn_dropdown;
 
