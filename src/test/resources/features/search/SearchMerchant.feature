@@ -12,6 +12,6 @@ Feature: As a logged in user , i can search different retailers / merchants usin
     Examples:
       | RetailerName               |
       | Marks & Spencer            |
-      | Debenhams (In-store)       |
+      | Debenhams                  |
       | John Lewis                 |
 
