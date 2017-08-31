@@ -1,5 +1,6 @@
 package com.quidco.app.pages;
 
+import com.quidco.app.pageObjects.LandingPageObject;
 import com.quidco.app.pageObjects.LoginPageObjects;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends BasePage {
 
     protected static LoginPageObjects loginPageObjects = PageFactory.initElements(driver, LoginPageObjects.class);
+    protected static LandingPageObject landingPageObject = PageFactory.initElements(driver,LandingPageObject.class);
     private static LoginPage loginPage = new LoginPage();
 
     private LoginPage() {
@@ -19,6 +21,11 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage enterUsernameAndPassWord(String username, String password) {
+        if(isElementVisible(landingPageObject.dismissAlert)){
+            landingPageObject.dismissAlert.click();
+//            waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
+
+        }
         waitForElementDisplay(loginPageObjects.usernameInput);
         loginPageObjects.usernameInput.sendKeys(username);
         loginPageObjects.passwordInput.sendKeys(password);
@@ -28,6 +35,11 @@ public class LoginPage extends BasePage {
     public HomePage clickSignInBtn() {
         waitForElementDisplay(loginPageObjects.signInBtn);
         loginPageObjects.signInBtn.click();
+        if(isElementVisible(landingPageObject.dismissAlert)){
+            landingPageObject.dismissAlert.click();
+            waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
+
+        }else
         if (isElementVisible(loginPageObjects.continueBtn)) {
             loginPageObjects.continueBtn.click();
             waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
