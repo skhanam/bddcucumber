@@ -28,7 +28,6 @@ public class LoginPage extends BasePage {
     public LoginPage enterUsernameAndPassWord(String username, String password) {
         if(isElementVisible(landingPageObject.dismissAlert)){
             landingPageObject.dismissAlert.click();
-//            waitForElementDisplay(driver.findElement(By.cssSelector(".user")));
 
         }
         waitForElementDisplay(loginPageObjects.usernameInput);

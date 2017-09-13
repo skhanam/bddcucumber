@@ -16,10 +16,10 @@ Feature: As a Quidco Visitor user,  I want to explore compare feature for differ
       | TabName      |
       | How it works |
 
-  Scenario: As a user, I want to navigate all FAQ related topics
-    And I click FAQs tab
-    Then I should see 7 FAQs
-    And I can see relevant information about each FAQ
+#  Scenario: As a user, I want to navigate all FAQ related topics
+#    And I click FAQs tab
+#    Then I should see 7 FAQs
+#    And I can see relevant information about each FAQ
 
   Scenario:  As a user, I want to see different options for Insurance under Compare.
     And I click Insurance tab

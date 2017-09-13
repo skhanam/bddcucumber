@@ -89,9 +89,10 @@ public class LandingPage extends BasePage {
 
             public QuidcoComparePage clickQuidcoCompare() {
                 gotoCompare();
+                if (isElementVisible(landingPageObject.dismissAlert)) {
+                    landingPageObject.dismissAlert.click();
 
-                waitForElementDisplay(landingPageObject.dismissAlert);
-                landingPageObject.dismissAlert.click();
+                }
                 waitForElementDisplay(landingPageObject.waysToEarn_dropdown);
                 actions.moveToElement(landingPageObject.waysToEarn_dropdown).build().perform();
                 waitForElementDisplay(landingPageObject.quidcoCompareLink);
