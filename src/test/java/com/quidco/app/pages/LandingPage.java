@@ -84,8 +84,14 @@ public class LandingPage extends BasePage {
                 String geturl = driver.getCurrentUrl();
                 driver.navigate().to(geturl+"/browse/");
             }
+
+
+
             public QuidcoComparePage clickQuidcoCompare() {
                 gotoCompare();
+
+                waitForElementDisplay(landingPageObject.dismissAlert);
+                landingPageObject.dismissAlert.click();
                 waitForElementDisplay(landingPageObject.waysToEarn_dropdown);
                 actions.moveToElement(landingPageObject.waysToEarn_dropdown).build().perform();
                 waitForElementDisplay(landingPageObject.quidcoCompareLink);

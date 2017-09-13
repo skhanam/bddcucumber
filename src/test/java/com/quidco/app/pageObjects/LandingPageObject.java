@@ -47,6 +47,7 @@ public class LandingPageObject {
     @FindBy(css = ".category")
     public static WebElement menuCategories;
 
+
     @FindBy(xpath = ".//*[@id='modal-country']/div/div/div[3]/button")
     public static WebElement dismissAlert;
 
