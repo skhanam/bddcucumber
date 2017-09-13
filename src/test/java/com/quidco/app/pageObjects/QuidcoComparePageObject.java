@@ -33,19 +33,13 @@ public class QuidcoComparePageObject {
     public static List<WebElement> plusSignsForFAQs;
     @FindBy(css = "#page-content .panel-content")
     public static List<WebElement> faqAnswers;
-    //*[@id="filter-form"]/div[2]/div/div[1]/div/div[1]/label
-    //@FindBy(id = "attribute_broadband")
+    @FindBy(id = "attribute_broadband")
     public static WebElement broadband_cb;
-    //@FindBy(id = "Broadband")
-    @FindBy(xpath = "//*[@id=\"filter-form\"]/div[2]/div/div[1]/div/div[1]/label")
-    //@FindBy(css = ".deals-output>tr")
+    @FindBy(css = ".deals-output>tr")
     public static List<WebElement> broadbandPackagesList;
     public static String categoryIcon = "//a//span[text()='%s']/../..";
-    //public static String insuranceTypesLocator ="//*[@id=\"Insurance\"]/span";
     public static String insuranceTypesLocator = "//div[@data-id='Insurance']//span[text()='%s']";
-    //public static String energyTypesLocator = "//*[@id=\"Energy\"]/span";
     public static String energyTypesLocator = "//div[@data-id='Energy']//span[text()='%s']";
-    //public static String broadbandTypesLocator ="//*[@id=\"Broadband\"]/span";
     public static String broadbandTypesLocator = "//div[@data-id='Broadband']//span[text()='%s']";
     public static String getPaidTitleText = "Get paid to compare";
     public static String moneyCashbackTitleText = "Save time and money, and earn cashback, in one place!";

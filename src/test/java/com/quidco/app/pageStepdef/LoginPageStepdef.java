@@ -2,9 +2,6 @@ package com.quidco.app.pageStepdef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.support.ui.Wait;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by thadeus on 11/04/16.
@@ -70,6 +67,5 @@ public class LoginPageStepdef extends BaseStepdef {
         driver.manage().deleteAllCookies();
         driver.navigate().to(temp);
         facebookLoginPage = loginPage.clickSignInWithFacebook();
-
     }
 }

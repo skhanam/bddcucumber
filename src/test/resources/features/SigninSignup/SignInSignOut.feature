@@ -32,14 +32,14 @@ Feature: login/logout - premium/existing/fb
 #    And I click signOut
 #    And I am logged out
 
-#  Scenario:
-#    Given I am an existing paypal user
-#    And I click sign in with paypal
-#    When I enter paypal valid credentials
-#    And I click login for paypal
-#    Then I am logged in
-#    And I click signOut
-#    And I am logged out
+  Scenario:
+    Given I am an existing paypal user
+    And I click sign in with paypal
+    When I enter paypal valid credentials
+    And I click login for paypal
+    Then I am logged in
+    And I click signOut
+    And I am logged out
 
 
 

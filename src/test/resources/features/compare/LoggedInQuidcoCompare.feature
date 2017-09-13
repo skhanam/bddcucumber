@@ -41,10 +41,10 @@ Feature: As a Quidco Member user, I want to explore compare feature for differen
     And I click Broadband icon
     And I click Home Broadband icon
     Then I should see list of broadband options
-#    When I click How it works tab
-#    And I click Broadband icon
-#    And I click Mobile Broadband icon
-#    Then I should see list of broadband options
+    When I click How it works tab
+    And I click Broadband icon
+    And I click Mobile Broadband icon
+    Then I should see list of broadband options
     When I click How it works tab
     And I click Broadband icon
     And I click Office Broadband icon

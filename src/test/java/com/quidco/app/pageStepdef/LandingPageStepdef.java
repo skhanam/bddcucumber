@@ -6,8 +6,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by ashishmohindroo on 11/8/16.
  */
@@ -50,11 +48,10 @@ public class LandingPageStepdef extends BaseStepdef {
                 landingPage.setUsername("quidcofb@gmail.com");
                 landingPage.setPassword("quidco321");
 
-
                 break;
             case "paypal":
-                landingPage.setUsername("quidco.tester@gmail.com");
-                landingPage.setPassword("quidcotester@01");
+                landingPage.setUsername("adsfsd@adfasf.com");
+                landingPage.setPassword("lkjjlkl");
                 break;
             default:
                 System.out.println("No User Type Selected");
