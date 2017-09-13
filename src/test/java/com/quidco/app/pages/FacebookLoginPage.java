@@ -19,7 +19,10 @@ public class FacebookLoginPage extends BasePage {
 
     public FacebookLoginPage enterUsernameAndPassword(String username, String password) {
         waitForElementDisplay(facebookLoginPageObject.emailInput);
+
         facebookLoginPageObject.emailInput.sendKeys(username);
+
+
         facebookLoginPageObject.passwordInput.sendKeys(password);
         return this;
     }

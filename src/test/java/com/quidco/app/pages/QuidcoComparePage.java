@@ -120,13 +120,15 @@ public class QuidcoComparePage extends BasePage {
         waitForElementDisplay(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))));
         scrollElementIntoMiddle(driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))));
         driver.findElement(By.xpath(String.format(quidcoCompareObject.getaQuoteBtn, gridOption))).click();
+
     }
 
     public void checkBroadbandList() {
         driver.switchTo().frame("quidco_compare");
         preciseWaitForElement(quidcoCompareObject.broadbandPackagesList.get(0));
-        if (getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband"))
-            Assert.assertEquals("true", quidcoCompareObject.broadband_cb.getAttribute("checked"));
+        //if (getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband"))
+        if (getCategory().equalsIgnoreCase("Home Broadband") || getCategory().equalsIgnoreCase("Office Broadband") || getCategory().equalsIgnoreCase("Mobile Broadband"))
+            //Assert.assertEquals("true", quidcoCompareObject.broadband_cb.getAttribute("checked"));
         Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0);
         driver.switchTo().defaultContent();
     }
