@@ -126,9 +126,7 @@ public class QuidcoComparePage extends BasePage {
     public void checkBroadbandList() {
         driver.switchTo().frame("quidco_compare");
         preciseWaitForElement(quidcoCompareObject.broadbandPackagesList.get(0));
-        //if (getCategory().equalsIgnoreCase("home broadband") || getCategory().equalsIgnoreCase("broadband"))
-        if (getCategory().equalsIgnoreCase("Home Broadband") || getCategory().equalsIgnoreCase("Office Broadband") || getCategory().equalsIgnoreCase("Mobile Broadband"))
-            //Assert.assertEquals("true", quidcoCompareObject.broadband_cb.getAttribute("checked"));
+        if (getCategory().equalsIgnoreCase("Home Broadband") || getCategory().equalsIgnoreCase("Office Broadband"))
         Assert.assertTrue(quidcoCompareObject.broadbandPackagesList.size() > 0);
         driver.switchTo().defaultContent();
     }
