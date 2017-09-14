@@ -14,6 +14,12 @@ import java.util.logging.Level;
  * Created by laxmimaddali on 5/30/17.
  */
 
+
+/*
+Opinions no longer exist on Prod hence disabling this test.
+
+ */
+
 @RunWith(Cucumber.class)
 @CucumberOptions(tags = "@survey",
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
