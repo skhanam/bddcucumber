@@ -24,7 +24,7 @@ public class LoginPageStepdef extends BaseStepdef {
 
     @When("^I enter valid credentials$")
     public void i_enter_valid_credentials() {
-        i_enter_my_credentials(landingPage.getUsername(), landingPage.getPassword());
+        loginPage.enterValidUsernameAndPassword(landingPage.getUsername(),landingPage.getPassword());
     }
 
     @When("^I enter facebook valid credentials$")
