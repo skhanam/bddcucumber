@@ -29,7 +29,8 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @When("^I click on the signin link$")
     public void i_click_on_the_signin_link() {
-        loginPage = landingPage.clickSignInOnNavigationBar();
+        loginPage = landingPage.navigateToSignInPage();
+//        loginPage = landingPage.clickSignInOnNavigationBar();
     }
 
     @Given("^I am an existing ([^\"]*) user$")
