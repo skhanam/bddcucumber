@@ -29,7 +29,8 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @When("^I click on the signin link$")
     public void i_click_on_the_signin_link() {
-        loginPage = landingPage.clickSignInOnNavigationBar();
+        loginPage = landingPage.navigateToSignInPage();
+//        loginPage = landingPage.clickSignInOnNavigationBar();
     }
 
     @Given("^I am an existing ([^\"]*) user$")
@@ -84,6 +85,12 @@ public class LandingPageStepdef extends BaseStepdef {
     public void i_click_quidco_compare() {
         quidcoComparePage = landingPage.clickQuidcoCompare();
     }
+
+//    @And("^I click ([^\"]*) tab$")
+//    public void i_click_tab(String tabName) {
+//        quidcoComparePage.setTabName(tabName);
+//        quidcoComparePage.i_click_tab();
+//    }
 
     @When("^I click Join Quidco now$")
     public void i_click_join_quidco_btn() {
