@@ -36,6 +36,17 @@ public class LoginPage extends BasePage {
         return this;
     }
 
+    public LoginPage enterValidUsernameAndPassword(String existingUsername, String existingPassword){
+        if(isElementVisible(landingPageObject.dismissAlert)){
+            landingPageObject.dismissAlert.click();
+
+        }
+        waitForElementDisplay(loginPageObjects.usernameInput);
+        loginPageObjects.usernameInput.sendKeys(existingUsername);
+        loginPageObjects.passwordInput.sendKeys(existingPassword);
+        return this;
+    }
+
     public HomePage clickSignInBtn() {
         waitForElementDisplay(loginPageObjects.signInBtn);
         loginPageObjects.signInBtn.click();
@@ -71,7 +82,6 @@ public class LoginPage extends BasePage {
     public FacebookLoginPage clickSignInWithFacebook() {
         WebElement facebookBtn = waitForElementDisplay(loginPageObjects.signInWithFacebookBtn);
         facebookBtn.click();
-
         return FacebookLoginPage.getInstance();
 
     }
