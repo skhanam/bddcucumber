@@ -101,9 +101,11 @@ public class LandingPage extends BasePage {
             }
 
             public SignupPage click_join_quidco_now_btn() {
-                waitForElementDisplay(LandingPageObject.join_quidco_btn);
-                LandingPageObject.join_quidco_btn.click();
+
+                waitForElementDisplay(LandingPageObject.joinNowBtn);
+                LandingPageObject.joinNowBtn.click();
                 return SignupPage.getInstance();
+
             }
 
             public void showmore(){

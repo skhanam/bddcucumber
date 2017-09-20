@@ -88,6 +88,7 @@ public class LandingPageStepdef extends BaseStepdef {
 
     @When("^I click Join Quidco now$")
     public void i_click_join_quidco_btn() {
+        loginPage = landingPage.navigateToSignInPage();
         signupPage = landingPage.click_join_quidco_now_btn();
 
     }
