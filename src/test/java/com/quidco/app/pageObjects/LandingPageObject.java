@@ -51,5 +51,8 @@ public class LandingPageObject {
     @FindBy(xpath = ".//*[@id='modal-country']/div/div/div[3]/button")
     public static WebElement dismissAlert;
 
+    @FindBy(xpath = "//*[@id=\"main-nav\"]/div[2]/div/div/div/ul/div/ul/li[1]/a")
+    public static WebElement joinNowBtn;
+
 
 }
